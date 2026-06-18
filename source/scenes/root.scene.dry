@@ -20,9 +20,9 @@ go-to: start_menu_2
 on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
-Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.time = 11;
+Q.year = 1918;
+Q.month = 11;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -31,14 +31,14 @@ Q.difficulty = 0;
 Q.historical_mode = 0;
 // old demographics
 Q.old_demographics = 0;
-// use decimals for reichstag seats
-// TODO: not yet implemented
-Q.use_decimals = 0;
 
 // party resources
 Q.resources = 2;
 // party dues
 Q.dues = 2;
+
+// pilsudski (placeholder stats)
+Q.p_influence = 80;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
@@ -46,34 +46,14 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
-// should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
+Q.factions = ['revolutionary', 'labor', 'reformist'];
+Q.revolutionary_strength = 30;
+Q.revolutionary_dissent = 25;
 Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.labor_dissent = 10;
+Q.reformist_strength = 45;
+Q.reformist_dissent = 15;
 
-// secret events...
-Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
-
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
-
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
-Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
-Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
 // Support for Pacifism within the SPD relative to 1928
@@ -315,12 +295,9 @@ Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
-
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+// for changing parties name
+Q.kprp_name = "KPRP";
+Q.chzjn_name = "NKWSD";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -414,12 +391,6 @@ Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
 Q.wtb_implemented = 0;
-// Relations with the Western countries (France, UK).
-Q.west_relation = 0;
-// Relations with the Eastern countries (Poland, Czechoslovakia)
-Q.east_relation = 0;
-// Relations with the Soviet Union
-Q.soviet_relation = 0;
 // How much have we exposed the secret rearmament programs?
 Q.rearmament_exposed = 0;
 // reparations vs baseline: young plan is -1.
@@ -445,6 +416,12 @@ Q.education_science = 0;
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
+
+// foreign
+Q.soviet_relation = 0;
+Q.german_relation = 0;
+// France, UK, USA
+Q.west_relation = 0;
 
 Q.electoral_threshold = 0;
 
