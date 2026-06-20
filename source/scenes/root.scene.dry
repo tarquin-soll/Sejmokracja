@@ -220,7 +220,7 @@ Q.chzjn_formed = 0;
 // for changing parties name
 Q.kprp_name = "KPRP";
 Q.chzjn_name = "NKWSD";
-Q.kprp_full_name = "Communist Workers' Party of Poland";
+Q.kprp_full_name = "Communist Workers Party of Poland";
 Q.chzjn_full_name = "The National Electoral Committee of Democratic Parties";
 
 // Support for party by social group
