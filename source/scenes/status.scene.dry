@@ -37,7 +37,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 Ssjm composition:
 
-[? if kprp_exist:
+[? if kprp_formed:
 <span style="color: #890000;">**{!<span class="tooltip-text" title="[+ kprp_full_name +]">[+ kprp_name +]</span>!}**</span>: [+ kprp_sj +]%
 ?]
 
@@ -47,7 +47,7 @@ Ssjm composition:
 
 <span style="color: #80FF00;">**{!<span class="tooltip-text" title="Polish People's Party - Left">PSL-L</span>!}**</span>: [+ psl_l_sj +]%
 
-[? if chsr_exist:
+[? if chsr_formed:
 <span style="color: #43C46C;">**{!<span class="tooltip-text" title="Radical Peasant Party">ChSR</span>!}**</span>: [+ chsr_sj +]%
 ?]
 
@@ -57,7 +57,7 @@ Ssjm composition:
 
 <span style="color: #FFF480;">**{!<span class="tooltip-text" title="Ukrainian Parties">PU</span>!}**</span>: [+ pu_sj +]%
 
-[? if bmn_exist:
+[? if bmn_formed:
 <span style="color: #E3AF34;">**{!<span class="tooltip-text" title="Bloc of National Minorities">BMN</span>!}**</span>: [+ bmn_sj +]%
 ?]
 
@@ -65,7 +65,7 @@ Ssjm composition:
 
 <span style="color: #FFD700;">**{!<span class="tooltip-text" title="Polish Centre">PC</span>!}**</span>: [+ pc_sj +]%
 
-[? if chzjn_exist:
+[? if chzjn_formed:
 <span style="color: #312E99;">**{!<span class="tooltip-text" title="[+ chzjn_full_name +]">[+ chzjn_name +]</span>!}**</span>: [+ chzjn_sj +]%
 ?]
 

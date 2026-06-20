@@ -201,12 +201,13 @@ Q.upper_qol = 100;
 Q.unemployed_qol = 100;
 
 Q.classes = ['peasants', 'peasants', 'middle', 'upper', 'unemployed', 'minority'];
-Q.parties = ['pps', 'npr', 'psl-l', 'psl-w', 'psl-p', 'pu', 'pz', 'pc',];
+Q.parties = ['pps', 'npr', 'psl-l', 'psl-w', 'psl-p', 'pu', 'pz', 'pc', 'others'];
 
 // future parties
 Q.kprp_formed = 0;
 Q.bmn_formed = 0;
 Q.chsr_formed = 0;
+Q.chzjn_formed = 0;
 
 // for changing parties name
 Q.kprp_name = "KPRP";
@@ -271,7 +272,7 @@ Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
 
-// Current Reichstag composition
+// Current Sejm Composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
 // note: the Z figures also include the BVP (Bavarian people's party)
