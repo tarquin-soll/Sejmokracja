@@ -229,7 +229,7 @@ Q.chzjn_full_name = "The National Electoral Committee of Democratic Parties";
 Q.peasants_pps = 0;
 Q.peasants_npr = 0;
 Q.peasants_psl_l = 10;
-Q.peasants_psl_w = 67
+Q.peasants_psl_w = 67;
 Q.peasants_psl_p = 20;
 Q.peasants_pu = 0;
 Q.peasants_pz = 0;
@@ -268,7 +268,7 @@ Q.upper_other =  0;
 
 Q.unemployed_pps = 20;
 Q.unemployed_npr = 24;
-Q.unemployed_psl_l = 0:
+Q.unemployed_psl_l = 0;
 Q.unemployed_psl_w = 0;
 Q.unemployed_psl_p = 30;
 Q.unemployed_pu = 0;
