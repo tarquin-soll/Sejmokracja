@@ -208,7 +208,7 @@ Others: [+ other_votes +]%
 
 [? if kprp_formed:
 {!<tr>!}
-{!<td><span style="color: #890000;"><b>[+ kprp_name +]</b></span></td>!}
+{!<td>!}<span style="color: #890000;"><b>[+ kprp_name +]</b></span>{!</td>!}
 {!<td>!}[+ peasants_kprp_display +]{!</td>!}
 {!<td>!}[+ workers_kprp_display +]{!</td>!}
 {!<td>!}[+ middle_kprp_display +]{!</td>!}
@@ -219,7 +219,7 @@ Others: [+ other_votes +]%
 ?]
 
 {!<tr>!}
-{!<td><span style="color: #C62828;"><b>PPS</b></span></td>!}
+{!<td>!}<span style="color: #C62828;"><b>PPS</b></span>{!</td>!}
 {!<td>!}[+ peasants_pps_display +]{!</td>!}
 {!<td>!}[+ workers_pps_display +]{!</td>!}
 {!<td>!}[+ middle_pps_display +]{!</td>!}
@@ -229,7 +229,7 @@ Others: [+ other_votes +]%
 {!</tr>!}
 
 {!<tr>!}
-{!<td><span style="color: #841839;"><b>NPR</b></span></td>!}
+{!<td>!}<span style="color: #841839;"><b>NPR</b></span>{!</td>!}
 {!<td>!}[+ peasants_npr_display +]{!</td>!}
 {!<td>!}[+ workers_npr_display +]{!</td>!}
 {!<td>!}[+ middle_npr_display +]{!</td>!}
@@ -239,7 +239,7 @@ Others: [+ other_votes +]%
 {!</tr>!}
 
 {!<tr>!}
-{!<td><span style="color: #80FF00;"><b>PSL-L</b></span></td>!}
+{!<td>!}<span style="color: #80FF00;"><b>PSL-L</b></span>{!</td>!}
 {!<td>!}[+ peasants_psl_l_display +]{!</td>!}
 {!<td>!}[+ workers_psl_l_display +]{!</td>!}
 {!<td>!}[+ middle_psl_l_display +]{!</td>!}
@@ -250,7 +250,7 @@ Others: [+ other_votes +]%
 
 [? if chsr_formed:
 {!<tr>!}
-{!<td><span style="color: #43C46C;"><b>ChSR</b></span></td>!}
+{!<td>!}<span style="color: #43C46C;"><b>ChSR</b></span>{!</td>!}
 {!<td>!}[+ peasants_chsr_display +]{!</td>!}
 {!<td>!}[+ workers_chsr_display +]{!</td>!}
 {!<td>!}[+ middle_chsr_display +]{!</td>!}
@@ -261,7 +261,7 @@ Others: [+ other_votes +]%
 ?]
 
 {!<tr>!}
-{!<td><span style="color: #179900;"><b>PSL-W</b></span></td>!}
+{!<td>!}<span style="color: #179900;"><b>PSL-W</b></span>{!</td>!}
 {!<td>!}[+ peasants_psl_w_display +]{!</td>!}
 {!<td>!}[+ workers_psl_w_display +]{!</td>!}
 {!<td>!}[+ middle_psl_w_display +]{!</td>!}
@@ -271,7 +271,7 @@ Others: [+ other_votes +]%
 {!</tr>!}
 
 {!<tr>!}
-{!<td><span style="color: #3A6538;"><b>PSL-P</b></span></td>!}
+{!<td>!}<span style="color: #3A6538;"><b>PSL-P</b></span>{!</td>!}
 {!<td>!}[+ peasants_psl_p_display +]{!</td>!}
 {!<td>!}[+ workers_psl_p_display +]{!</td>!}
 {!<td>!}[+ middle_psl_p_display +]{!</td>!}
@@ -281,7 +281,7 @@ Others: [+ other_votes +]%
 {!</tr>!}
 
 {!<tr>!}
-{!<td><span style="color: #FFF480;"><b>PU</b></span></td>!}
+{!<td>!}<span style="color: #FFF480;"><b>PU</b></span>{!</td>!}
 {!<td>!}[+ peasants_pu_display +]{!</td>!}
 {!<td>!}[+ workers_pu_display +]{!</td>!}
 {!<td>!}[+ middle_pu_display +]{!</td>!}
@@ -292,7 +292,7 @@ Others: [+ other_votes +]%
 
 [? if bmn_formed:
 {!<tr>!}
-{!<td><span style="color: #E3AF34;"><b>BMN</b></span></td>!}
+{!<td>!}<span style="color: #E3AF34;"><b>BMN</b></span>{!</td>!}
 {!<td>!}[+ peasants_bmn_display +]{!</td>!}
 {!<td>!}[+ workers_bmn_display +]{!</td>!}
 {!<td>!}[+ middle_bmn_display +]{!</td>!}
@@ -303,7 +303,7 @@ Others: [+ other_votes +]%
 ?]
 
 {!<tr>!}
-{!<td><span style="color: #C40000;"><b>PZ</b></span></td>!}
+{!<td>!}<span style="color: #C40000;"><b>PZ</b></span>{!</td>!}
 {!<td>!}[+ peasants_pz_display +]{!</td>!}
 {!<td>!}[+ workers_pz_display +]{!</td>!}
 {!<td>!}[+ middle_pz_display +]{!</td>!}
@@ -313,7 +313,7 @@ Others: [+ other_votes +]%
 {!</tr>!}
 
 {!<tr>!}
-{!<td><span style="color: #FFD700;"><b>PC</b></span></td>!}
+{!<td>!}<span style="color: #FFD700;"><b>PC</b></span>{!</td>!}
 {!<td>!}[+ peasants_pc_display +]{!</td>!}
 {!<td>!}[+ workers_pc_display +]{!</td>!}
 {!<td>!}[+ middle_pc_display +]{!</td>!}
@@ -324,7 +324,7 @@ Others: [+ other_votes +]%
 
 [? if chzjn_formed:
 {!<tr>!}
-{!<td><span style="color: #312E99;"><b>[+ chzjn_name +]</b></span></td>!}
+{!<td>!}<span style="color: #312E99;"><b>[+ chzjn_name +]</b></span>{!</td>!}
 {!<td>!}[+ peasants_chzjn_display +]{!</td>!}
 {!<td>!}[+ workers_chzjn_display +]{!</td>!}
 {!<td>!}[+ middle_chzjn_display +]{!</td>!}
