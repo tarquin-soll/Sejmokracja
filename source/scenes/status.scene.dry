@@ -192,16 +192,150 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+{!<div style="overflow-x:auto;">!}
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+{!<table>!}
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+{!<tr>!}
+{!<td>Party</td>!}
+{!<td>Peasants</td>!}
+{!<td>Workers</td>!}
+{!<td>Middle Class</td>!}
+{!<td>Upper Class</td>!}
+{!<td>Unemployed</td>!}
+{!<td>Minorities</td>!}
+{!</tr>!}
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+[? if kprp_formed:
+{!<tr>!}
+{!<td><span style="color: #890000;"><b>[+ kprp_name +]</b></span></td>!}
+{!<td>!}[+ peasants_kprp_display +]{!</td>!}
+{!<td>!}[+ workers_kprp_display +]{!</td>!}
+{!<td>!}[+ middle_kprp_display +]{!</td>!}
+{!<td>!}[+ upper_kprp_display +]{!</td>!}
+{!<td>!}[+ unemployed_kprp_display +]{!</td>!}
+{!<td>!}[+ minority_kprp_display +]{!</td>!}
+{!</tr>!}
+?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+{!<tr>!}
+{!<td><span style="color: #C62828;"><b>PPS</b></span></td>!}
+{!<td>!}[+ peasants_pps_display +]{!</td>!}
+{!<td>!}[+ workers_pps_display +]{!</td>!}
+{!<td>!}[+ middle_pps_display +]{!</td>!}
+{!<td>!}[+ upper_pps_display +]{!</td>!}
+{!<td>!}[+ unemployed_pps_display +]{!</td>!}
+{!<td>!}[+ minority_pps_display +]{!</td>!}
+{!</tr>!}
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+{!<tr>!}
+{!<td><span style="color: #841839;"><b>NPR</b></span></td>!}
+{!<td>!}[+ peasants_npr_display +]{!</td>!}
+{!<td>!}[+ workers_npr_display +]{!</td>!}
+{!<td>!}[+ middle_npr_display +]{!</td>!}
+{!<td>!}[+ upper_npr_display +]{!</td>!}
+{!<td>!}[+ unemployed_npr_display +]{!</td>!}
+{!<td>!}[+ minority_npr_display +]{!</td>!}
+{!</tr>!}
+
+{!<tr>!}
+{!<td><span style="color: #80FF00;"><b>PSL-L</b></span></td>!}
+{!<td>!}[+ peasants_psl_l_display +]{!</td>!}
+{!<td>!}[+ workers_psl_l_display +]{!</td>!}
+{!<td>!}[+ middle_psl_l_display +]{!</td>!}
+{!<td>!}[+ upper_psl_l_display +]{!</td>!}
+{!<td>!}[+ unemployed_psl_l_display +]{!</td>!}
+{!<td>!}[+ minority_psl_l_display +]{!</td>!}
+{!</tr>!}
+
+[? if chsr_formed:
+{!<tr>!}
+{!<td><span style="color: #43C46C;"><b>ChSR</b></span></td>!}
+{!<td>!}[+ peasants_chsr_display +]{!</td>!}
+{!<td>!}[+ workers_chsr_display +]{!</td>!}
+{!<td>!}[+ middle_chsr_display +]{!</td>!}
+{!<td>!}[+ upper_chsr_display +]{!</td>!}
+{!<td>!}[+ unemployed_chsr_display +]{!</td>!}
+{!<td>!}[+ minority_chsr_display +]{!</td>!}
+{!</tr>!}
+?]
+
+{!<tr>!}
+{!<td><span style="color: #179900;"><b>PSL-W</b></span></td>!}
+{!<td>!}[+ peasants_psl_w_display +]{!</td>!}
+{!<td>!}[+ workers_psl_w_display +]{!</td>!}
+{!<td>!}[+ middle_psl_w_display +]{!</td>!}
+{!<td>!}[+ upper_psl_w_display +]{!</td>!}
+{!<td>!}[+ unemployed_psl_w_display +]{!</td>!}
+{!<td>!}[+ minority_psl_w_display +]{!</td>!}
+{!</tr>!}
+
+{!<tr>!}
+{!<td><span style="color: #3A6538;"><b>PSL-P</b></span></td>!}
+{!<td>!}[+ peasants_psl_p_display +]{!</td>!}
+{!<td>!}[+ workers_psl_p_display +]{!</td>!}
+{!<td>!}[+ middle_psl_p_display +]{!</td>!}
+{!<td>!}[+ upper_psl_p_display +]{!</td>!}
+{!<td>!}[+ unemployed_psl_p_display +]{!</td>!}
+{!<td>!}[+ minority_psl_p_display +]{!</td>!}
+{!</tr>!}
+
+{!<tr>!}
+{!<td><span style="color: #FFF480;"><b>PU</b></span></td>!}
+{!<td>!}[+ peasants_pu_display +]{!</td>!}
+{!<td>!}[+ workers_pu_display +]{!</td>!}
+{!<td>!}[+ middle_pu_display +]{!</td>!}
+{!<td>!}[+ upper_pu_display +]{!</td>!}
+{!<td>!}[+ unemployed_pu_display +]{!</td>!}
+{!<td>!}[+ minority_pu_display +]{!</td>!}
+{!</tr>!}
+
+[? if bmn_formed:
+{!<tr>!}
+{!<td><span style="color: #E3AF34;"><b>BMN</b></span></td>!}
+{!<td>!}[+ peasants_bmn_display +]{!</td>!}
+{!<td>!}[+ workers_bmn_display +]{!</td>!}
+{!<td>!}[+ middle_bmn_display +]{!</td>!}
+{!<td>!}[+ upper_bmn_display +]{!</td>!}
+{!<td>!}[+ unemployed_bmn_display +]{!</td>!}
+{!<td>!}[+ minority_bmn_display +]{!</td>!}
+{!</tr>!}
+?]
+
+{!<tr>!}
+{!<td><span style="color: #C40000;"><b>PZ</b></span></td>!}
+{!<td>!}[+ peasants_pz_display +]{!</td>!}
+{!<td>!}[+ workers_pz_display +]{!</td>!}
+{!<td>!}[+ middle_pz_display +]{!</td>!}
+{!<td>!}[+ upper_pz_display +]{!</td>!}
+{!<td>!}[+ unemployed_pz_display +]{!</td>!}
+{!<td>!}[+ minority_pz_display +]{!</td>!}
+{!</tr>!}
+
+{!<tr>!}
+{!<td><span style="color: #FFD700;"><b>PC</b></span></td>!}
+{!<td>!}[+ peasants_pc_display +]{!</td>!}
+{!<td>!}[+ workers_pc_display +]{!</td>!}
+{!<td>!}[+ middle_pc_display +]{!</td>!}
+{!<td>!}[+ upper_pc_display +]{!</td>!}
+{!<td>!}[+ unemployed_pc_display +]{!</td>!}
+{!<td>!}[+ minority_pc_display +]{!</td>!}
+{!</tr>!}
+
+[? if chzjn_formed:
+{!<tr>!}
+{!<td><span style="color: #312E99;"><b>[+ chzjn_name +]</b></span></td>!}
+{!<td>!}[+ peasants_chzjn_display +]{!</td>!}
+{!<td>!}[+ workers_chzjn_display +]{!</td>!}
+{!<td>!}[+ middle_chzjn_display +]{!</td>!}
+{!<td>!}[+ upper_chzjn_display +]{!</td>!}
+{!<td>!}[+ unemployed_chzjn_display +]{!</td>!}
+{!<td>!}[+ minority_chzjn_display +]{!</td>!}
+{!</tr>!}
+?]
+
+{!</table>!}
+
+{!</div>!}
 
 Support for the Republic: [+ pro_republic_disp +]%
