@@ -339,6 +339,8 @@ Q.pc_in_government = 0;
 Q.chzjn_in_government = 0;
 Q.other_in_government = 0;
 
+Q.seat_sejm = 3.91;
+
 // temporary
 // kprp to psl-p
 Q.in_left_coalition = 0;
