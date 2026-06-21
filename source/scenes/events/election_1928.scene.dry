@@ -110,13 +110,13 @@ data = data.concat([
         "seats": Math.round(Q.npr_sj*Q.sejm_size),
     },
     {
-        "id": "psl-l",
+        "id": "psl_l",
         "legend": "PSL-L",
         "name": "PSL-L",
         "seats": Math.round(Q.psl_l_sj*Q.sejm_size),
     },
     {
-        "id": "psl-w",
+        "id": "psl_w",
         "legend": "PSL-W",
         "name": "PSL-W",
         "seats": Math.round(Q.psl_w_sj*Q.sejm_size),
@@ -134,7 +134,7 @@ if (Q.chsr_formed && Q.chsr_sj) {
 
 data = data.concat([
     {
-        "id": "psl-p",
+        "id": "psl_p",
         "legend": "PSL-Piast",
         "name": "PSL-Piast",
         "seats": Math.round(Q.psl_p_sj*Q.sejm_size),
