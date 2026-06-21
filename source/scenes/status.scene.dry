@@ -60,10 +60,10 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 [? if kprp_formed:
-<span style="color: #890000;">**{!<span class="tooltip-text" title="[+ kprp_full_name +]">[+ kprp_name +]</span>!}**</span>: [+ kprp_relation : relationships +]
+<span style="color: #890000;"><span class="tooltip-text" title="[+ kprp_full_name +]">**[+ kprp_name +]**</span></span>: [+ kprp_relation : relationships +]
 ?]
 
-<span style="color: #C62828;">**{!<span class="tooltip-text" title="Polish Socialist Party">PPS</span>!}**</span>: [+ pps_relation : relationships +]
+<span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span>: [+ pps_relation : relationships +]
 
 <span style="color: #841839;">**{!<span class="tooltip-text" title="National Workers' Party">NPR</span>!}**</span>: [+ npr_relation : relationships +]
 
