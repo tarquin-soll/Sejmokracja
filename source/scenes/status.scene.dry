@@ -18,11 +18,9 @@ if (Q.economic_growth) {
 
 [+ month : month +] [+ year +]
 
-Debug: Voted [+ pps_voted +], Seat [+ pps_sj +], Seat Size [+ sejm_size +]
-
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+PPS position: [? if pps_toleration : toleration ?][? if pps_in_government : in government - ?][? if pps_toleration == 0 and pps_in_government == 0 : opposition ?]
 [? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -51,7 +49,7 @@ Inflation: [+ inflation_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
-[? if kprp_formed: <span style="color: #890000;">**{!<span class="tooltip-text" title="[+ kprp_full_name +]">[+ kprp_name +]</span>!}**</span>: [+ kprp_votes +]% ?] <span style="color: #C62828;">**{!<span class="tooltip-text" title="Polish Socialist Party">PPS</span>!}**</span>: [+ pps_votes +]% <span style="color: #841839;">**{!<span class="tooltip-text" title="National Workers' Party">NPR</span>!}**</span>: [+ npr_votes +]% <span style="color: #80FF00;">**{!<span class="tooltip-text" title="Polish People's Party - Left">PSL-L</span>!}**</span>: [+ psl_l_votes +]% [? if chsr_formed: <span style="color: #43C46C;">**{!<span class="tooltip-text" title="Radical Peasant Party">ChSR</span>!}**</span>: [+ chsr_votes +]% ?] <span style="color: #179900;">**{!<span class="tooltip-text" title="Polish People's Party - Liberation">PSL-W</span>!}**</span>: [+ psl_w_votes +]% <span style="color: #3A6538;">**{!<span class="tooltip-text" title="Polish People's Party - Piast">PSL-P</span>!}**</span>: [+ psl_p_votes +]% <span style="color: #FFF480;">**{!<span class="tooltip-text" title="Ukrainian Parties">PU</span>!}**</span>: [+ pu_votes +]% [? if bmn_formed: <span style="color: #E3AF34;">**{!<span class="tooltip-text" title="Bloc of National Minorities">BMN</span>!}**</span>: [+ bmn_votes +]% ?] <span style="color: #C40000;">**{!<span class="tooltip-text" title="Jewish Parties">PZ</span>!}**</span>: [+ pz_sj +]% <span style="color: #FFD700;">**{!<span class="tooltip-text" title="Polish Centre">PC</span>!}**</span>: [+ pc_sj +]% [? if chzjn_formed: <span style="color: #312E99;">**{!<span class="tooltip-text" title="[+ chzjn_full_name +]">[+ chzjn_name +]</span>!}**</span>: [+ chzjn_votes +]% ?] <span style="color: #909090;">**Others**</span>: [+ other_votes +]%
+[? if kprp_formed: <span style="color: #890000;"><span class="tooltip-text" title="[+ kprp_full_name +]"><b>[+ kprp_name +]</b></span></span>: [+ kprp_sj +]% ?] <span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party"><b>PPS</b></span></span>: [+ pps_sj +]% <span style="color: #841839;"><span class="tooltip-text" title="National Workers' Party"><b>NPR</b></span></span>: [+ npr_sj +]% <span style="color: #80FF00;"><span class="tooltip-text" title="Polish People's Party - Left"><b>PSL-L</b></span></span>: [+ psl_l_sj +]% [? if chsr_formed: <span style="color: #43C46C;"><span class="tooltip-text" title="Radical Peasant Party"><b>ChSR</b></span></span>: [+ chsr_sj +]% ?] <span style="color: #179900;"><span class="tooltip-text" title="Polish People's Party - Liberation"><b>PSL-W</b></span></span>: [+ psl_w_sj +]% <span style="color: #3A6538;"><span class="tooltip-text" title="Polish People's Party - Piast"><b>PSL-P</b></span></span>: [+ psl_p_sj +]% <span style="color: #FFF480;"><span class="tooltip-text" title="Ukrainian Parties"><b>PU</b></span></span>: [+ pu_sj +]% [? if bmn_formed: <span style="color: #E3AF34;"><span class="tooltip-text" title="Bloc of National Minorities"><b>BMN</b></span></span>: [+ bmn_sj +]% ?] <span style="color: #C40000;"><span class="tooltip-text" title="Jewish Parties"><b>PZ</b></span></span>: [+ pz_sj +]% <span style="color: #FFD700;"><span class="tooltip-text" title="Polish Centre"><b>PC</b></span></span>: [+ pc_sj +]% [? if chzjn_formed: <span style="color: #312E99;"><span class="tooltip-text" title="[+ chzjn_full_name +]"><b>[+ chzjn_name +]</b></span></span>: [+ chzjn_sj +]% ?] <span style="color: #909090;"><b>Others</b></span>: [+ other_sj +]%
 
 # = Public Opinion
 
@@ -65,32 +63,33 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span>: [+ pps_relation : relationships +]
 
-<span style="color: #841839;">**{!<span class="tooltip-text" title="National Workers' Party">NPR</span>!}**</span>: [+ npr_relation : relationships +]
+<span style="color: #841839;"><span class="tooltip-text" title="National Workers' Party">**NPR**</span></span>: [+ npr_relation : relationships +]
 
-<span style="color: #80FF00;">**{!<span class="tooltip-text" title="Polish People's Party - Left">PSL-L</span>!}**</span>: [+ psl_l_relation : relationships +]
+<span style="color: #80FF00;"><span class="tooltip-text" title="Polish People's Party Liberation">**PSL-L**</span></span>: [+ psl_l_relation : relationships +]
 
 [? if chsr_formed:
-<span style="color: #43C46C;">**{!<span class="tooltip-text" title="Radical Peasant Party">ChSR</span>!}**</span>: [+ chsr_relation : relationships +]
+<span style="color: #43C46C;"><span class="tooltip-text" title="Christian Peasant Party">**CHSR**</span></span>: [+ chsr_relation : relationships +]
 ?]
 
-<span style="color: #179900;">**{!<span class="tooltip-text" title="Polish People's Party - Liberation">PSL-W</span>!}**</span>: [+ psl_w_relation : relationships +]
+<span style="color: #179900;"><span class="tooltip-text" title="Polish People's Party Wyzwolenie">**PSL-W**</span></span>: [+ psl_w_relation : relationships +]
 
-<span style="color: #3A6538;">**{!<span class="tooltip-text" title="Polish People's Party - Piast">PSL-P</span>!}**</span>: [+ psl_p_relation : relationships +]
+<span style="color: #3A6538;"><span class="tooltip-text" title="Polish People's Party Piast">**PSL-Piast**</span></span>: [+ psl_p_relation : relationships +]
 
-<span style="color: #FFF480;">**{!<span class="tooltip-text" title="Ukrainian Parties">PU</span>!}**</span>: [+ pu_relation : relationships +]
+<span style="color: #FFF480;"><span class="tooltip-text" title="Ukrainian Parties">**PU**</span></span>: [+ pu_relation : relationships +]
 
 [? if bmn_formed:
-<span style="color: #E3AF34;">**{!<span class="tooltip-text" title="Bloc of National Minorities">BMN</span>!}**</span>: [+ bmn_relation : relationships +]
+<span style="color: #E3AF34;"><span class="tooltip-text" title="Bloc of National Minorities">**BMN**</span></span>: [+ bmn_relation : relationships +]
 ?]
 
-<span style="color: #C40000;">**{!<span class="tooltip-text" title="Jewish Parties">PZ</span>!}**</span>: [+ pz_relation : relationships +]
+<span style="color: #C40000;"><span class="tooltip-text" title="Poale Zion">**PZ**</span></span>: [+ pz_relation : relationships +]
 
-<span style="color: #FFD700;">**{!<span class="tooltip-text" title="Polish Centre">PC</span>!}**</span>: [+ pc_relation : relationships +]
+<span style="color: #FFD700;"><span class="tooltip-text" title="Communist Party">**PC**</span></span>: [+ pc_relation : relationships +]
 
 [? if chzjn_formed:
-<span style="color: #312E99;">**{!<span class="tooltip-text" title="[+ chzjn_full_name +]">[+ chzjn_name +]</span>!}**</span>: [+ chzjn_relation : relationships +]
+<span style="color: #312E99;"><span class="tooltip-text" title="[+ chzjn_full_name +]">**[+ chzjn_name +]**</span></span>: [+ chzjn_relation : relationships +]
 ?]
 
+<span style="color: #909090;"><span class="tooltip-text" title="Other Parties">**Others**</span></span>: [+ other_relation : relationships +]
 = Internal Factions of the SPD
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
@@ -162,38 +161,38 @@ Q.socialism_disp = Math.round(Q.socialism);
 (if the election were to be held now):
 
 [? if kprp_formed:
-<span style="color: #890000;">**{!<span class="tooltip-text" title="[+ kprp_full_name +]">[+ kprp_name +]</span>!}**</span>: [+ kprp_votes +]%
+<span style="color: #890000;"><span class="tooltip-text" title="[+ kprp_full_name +]"><b>[+ kprp_name +]</b></span></span>: [+ kprp_votes +]%
 ?]
 
-<span style="color: #C62828;">**{!<span class="tooltip-text" title="Polish Socialist Party">PPS</span>!}**</span>: [+ pps_votes +]%
+<span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party"><b>PPS</b></span></span>: [+ pps_votes +]%
 
-<span style="color: #841839;">**{!<span class="tooltip-text" title="National Workers' Party">NPR</span>!}**</span>: [+ npr_votes +]%
+<span style="color: #841839;"><span class="tooltip-text" title="National Workers' Party"><b>NPR</b></span></span>: [+ npr_votes +]%
 
-<span style="color: #80FF00;">**{!<span class="tooltip-text" title="Polish People's Party - Left">PSL-L</span>!}**</span>: [+ psl_l_votes +]%
+<span style="color: #80FF00;"><span class="tooltip-text" title="Polish People's Party - Left"><b>PSL-L</b></span></span>: [+ psl_l_votes +]%
 
 [? if chsr_formed:
-<span style="color: #43C46C;">**{!<span class="tooltip-text" title="Radical Peasant Party">ChSR</span>!}**</span>: [+ chsr_votes +]%
+<span style="color: #43C46C;"><span class="tooltip-text" title="Radical Peasant Party"><b>ChSR</b></span></span>: [+ chsr_votes +]%
 ?]
 
-<span style="color: #179900;">**{!<span class="tooltip-text" title="Polish People's Party - Liberation">PSL-W</span>!}**</span>: [+ psl_w_votes +]%
+<span style="color: #179900;"><span class="tooltip-text" title="Polish People's Party - Liberation"><b>PSL-W</b></span></span>: [+ psl_w_votes +]%
 
-<span style="color: #3A6538;">**{!<span class="tooltip-text" title="Polish People's Party - Piast">PSL-P</span>!}**</span>: [+ psl_p_votes +]%
+<span style="color: #3A6538;"><span class="tooltip-text" title="Polish People's Party - Piast"><b>PSL-P</b></span></span>: [+ psl_p_votes +]%
 
-<span style="color: #FFF480;">**{!<span class="tooltip-text" title="Ukrainian Parties">PU</span>!}**</span>: [+ pu_votes +]%
+<span style="color: #FFF480;"><span class="tooltip-text" title="Ukrainian Parties"><b>PU</b></span></span>: [+ pu_votes +]%
 
 [? if bmn_formed:
-<span style="color: #E3AF34;">**{!<span class="tooltip-text" title="Bloc of National Minorities">BMN</span>!}**</span>: [+ bmn_votes +]%
+<span style="color: #E3AF34;"><span class="tooltip-text" title="Bloc of National Minorities"><b>BMN</b></span></span>: [+ bmn_votes +]%
 ?]
 
-<span style="color: #C40000;">**{!<span class="tooltip-text" title="Jewish Parties">PZ</span>!}**</span>: [+ pz_sj +]%
+<span style="color: #C40000;"><span class="tooltip-text" title="Jewish Parties"><b>PZ</b></span></span>: [+ pz_votes +]%
 
-<span style="color: #FFD700;">**{!<span class="tooltip-text" title="Polish Centre">PC</span>!}**</span>: [+ pc_sj +]%
+<span style="color: #FFD700;"><span class="tooltip-text" title="Polish Centre"><b>PC</b></span></span>: [+ pc_votes +]%
 
 [? if chzjn_formed:
-<span style="color: #312E99;">**{!<span class="tooltip-text" title="[+ chzjn_full_name +]">[+ chzjn_name +]</span>!}**</span>: [+ chzjn_votes +]%
+<span style="color: #312E99;"><span class="tooltip-text" title="[+ chzjn_full_name +]"><b>[+ chzjn_name +]</b></span></span>: [+ chzjn_votes +]%
 ?]
 
-<span style="color: #909090;">**Others**</span>: [+ other_votes +]%
+<span style="color: #909090;"><b>Others</b></span>: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
