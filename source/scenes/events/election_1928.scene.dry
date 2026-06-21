@@ -21,7 +21,7 @@ on-arrival: {!
 var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_sj'] = Q[party + '_sj'];
-    if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned'] || Q[party + 'boycott']) {
+    if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned'] || Q[party + '_boycott']) {
         Q[party + '_sj'] = 0;
     } else {
         Q[party + '_sj'] = Q[party + '_votes'];
@@ -85,7 +85,14 @@ for (var party of Q.parties) {
 Q.election_records.push(election_result);
 !}
 on-display: {!
-data = [];
+data = [
+    {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Math.round(Q.pps_sj*Q.sejm_size),
+    }
+];
 
 if (Q.kprp_formed && Q.kprp_sj) {
     data.push({
