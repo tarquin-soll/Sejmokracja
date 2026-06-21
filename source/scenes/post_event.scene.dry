@@ -14,6 +14,8 @@ for (var c of Q.classes) {
 // parties formed
 if (Q.year == 1918 && Q.month == 12) {
     Q.kprp_formed = 1;
+    Q.parties.push('kprp');
+    Q.parties.push('chzjn');
     Q.chzjn_formed = 1;
     Q.peasants_chzjn = 30;
     Q.upper_chzjn = 70;
