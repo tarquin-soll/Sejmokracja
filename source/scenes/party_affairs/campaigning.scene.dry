@@ -4,7 +4,7 @@ on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
 card-image: img/car.jpg
-frequency: 100
+frequency: 80
 tags: party_affairs
 
 = Campaigning
@@ -31,6 +31,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+go-to: campaign
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
 
@@ -41,6 +42,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+go-to: campaign
 
 We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
@@ -51,6 +53,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+go-to: campaign
 
 We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
@@ -61,6 +64,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: peasants_pps += 5*(1-dissent); peasants_pps -= 3*(1-dissent) if rural_policy <= 2; resources -= 1; peasants_pps += 2*(1-dissent) if rural_policy >= 4
+go-to: campaign
 
 We have increased our campaigning among the peasant demographic. [? if rural_policy <= 2 : We haven't historically campaigned towards the peasants, and we haven't shown commitments towards them in our policies so they do not trust us yet. ?][? if rural_policy >= 4 : Our rural policies have made it easier for us to build support among farmers. ?]
 
@@ -71,6 +75,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+go-to: campaign
 
 We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
 
@@ -81,6 +86,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
 on-arrival: minority_pps += 6*(1-dissent); resources -= 1
+go-to: campaign
 
 We have increased our campaigning among Minorities.
 
