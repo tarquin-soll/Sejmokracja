@@ -15,6 +15,13 @@ for (var c of Q.classes) {
 if (Q.year == 1918 && Q.month == 12) {
     Q.kprp_formed = 1;
     Q.chzjn_formed = 1;
+    Q.peasants_chzjn = 30;
+    Q.upper_chzjn = 70;
+    Q.middle_chzjn = 30;
+    Q.peasants_kprp = 4;
+    Q.workers_kprp = 35;
+    Q.unemployed_kprp = 30;
+    Q.minority_kprp = 5;
 }
 if (Q.year == 1919 && Q.month == 1) {
     Q.chsr_formed = 1;

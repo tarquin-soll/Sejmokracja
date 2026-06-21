@@ -23,19 +23,19 @@ Resources available: [+ resources +]
 PPS position: [? if pps_toleration : toleration ?][? if pps_in_government : in government - ?][? if pps_toleration == 0 and pps_in_government == 0 : opposition ?]
 [? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if pps_in_government and not in_pps_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if not pps_in_government and government: Government Strife: [+ other_coalion_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+[? if president_constitution : President: [+ president +] ?]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
-Ssjm composition:
+Sejm composition:
 
 [? if pps_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -90,6 +90,7 @@ Economic growth: [+ economic_growth_2 +]%
 ?]
 
 <span style="color: #909090;"><span class="tooltip-text" title="Other Parties">**Others**</span></span>: [+ other_relation : relationships +]
+
 = Internal Factions of the SPD
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]

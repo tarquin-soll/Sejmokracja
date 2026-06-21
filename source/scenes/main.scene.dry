@@ -41,7 +41,7 @@ max-cards: 4
 if year == 1918 and month == 12 : An Electoral Commttee has been formed, Its members included: the National Democratic Party, the Christian Democratic Party, the Polish Progressive Party, the National Union, and the National Suffrage Action of Polish Women.<br><br>
 After a few weeks, the following also joined: the Real Politics Party, the National Rebirth Party, the National Labor Party, the Political Circle of Workers' Associations, the Association of Christian Workers and the Economic Independence Union.<br><br>
 Additionally a far left party has been formed,<span style="color: #890000;">**The Communist Workers' Party of Poland</span> was formed after the following the merger of the <span style="color: #855000;">Social Democracy of the Kingdom of Poland and Lithuania (SDKPiL)</span><br><br>
-and <span style="color: #D03030;">PPS-Left</span>, the <span style="color: #890000;">Communist Workers' Party of Poland (KPRP) has been formally established. Additionally Party has decided to Boycott the January Elections.
+and <span style="color: #D03030;">PPS-Left</span>, the <span style="color: #890000;">Communist Workers' Party of Poland (KPRP)</span> has been formally established. Additionally Party has decided to Boycott the January Elections.
 ?]
 
 - @party
@@ -52,15 +52,15 @@ and <span style="color: #D03030;">PPS-Left</span>, the <span style="color: #8900
 
 @party
 title: Party Affairs
-card-image: img/Vorwaerts_nr_1.png
+card-image: img/Robotnik.jpg
 is-deck: true
 
 - #party_affairs
 
 @govt
 title: Government Affairs
-view-if: time >= 6
-card-image: img/reichstag_2.jpg
+view-if: time >= 4
+card-image: img/Sejm.jpg
 is-deck: true
 
 - #govt_affairs

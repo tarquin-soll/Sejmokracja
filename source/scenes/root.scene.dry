@@ -358,6 +358,8 @@ Q.pps_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
+Q.in_pps_majority = 0;
+Q.govenment = 0;
 
 // ministries - which parties control the ministries?
 // https://pl.wikipedia.org/wiki/Rz%C4%85d_Ignacego_Jana_Paderewskiego
