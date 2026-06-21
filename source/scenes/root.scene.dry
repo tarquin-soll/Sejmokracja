@@ -230,6 +230,10 @@ Q.chzjn_full_name = "The National Electoral Committee of Democratic Parties";
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
+Q.peasants_kprp = 0;
+Q.peasants_chsr = 0;
+Q.peasants_bmn = 0;
+Q.peasants_chzjn = 0;
 Q.peasants_pps = 17;
 Q.peasants_npr = 10;
 Q.peasants_psl_l = 10;
@@ -240,6 +244,10 @@ Q.peasants_pz = 0;
 Q.peasants_pc = 3;
 Q.peasants_other = 0;
 
+Q.workers_kprp = 0;
+Q.workers_chsr = 0;
+Q.workers_bmn = 0;
+Q.workers_chzjn = 0;
 Q.workers_pps = 52;
 Q.workers_npr = 33;
 Q.workers_psl_l = 6;
@@ -250,6 +258,10 @@ Q.workers_pz = 0;
 Q.workers_pc = 0;
 Q.workers_other = 0;
 
+Q.middle_kprp = 0;
+Q.middle_chsr = 0;
+Q.middle_bmn = 0;
+Q.middle_chzjn = 0;
 Q.middle_pps = 10;
 Q.middle_npr = 0;
 Q.middle_psl_l = 0;
@@ -260,6 +272,10 @@ Q.middle_pz = 0;
 Q.middle_pc = 0;
 Q.middle_other = 0;
 
+Q.upper_kprp = 0;
+Q.upper_chsr = 0;
+Q.upper_bmn = 0;
+Q.upper_chzjn = 0;
 Q.upper_pps = 0;
 Q.upper_npr = 0;
 Q.upper_psl_l = 0;
@@ -270,6 +286,10 @@ Q.upper_pz = 7;
 Q.upper_pc =  11;
 Q.upper_other =  32;
 
+Q.unemployed_kprp = 0;
+Q.unemployed_chsr = 0;
+Q.unemployed_bmn = 0;
+Q.unemployed_chzjn = 0;
 Q.unemployed_pps = 20;
 Q.unemployed_npr = 24;
 Q.unemployed_psl_l = 0;
@@ -280,6 +300,10 @@ Q.unemployed_pz = 0;
 Q.unemployed_pc = 0;
 Q.unemployed_other = 1;
 
+Q.minority_kprp = 0;
+Q.minority_chsr = 0;
+Q.minority_bmn = 0;
+Q.minority_chzjn = 0;
 Q.minority_pps = 21;
 Q.minority_npr = 6;
 Q.minority_psl_l = 8;
