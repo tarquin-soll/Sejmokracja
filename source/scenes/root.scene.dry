@@ -217,6 +217,10 @@ Q.bmn_formed = 0;
 Q.chsr_formed = 0;
 Q.chzjn_formed = 0;
 
+Q.kprp_boycott = 1;
+
+Q.sejm_size = 3.91;
+
 // for changing parties name
 Q.kprp_name = "KPRP";
 Q.chzjn_name = "NKWSD";
@@ -287,29 +291,33 @@ Q.minority_pc = 2;
 Q.minority_other = 14;
 
 // Current Sejm Composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
+Q.kprp_sj = 0;
+Q.pps_sj = 0;
+Q.npr_sj = 0;
+Q.psl_l_sj = 0;
+Q.psl_w_sj = 0;
+Q.chsr_sj = 0;
+Q.psl_p_sj = 0;
+Q.pu_sj = 0;
+Q.bmn_sj = 0;
+Q.pz_sj = 0;
+Q.pc_sj = 0;
+Q.chzjn_sj = 0;
+Q.other_sj = 0;
 
-// diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+Q.old_kprp_sj = 0;
+Q.old_pps_sj = 0;
+Q.old_npr_sj = 0;
+Q.old_psl_l_sj = 0;
+Q.old_psl_w_sj = 0;
+Q.old_chsr_sj = 0;
+Q.old_psl_p_sj = 0;
+Q.old_pu_sj = 0;
+Q.old_bmn_sj = 0;
+Q.old_pz_sj = 0;
+Q.old_pc_sj = 0;
+Q.old_chzjn_sj = 0;
+Q.old_other_sj = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -357,13 +365,21 @@ Q.minority_government = 0;
 Q.prime_minister_party = 'Vacant';
 Q.prime_minister = 'Vacant';
 Q.labor_minister_party = 'Vacant';
+Q.labor_minister = 'Vacant';
 Q.treasury_minister_party = 'Vacant';
+Q.treasury_minister = 'Vacant';
 Q.agriculture_minister_party = 'Vacant';
+Q.agriculture_minister = 'Vacant';
 Q.exterior_minister_party = 'Vacant';
 Q.exterior_minister = 'Vacant';
 Q.interior_minister_party = 'Vacant'
+Q.interior_minister = 'Vacant';
 Q.military_minister_party = 'Vacant';
+Q.military_minister = 'Vacant';
 Q.justice_minister_party = 'Vacant';
+Q.justice_minister = 'Vacant';
+Q.education_minister_party = 'Vacant';
+Q.education_minister = 'Vacant';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;

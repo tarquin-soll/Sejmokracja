@@ -575,6 +575,9 @@ table {
 .seat.chzjn {
     fill: #312E99;
 }
+.seat.other {
+    fill: #909090;
+}
 
 .tooltip-text {
     text-decoration: underline;
