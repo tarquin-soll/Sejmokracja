@@ -230,31 +230,31 @@ Q.chzjn_full_name = "The National Electoral Committee of Democratic Parties";
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
-Q.peasants_pps = 0;
-Q.peasants_npr = 0;
+Q.peasants_pps = 17;
+Q.peasants_npr = 10;
 Q.peasants_psl_l = 10;
-Q.peasants_psl_w = 67;
+Q.peasants_psl_w = 40;
 Q.peasants_psl_p = 20;
 Q.peasants_pu = 0;
 Q.peasants_pz = 0;
-Q.peasants_pc = 0;
+Q.peasants_pc = 3;
 Q.peasants_other = 0;
 
-Q.workers_pps = 67;
-Q.workers_npr = 0;
-Q.workers_psl_l = 0;
-Q.workers_psl_w = 0;
-Q.workers_psl_p = 6;
-Q.workers_pu = 7;
+Q.workers_pps = 52;
+Q.workers_npr = 33;
+Q.workers_psl_l = 6;
+Q.workers_psl_w = 10;
+Q.workers_psl_p = 5;
+Q.workers_pu = 0;
 Q.workers_pz = 0;
 Q.workers_pc = 0;
 Q.workers_other = 0;
 
-Q.middle_pps = 0;
+Q.middle_pps = 10;
 Q.middle_npr = 0;
 Q.middle_psl_l = 0;
-Q.middle_psl_w = 0;
-Q.middle_psl_p = 0;
+Q.middle_psl_w = 50;
+Q.middle_psl_p = 40;
 Q.middle_pu = 0;
 Q.middle_pz = 0;
 Q.middle_pc = 0;
@@ -263,12 +263,12 @@ Q.middle_other = 0;
 Q.upper_pps = 0;
 Q.upper_npr = 0;
 Q.upper_psl_l = 0;
-Q.upper_psl_w = 0;
-Q.upper_psl_p = 0;
-Q.upper_pu = 0;
-Q.upper_pz = 0;
-Q.upper_pc =  0;
-Q.upper_other =  0;
+Q.upper_psl_w = 3;
+Q.upper_psl_p = 42;
+Q.upper_pu = 6;
+Q.upper_pz = 7;
+Q.upper_pc =  11;
+Q.upper_other =  32;
 
 Q.unemployed_pps = 20;
 Q.unemployed_npr = 24;
@@ -278,17 +278,17 @@ Q.unemployed_psl_p = 30;
 Q.unemployed_pu = 0;
 Q.unemployed_pz = 0;
 Q.unemployed_pc = 0;
-Q.unemployed_other = 0;
+Q.unemployed_other = 1;
 
-Q.minority_pps = 4;
-Q.minority_npr = 1;
-Q.minority_psl_l = 3;
-Q.minority_psl_w = 6;
-Q.minority_psl_p = 5;
-Q.minority_pu = 0;
-Q.minority_pz = 65;
-Q.minority_pc = 2;
-Q.minority_other = 14;
+Q.minority_pps = 21;
+Q.minority_npr = 6;
+Q.minority_psl_l = 8;
+Q.minority_psl_w = 16;
+Q.minority_psl_p = 15;
+Q.minority_pu = 5;
+Q.minority_pz = 10;
+Q.minority_pc = 25;
+Q.minority_other = 4;
 
 // Current Sejm Composition
 Q.kprp_sj = 0;
