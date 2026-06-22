@@ -3,7 +3,7 @@ new-page: true
 tags: event
 priority: -1
 view-if: (year = next_election_year and month >= next_election_month) or (year > next_election_year)
-on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 5; n_elections += 1; next_election_time = time + 60;
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 5; n_elections += 1; next_election_time = time + 60; government = 0;
 set-jump: post_election_1928
 face-image: img/Rothe_Wahlen_1903.jpg
 
@@ -223,25 +223,31 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DD0000; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sj +]%** {!</td><td>!} **[+ str_change_pps +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if kprp_formed : {!<tr><td><div class="box" style='background-color:#890000'> </div> !}[+ kprp_name +]: {!</td><td>!} [+ kprp_sj +]% {!</td><td>!} [+ str_change_kprp +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#841839'> </div> !} NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#80FF00'> </div> !} PSL-L: {!</td><td>!} [+ psl_l_sj +]% {!</td><td>!} [+ str_change_psl_l +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+[? if chsr_formed : {!<tr><td><div class="box" style='background-color:#43C46C'> </div> !} ChSR: {!</td><td>!} [+ chsr_sj +]% {!</td><td>!} [+ str_change_chsr +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#179900'> </div> !} PSL-W: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [+ str_change_psl_w +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !} PSL-P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [+ str_change_psl_p +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFF480'> </div> !} PU: {!</td><td>!} [+ pu_sj +]% {!</td><td>!} [+ str_change_pu +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+[? if bmn_formed : {!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !} BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [+ str_change_bmn +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#C40000'> </div> !} PZ: {!</td><td>!} [+ pz_sj +]% {!</td><td>!} [+ str_change_pz +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FFD700'> </div> !} PC: {!</td><td>!} [+ pc_sj +]% {!</td><td>!} [+ str_change_pc +] {!</td></tr>!}
+
+[? if chzjn_formed : {!<tr><td><div class="box" style='background-color:#312E99'> </div> !} [+ chzjn_name +]: {!</td><td>!} [+ chzjn_sj +]% {!</td><td>!} [+ str_change_chzjn +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#909090'> </div> !} Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
