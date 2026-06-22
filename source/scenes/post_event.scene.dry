@@ -17,9 +17,9 @@ if (Q.year == 1918 && Q.month == 12) {
     Q.parties.push('kprp');
     Q.parties.push('chzjn');
     Q.chzjn_formed = 1;
-    Q.peasants_chzjn = 30;
-    Q.upper_chzjn = 70;
-    Q.middle_chzjn = 30;
+    Q.peasants_chzjn = 65;
+    Q.upper_chzjn = 80;
+    Q.middle_chzjn = 35;
     Q.peasants_kprp = 4;
     Q.workers_kprp = 35;
     Q.unemployed_kprp = 30;
@@ -27,6 +27,9 @@ if (Q.year == 1918 && Q.month == 12) {
 }
 if (Q.year == 1919 && Q.month == 1) {
     Q.chsr_formed = 1;
+}
+if (Q.year == 1919 && Q.month >= 3){
+    Q.parties_push('chsr')
 }
 
 Q.pro_republic = Math.round(Q.pro_republic);

@@ -236,13 +236,13 @@ Q.peasants_bmn = 0;
 Q.peasants_chzjn = 0;
 Q.peasants_pps = 17;
 Q.peasants_npr = 10;
-Q.peasants_psl_l = 10;
-Q.peasants_psl_w = 40;
+Q.peasants_psl_l = 7;
+Q.peasants_psl_w = 35;
 Q.peasants_psl_p = 20;
 Q.peasants_pu = 0;
 Q.peasants_pz = 0;
-Q.peasants_pc = 3;
-Q.peasants_other = 0;
+Q.peasants_pc = 5;
+Q.peasants_other = 2;
 
 Q.workers_kprp = 0;
 Q.workers_chsr = 0;
