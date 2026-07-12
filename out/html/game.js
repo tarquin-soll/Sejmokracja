@@ -165,6 +165,19 @@
       return text;
   };
 
+  window.updateSidebarRight = function () {
+    $('#qualities_right').empty();
+
+    var scene = dendryUI.game.scenes[window.statusTabRight];
+    
+    dendryUI.dendryEngine._runActions(scene.onArrival);
+
+    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+
+    $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
+
+  };
+
   // This function allows you to do something in response to signals.
   window.handleSignal = function(signal, event, scene_id) {
   };
@@ -195,17 +208,33 @@
           return;
       }
       var tabButton = document.getElementById(tabId);
-      var tabButtons = document.getElementsByClassName('tab_button');
-      for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+      if (tabId.endsWith('_right')) {
+         var rightTabs = document.querySelectorAll('#stats_sidebar_right .tab_button'); 
+         for (var i = 0; i < rightTabs.length; i++) {
+            rightTabs[i].classList.remove('active');
+            }
+
+         tabButton.classList.add('active');
+          window.statusTabRight = newTab;
+          window.updateSidebarRight();
+                                                                                                                          } else {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              var leftTabs = document.querySelectorAll('#stats_sidebar .tab_button');
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        for (var i = 0; i < leftTabs.length; i++) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              leftTabs[i].classList.remove('active');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  tabButton.classList.add('active');
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                window.statusTab = newTab;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      window.updateSidebar();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          };
       }
-      tabButton.className += ' active';
-      window.statusTab = newTab;
-      window.updateSidebar();
-  };
 
   window.onDisplayContent = function() {
       window.updateSidebar();
+      window.updateSidebarRight();
   };
 
   /*
@@ -242,6 +271,7 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
+  window.statusTabRight = "status_right";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
