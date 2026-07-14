@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Sejm Elections
 new-page: true
 tags: event
 priority: -1
@@ -25,78 +25,78 @@ view-if: in_emergency_government == 1 and president == "Braun" and not president
 
 Since we are currently ruling as part of an emergency government, we may use quasi-constitutional trickery to significantly delay these elections, and continue governing via Article 48. This is likely to be extremely unpopular both with our base and with the other parties. However, this may be necessary to prevent the extremists from gaining power.
 
-- @cancel_elections_2: Yes, do it.
-- @election_algorithm: No, let's hold the elections.
+- @election_algorithm: May we do our best...
 
-@cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; dvp_relation -= 8; z_relation -= 8; ddp_relation -= 10; kpd_relation -= 8; coup_progress += 2; workers_spd -= 4; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; catholics_spd -= 5; unemployed_spd -= 5; coup_progress += 2 if nsdap_normalized >= 0.3; coup_progress += 2 if nsdap_normalized + dnvp_normalized >= 0.5; sa_strength += 100 if coup_progress >= 7; sh_strength += 100 if coup_progress >= 7
-achievement: ausnahmezustand
-
-Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
-
-Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
-// set old results
-// election threshold constitutional reform
-// banning parties
 var new_party_sum = 0;
 for (var party of Q.parties) {
-    Q['old_' + party + '_r'] = Q[party + '_r'];
-    if (Q.constitutional_reform > 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned']) {
-            Q[party + '_r'] = 0;
-        } else {
-            Q[party + '_r'] = Q[party + '_votes'];
-        }
-        new_party_sum += Q[party + '_r'];
+    Q['old_' + party + '_sj'] = Q[party + '_sj'];
+    if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned'] || Q[party + '_boycott']) {
+        Q[party + '_sj'] = 0;
     } else {
-        Q[party + '_r'] = Q[party + '_votes'];
+        Q[party + '_sj'] = Q[party + '_votes'];
     }
-    // if we use decimals, then we might want to truncate the numbers
-    if (Q.use_decimals) {
-        Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
-    }  else {
-            Q[party + '_r_disp'] = Q[party+'_r'];
-    }
-    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
-    var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
-    Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
-}
-// calculate new party sum if electoral reform
-if (Q.electoral_threshold && Q.electoral_threshold > 0) {
-    for (var party of Q.parties) {
-        if (Q[party + '_r'] > 0) {
-            if (Q.use_decimals) {
-                Q[party + '_r'] = Math.round(Q[party + '_r']*1000/new_party_sum)/10;
-            } else {
-                Q[party + '_r'] = Math.round(Q[party + '_r']*100/new_party_sum);
-            }
-        }
-        if (Q.use_decimals) {
-            Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
-        } else {
-            Q[party + '_r_disp'] = Q[party+'_r'];
-        }
-        Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
-        var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
-        Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
-    }
+    new_party_sum += Q[party + '_sj'];
+    Q[party + '_sj_disp'] = Q[party + '_sj'].toFixed(1);
+    Q['change_' + party + '_sj'] = Q[party + '_sj'] - Q['old_' + party + '_sj'];
+    var sign = Q['change_' + party + '_sj'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + party + '_sj'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+    Q['str_change_' + party] = sign + Q['change_' + party + '_sj'].toFixed(1);
 }
 
-// get change arrows and signs
+Q.leverage = Q.pps_sj;
 
+// Reset government and ministers
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
-}
+// pissed off being coalition dissent
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
-}
+Q.kpp_pissedoff -= 1;
+Q.nzr_pissedoff -= 2;
+Q.psl_l_pissedoff -= 2;
+Q.psl_w_pissedoff -= 2;
+Q.psl_p_pissedoff -= 1;
+Q.bmn_pissedoff -= 1;
+Q.chzjn_pissedoff -= 1;
+Q.other_pissedoff -= 1;
+
+Q.other_coalition_dissent = 0;
+
+Q.kpp_in_government = 0;
+Q.pps_in_government = 0;
+Q.nzr_in_government = 0;
+Q.psl_l_in_government = 0;
+Q.psl_w_in_government = 0;
+Q.psl_p_in_government = 0;
+Q.bmn_in_government = 0;
+Q.chzjn_in_government = 0;
+Q.other_in_government = 0;
+
+Q.minority_government = 0;
+Q.pps_toleration = 0;
+
+Q.prime_minister_party = 'Vacant';
+Q.prime_minister = 'Vacant';
+Q.labor_minister_party = 'Vacant';
+Q.labor_minister = 'Vacant';
+Q.treasury_minister_party = 'Vacant';
+Q.treasury_minister = 'Vacant';
+Q.agriculture_minister_party = 'Vacant';
+Q.agriculture_minister = 'Vacant';
+Q.exterior_minister_party = 'Vacant';
+Q.exterior_minister = 'Vacant';
+Q.interior_minister_party = 'Vacant'
+Q.interior_minister = 'Vacant';
+Q.military_minister_party = 'Vacant';
+Q.military_minister = 'Vacant';
+Q.justice_minister_party = 'Vacant';
+Q.justice_minister = 'Vacant';
+Q.education_minister_party = 'Vacant';
+Q.education_minister = 'Vacant';
 
 // coalitions
 Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
@@ -115,35 +115,6 @@ Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
-
-if (Q.kpd_relation >= 30) {
-    Q.weimar_coalition += Q.sapd_r;
-}
-
-Q.leverage = Q.spd_r;
-
-Q.grand_coalition_failed = 0;
-// Reset government and ministers... Based on Brüning's 1930 govt
-Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
-Q.spd_in_government = 0;
-Q.in_weimar_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_left_front = 0;
-Q.in_popular_front = 0;
-Q.in_emergency_government = 0;
-Q.in_minority_government = 0;
-Q.in_unity_government = 0;
-Q.spd_toleration = 0;
-Q.spd_caretaker = 0;
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
-Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister_party = Q.ddp_name;
-Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
 
 // reset KPD goals
 Q.kpd_goals_seen = 0;
@@ -168,8 +139,6 @@ Q.reichswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
-Q.z_minus_bvp_r = Q.z_r - 3;
-
 // understanding the enemy
 if (Q.nsdap_r >= 15) {
     Q.understanding_enemy_timer = 2;
@@ -185,70 +154,54 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
+        "id": "kpp",
+        "legend": "KPP",
+        "name": "KPP",
+        "seats": Math.round(Q.kpp_sj*4.44),
     }
-];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
-data = data.concat([
     {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
+        "id": "pps",
+        "legend": "PPS",
+        "name": "pps",
+        "seats": Math.round(Q.pps_sj*4.44),
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "id": "psl_l",
+        "legend": "PSL_L",
+        "name": "PSL-L",
+        "seats": Math.round(Q.psl_l_sj*4.44),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "id": "psl_w",
+        "legend": "PSL_W",
+        "name": "PSL-W",
+        "seats": Math.round(Q.psl_w_sj*4.44),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
+        "id": "psl_p",
+        "legend": "PSL_P",
+        "name": "PSL-P",
+        "seats": Math.round(Q.psl_p_sj*4.44),
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
+        "id": "bmn",
+        "legend": "BMN",
+        "name": "BMN",
+        "seats": Math.round(Q.pps_sj*4.44),
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Math.round(Q.other_sj*5),
     },
     {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
+        "id": "chzjn",
+        "legend": "CHZJN",
+        "name": "CHZJN",
+        "seats": Math.round(Q.chzjn_sj*5),
     },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
-    },
-]);
+];
 
 if (window && d3) {
     var width = 500; 
@@ -296,7 +249,7 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
-**Potential coalitions:**
+**Potential coalition partners:**
 
 Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
 
