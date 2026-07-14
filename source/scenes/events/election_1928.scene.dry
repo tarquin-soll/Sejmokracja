@@ -79,7 +79,7 @@ Q.agriculture_minister_party = 'Vacant';
 Q.agriculture_minister = 'Vacant';
 Q.exterior_minister_party = 'Vacant';
 Q.exterior_minister = 'Vacant';
-Q.interior_minister_party = 'Vacant'
+Q.interior_minister_party = 'Vacant';
 Q.interior_minister = 'Vacant';
 Q.military_minister_party = 'Vacant';
 Q.military_minister = 'Vacant';
@@ -148,11 +148,11 @@ data = [
         "legend": "KPP",
         "name": "KPP",
         "seats": Math.round(Q.kpp_sj*4.44),
-    }
+    },
     {
         "id": "pps",
         "legend": "PPS",
-        "name": "pps",
+        "name": "PPS",
         "seats": Math.round(Q.pps_sj*4.44),
     },
     {
@@ -177,7 +177,7 @@ data = [
         "id": "bmn",
         "legend": "BMN",
         "name": "BMN",
-        "seats": Math.round(Q.pps_sj*4.44),
+        "seats": Math.round(Q.bmn_sj*4.44),
     },
     {
         "id": "other",
