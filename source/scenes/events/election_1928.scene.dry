@@ -13,17 +13,7 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
-
-- @election_algorithm: May we do our best...
-- @cancel_elections
-
-@cancel_elections
-title: We cannot hold the elections now. Cancel the elections.
-subtitle: This is an anti-democratic move that may backfire.
-view-if: in_emergency_government == 1 and president == "Braun" and not presidential_powers
-
-Since we are currently ruling as part of an emergency government, we may use quasi-constitutional trickery to significantly delay these elections, and continue governing via Article 48. This is likely to be extremely unpopular both with our base and with the other parties. However, this may be necessary to prevent the extremists from gaining power.
+The Sejm elections are to be held now.
 
 - @election_algorithm: May we do our best...
 
@@ -167,19 +157,19 @@ data = [
     },
     {
         "id": "psl_l",
-        "legend": "PSL_L",
+        "legend": "PSL-L",
         "name": "PSL-L",
         "seats": Math.round(Q.psl_l_sj*4.44),
     },
     {
         "id": "psl_w",
-        "legend": "PSL_W",
+        "legend": "PSL-W",
         "name": "PSL-W",
         "seats": Math.round(Q.psl_w_sj*4.44),
     },
     {
         "id": "psl_p",
-        "legend": "PSL_P",
+        "legend": "PSL-P",
         "name": "PSL-P",
         "seats": Math.round(Q.psl_p_sj*4.44),
     },
@@ -193,13 +183,13 @@ data = [
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_sj*5),
+        "seats": Math.round(Q.other_sj*4.44),
     },
     {
         "id": "chzjn",
         "legend": "CHZJN",
         "name": "CHZJN",
-        "seats": Math.round(Q.chzjn_sj*5),
+        "seats": Math.round(Q.chzjn_sj*4.44),
     },
 ];
 
