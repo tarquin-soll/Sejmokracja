@@ -208,31 +208,33 @@
           return;
       }
       var tabButton = document.getElementById(tabId);
-      if (tabId.endsWith('_right')) {
-         var rightTabs = document.querySelectorAll('#stats_sidebar_right .tab_button'); 
-         for (var i = 0; i < rightTabs.length; i++) {
-            rightTabs[i].classList.remove('active');
-            }
-         tabButton.classList.add('active');
-          window.statusTabRight = newTab;
-          window.updateSidebarRight();
-          } else {
-                                                                                                                                                                                                                                                                                                                                                                                                                                      var leftTabs = document.querySelectorAll('#stats_sidebar .tab_button');
-        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       for (var i = 0; i < leftTabs.length; i++) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              leftTabs[i].classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  tabButton.classList.add('active');
+          if (tabId.endsWith('_right')) {
+                  var rightTabs = document.querySelectorAll('#stats_sidebar_right .tab_button');
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  window.statusTab = newTab;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          window.updateSidebar();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          };
-      }
+                          for (var i = 0; i < rightTabs.length; i++) {
+                                      rightTabs[i].classList.remove('active');
+                                              }
 
+                                                      tabButton.classList.add('active');
+
+                                                              window.statusTabRight = newTab;
+                                                                      window.updateSidebarRight();
+                                                                          } else {
+                                                                                  var leftTabs = document.querySelectorAll('#stats_sidebar .tab_button');
+
+                                                                                          for (var i = 0; i < leftTabs.length; i++) {
+                                                                                                      leftTabs[i].classList.remove('active');
+                                                                                                              }
+
+                                                                                                                      tabButton.classList.add('active');
+
+                                                                                                                              window.statusTab = newTab;
+                                                                                                                                      window.updateSidebar();
+                                                                                                                                          }
+                                                                                                                                          };
   window.onDisplayContent = function() {
-      window.updateSidebarRight();
+    window.updateSidebarRight();
       window.updateSidebar();
   };
 
