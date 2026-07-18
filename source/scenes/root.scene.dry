@@ -235,22 +235,58 @@ Q.workers_psl_l = 0;
 Q.workers_psl_w = 5;
 Q.workers_psl_p = 4;
 Q.workers_bmn = 5;
-Q.workers_zln = 0;
-Q.workers_pschd = 0;
-Q.workers_otherright = 0;
-Q.workers_other = 0;
+Q.workers_zln = 15;
+Q.workers_pschd = 8;
+Q.workers_otherright = 5;
+Q.workers_other = 1;
 
 Q.petit_kpp = 0;
 Q.petit_pps = 0;
-Q.petit_npr = 0;
+Q.petit_npr = 2;
 Q.petit_psl_l = 0;
-Q.petit_psl_w = 0;
-Q.petit_psl_p = 0;
-Q.petit_bmn = 0;
-Q.petit_zln = 0;
-Q.petit_pschd = 0;
-Q.petit_otherright = 0;
-Q.petit_other = 0;
+Q.petit_psl_w = 2;
+Q.petit_psl_p = 20;
+Q.petit_bmn = 2;
+Q.petit_zln = 51;
+Q.petit_pschd = 9;
+Q.petit_otherright = 13;
+Q.petit_other = 1;
+
+Q.bourgeoisie_kpp = 0;
+Q.bourgeoisie_pps = 0;
+Q.bourgeoisis_npr = 0;
+Q.bourgeoisie_psl_l = 0;
+Q.bourgeoisie_psl_w = 0;
+Q.bourgeoisie_psl_p = 3;
+Q.bourgeoisie_bmn = 1;
+Q.bourgeoisie_zln = 80;
+Q.bourgeoisie_pschd = 6;
+Q.bourgeoisie_otherright = 9;
+Q.bourgeoisie_other = 1;
+
+Q.unemployed_kpp = 4.5;
+Q.unemployed_pps = 30;
+Q.unemployed_npr = 10;
+Q.unemployed_psl_l = 0;
+Q.unemployed_psl_w = 10;
+Q.unemployed_psl_p = 6.5;
+Q.unemployed_bmn = 4;
+Q.unemployed_zln = 8;
+Q.unemployed_pschd = 18;
+Q.unemployed_otherright = 3;
+Q.unemployed_other = 6;
+
+Q.minorities_kpp = 0;
+Q.minirities_pps = 4;;
+Q.minorities_npr = 0;
+Q.minorities_psl_l = 0;
+Q.minorities_psl_w = 5;
+Q.minorities_psl_p = 0;
+Q.minorities_bmn = 58;
+Q.minorities_zln = 0;
+Q.minorities_pschd = 0;
+Q.minorities_otherright = 0;
+Q.minorities_other = 33;
 
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
