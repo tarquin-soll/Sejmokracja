@@ -20,7 +20,8 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party"><b>PPS</b></span>position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+
 [? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -35,29 +36,17 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Sejm:
 
-# 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+<span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party">PPS</span> [+ pps_sj +]
+
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if pps_in_government = 1 : Budget: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+Next Sejm election: [+ next_election_month : month +] [+ next_election_year +]
+
+Next Senat election:
 
 = Economics
 
@@ -99,53 +88,6 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
-
-@paramilitaries
-on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
-}
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
-}
-!}
-
-= Paramilitaries
-
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
-
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
-
-RFB Militarization: [+ rfb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
-
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-
-SA Militarization: [+ sa_militancy : militancy +]
-
-= Official military/paramilitaries
-
-Reichswehr: [+ reichswehr_strength +] thousand troops.
-
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
-
-Prussian police: [+ prussian_police_strength +] thousand members.
-
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
-
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
 on-arrival: {!
