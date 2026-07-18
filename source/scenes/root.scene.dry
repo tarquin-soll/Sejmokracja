@@ -98,6 +98,7 @@ Q.psl_l_relation = 60;
 Q.psl_w_relation = 55;
 Q.psl_p_relation = 45;
 Q.bmn_relation = 40;
+Q.zln_relation = 5;
 Q.chzjn_relation = 5;
 
 Q.kpd_leader = "Thälmann";
@@ -211,7 +212,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['peasants', 'workers', 'petit', 'bourgeoisie', 'unemployed', 'minorities'];
-Q.parties = ['kpp', 'pps', 'nzr', 'psl_l', 'psl_w', 'psl_p', 'bmn', 'chzjn', 'other'];
+Q.parties = ['kpp', 'pps', 'nzr', 'psl_l', 'psl_w', 'psl_p', 'bmn', ,'chzjn 'zln', 'pschd', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -366,7 +367,8 @@ Q.agriculture_minister = 'Schiele';
 Q.agriculture_minister_party = 'DNVP';
 
 // Events: what has occurred?
-Q.lanckorona_pact = 1;
+Q.lanckorona_pact_seen = 0;
+Q.lanckorona_pact = 0;
 Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
@@ -582,6 +584,7 @@ Q.resources = 2;
 Q.dues = 1;
 Q.budget = 2;
 !}
+go-to: 1922_main
 
 @1922_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
@@ -618,6 +621,6 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1922
 
-Following a period of struggle, It is a relatively stable time for the Second Polish Republic, our borders are settled and we we're able to form comfortable governments in the past, and the economy is controlled and relaxed.
+Following a period of struggle, It is a relatively stable time for the Second <span style="color: #DDDDDD;"><b>Polish</b></span> <span style="color: #DC143C;"><b>Republic</b></span>, our borders are settled and we we're able to form comfortable governments in the past, and the economy is controlled and relaxed.
 
-Now, the task of Social Democracy is to prepare for the next election scheduled in November of this year.
+Now, the task of <span style="color: #C62828;"><b>Social Democracy</b></span> is to prepare for the next election scheduled in November of this year.
