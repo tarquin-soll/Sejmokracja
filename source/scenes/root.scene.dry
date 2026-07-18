@@ -212,7 +212,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['peasants', 'workers', 'petit', 'bourgeoisie', 'unemployed', 'minorities'];
-Q.parties = ['kpp', 'pps', 'nzr', 'psl_l', 'psl_w', 'psl_p', 'bmn', ,'chzjn 'zln', 'pschd', 'other'];
+Q.parties = ['kpp', 'pps', 'nzr', 'psl_l', 'psl_w', 'psl_p', 'bmn', 'chzjn', 'zln', 'pschd', 'otherright', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
