@@ -246,6 +246,25 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#80FF00'> </div> !}PSL-L: {!</td><td>!} [+ psl_l_sj +]% {!</td><td>!} [+ str_change_psl_l +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [+ str_change_psl_w +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [+ str_change_psl_p +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E3AFE4'> </div> !}BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [+ str_change_bmn +] {!</td></tr>!}
+
+{!<tr><td>- <div class="box" style='background-color:#302060'> </div> !}ChZJN: {!</td><td>!} volk% {!</td><td>!} skibidi {!</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div>ZLN: </td><td>[+ zln_sj +]%</td><td>[+ str_change_zln +]</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div>PSChD: </td><td>[+ pschd_sj +]%</td><td>[+ str_change_pschd +]</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0A0'></div>Other parties: </td><td>[+ otherright_sj +]%</td><td>[+ str_change_otherright +]</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+
+
 {!</table>!}
 
 **Potential coalition partners:**
