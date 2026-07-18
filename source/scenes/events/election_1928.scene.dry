@@ -140,7 +140,7 @@ if (Q.nsdap_r >= 15) {
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
-    election_result[party] = Q[party + '_r'];
+    election_result[party] = Q[party + '_sj'];
 }
 Q.election_records.push(election_result);
 !}
@@ -242,7 +242,7 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sj +]%** {!</td><td>!} **[+ str_change_pps +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kkp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kpp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
@@ -252,7 +252,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [+ str_change_psl_p +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3AFE4'> </div> !}BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [+ str_change_bmn +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !}BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [+ str_change_bmn +] {!</td></tr>!}
 
 {!<tr><td>- <div class="box" style='background-color:#302060'> </div> !}ChZJN: {!</td><td>!} volk% {!</td><td>!} skibidi {!</td></tr>!}
 
