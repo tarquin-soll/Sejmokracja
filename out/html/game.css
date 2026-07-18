@@ -561,6 +561,9 @@ table {
     fill: #E3AF34;
 }
 .seat.chzjn {
+    fill: #302060;
+}
+.seat.zln {
     fill: #312E99;
 }
 .seat.pschd {
