@@ -256,11 +256,11 @@ go-to: coalition_menu
 
 {!<tr><td>- <div class="box" style='background-color:#302060'> </div> !}ChZJN: {!</td><td>!} volk% {!</td><td>!} skibidi {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div>ZLN: </td><td>[+ zln_sj +]%</td><td>[+ str_change_zln +]</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div> !}ZLN: {!</td><td>!} [+ zln_sj +]% {!</td><td>!} [+ str_change_zln +] {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div>PSChD: </td><td>[+ pschd_sj +]%</td><td>[+ str_change_pschd +]</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div> !}PSChD: {!</td><td>!} [+ pschd_sj +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0A0'></div>Other parties: </td><td>[+ otherright_sj +]%</td><td>[+ str_change_otherright +]</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0A0'></div> !}Other parties: {!</td><td>!} [+ otherright_sj +]% {!</td><td>!} [+ str_change_otherright +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
