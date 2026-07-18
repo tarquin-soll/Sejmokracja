@@ -254,7 +254,7 @@ Q.petit_other = 1;
 
 Q.bourgeoisie_kpp = 0;
 Q.bourgeoisie_pps = 0;
-Q.bourgeoisis_npr = 0;
+Q.bourgeoisie_npr = 0;
 Q.bourgeoisie_psl_l = 0;
 Q.bourgeoisie_psl_w = 0;
 Q.bourgeoisie_psl_p = 3;
@@ -277,7 +277,7 @@ Q.unemployed_otherright = 3;
 Q.unemployed_other = 6;
 
 Q.minorities_kpp = 0;
-Q.minirities_pps = 4;;
+Q.minorities_pps = 4;;
 Q.minorities_npr = 0;
 Q.minorities_psl_l = 0;
 Q.minorities_psl_w = 5;
@@ -294,12 +294,16 @@ Q.minorities_other = 33;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
+Q.kpp_sj = 0;
 Q.pps_sj = 8.88;
 Q.npr_sj = 8.12;
 Q.psl_l_sj = 3.05;
 Q.psl_w_sj = 14.98;
 Q.psl_p_sj = 11.68;
+Q.bmn_sj = 0;
 Q.zln_sj = 35.53;
+Q.pschd_sj = 0;
+Q.otherright_sj = 0;
 Q.other_sj = 17.76;
 
 Q.old_pps_sj = 8.88;
@@ -307,7 +311,10 @@ Q.old_npr_sj = 8.12;
 Q.old_psl_l_sj = 3.05;
 Q.old_psl_w_sj = 14.98;
 Q.old_psl_p_sj = 11.68;
+Q.old_bmn_sj = 0;
 Q.old_zln_sj = 35.53;
+Q.old_pschd_sj = 0;
+Q.old_otherright_sj = 0;
 Q.old_other_sj = 17.76;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
