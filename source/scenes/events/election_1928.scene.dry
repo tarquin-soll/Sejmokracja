@@ -46,7 +46,7 @@ Q.leverage = Q.pps_sj;
 // pissed off being coalition dissent
 
 Q.kpp_pissedoff -= 1;
-Q.nzr_pissedoff -= 2;
+Q.npr_pissedoff -= 1;
 Q.psl_l_pissedoff -= 2;
 Q.psl_w_pissedoff -= 2;
 Q.psl_p_pissedoff -= 1;
@@ -58,7 +58,7 @@ Q.other_coalition_dissent = 0;
 
 Q.kpp_in_government = 0;
 Q.pps_in_government = 0;
-Q.nzr_in_government = 0;
+Q.npr_in_government = 0;
 Q.psl_l_in_government = 0;
 Q.psl_w_in_government = 0;
 Q.psl_p_in_government = 0;
@@ -156,6 +156,12 @@ data = [
         "seats": Math.round(Q.pps_sj*4.44),
     },
     {
+        "id": "npr",
+        "legend": "NPR",
+        "name": "NPR",
+        "seats": Math.round(Q.npr_sj*4.44),
+    },
+    {
         "id": "psl_l",
         "legend": "PSL-L",
         "name": "PSL-L",
@@ -187,9 +193,27 @@ data = [
     },
     {
         "id": "chzjn",
-        "legend": "CHZJN",
-        "name": "CHZJN",
+        "legend": "ChZJN",
+        "name": "ChZJN",
         "seats": Math.round(Q.chzjn_sj*4.44),
+    },
+    {
+        "id": "zln",
+        "legend": "ZLN",
+        "name": "ZLN",
+        "seats": Math.round(Q.zln_sj*4.44),
+    },
+    {
+        "id": "pschd",
+        "legend": "PSChD",
+        "name": "PSChD",
+        "seats": Math.round(Q.pschd_sj*4.44),
+    },
+    {
+        "id": "otherright",
+        "legend": "Other Parties",
+        "name": "Other Parties",
+        "seats": Math.round(Q.otherright_sj*4.44),
     },
 ];
 
@@ -218,25 +242,12 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sj +]%** {!</td><td>!} **[+ str_change_pps +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kkp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalition partners:**
