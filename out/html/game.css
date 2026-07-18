@@ -560,11 +560,17 @@ table {
 .seat.bmn {
     fill: #E3AF34;
 }
-.seat.nkwsd {
+.seat.chzjn {
     fill: #312E99;
+}
+.seat.pschd {
+    fill: #316EAA
 }
 .seat.other {
     fill: #909090;
+}
+.seat.otherright {
+    fill: #A0A0A0
 }
 
 .tooltip-text {

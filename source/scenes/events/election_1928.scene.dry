@@ -51,8 +51,10 @@ Q.psl_l_pissedoff -= 2;
 Q.psl_w_pissedoff -= 2;
 Q.psl_p_pissedoff -= 1;
 Q.bmn_pissedoff -= 1;
-Q.chzjn_pissedoff -= 1;
+Q.zln_pissedoff -= 1;
+Q.pschd_pissedoff -= 1;
 Q.other_pissedoff -= 1;
+Q.otherright_pissedoff -= 1;
 
 Q.other_coalition_dissent = 0;
 
@@ -63,8 +65,10 @@ Q.psl_l_in_government = 0;
 Q.psl_w_in_government = 0;
 Q.psl_p_in_government = 0;
 Q.bmn_in_government = 0;
-Q.chzjn_in_government = 0;
+Q.zln_in_government = 0;
+Q.pschd_in_government = 0;
 Q.other_in_government = 0;
+Q.otherright_in_government = 0;
 
 Q.minority_government = 0;
 Q.pps_toleration = 0;
@@ -192,12 +196,6 @@ data = [
         "seats": Math.round(Q.other_sj*4.44),
     },
     {
-        "id": "chzjn",
-        "legend": "ChZJN",
-        "name": "ChZJN",
-        "seats": Math.round(Q.chzjn_sj*4.44),
-    },
-    {
         "id": "zln",
         "legend": "ZLN",
         "name": "ZLN",
@@ -244,7 +242,7 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sj +]%** {!</td><td>!} **[+ str_change_pps +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kkp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kkp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
 
