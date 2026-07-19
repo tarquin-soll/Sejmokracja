@@ -295,27 +295,27 @@ Q.minorities_other = 33;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.kpp_sj = 0;
-Q.pps_sj = 8.88;
-Q.npr_sj = 8.12;
-Q.psl_l_sj = 3.05;
-Q.psl_w_sj = 14.98;
-Q.psl_p_sj = 11.68;
+Q.pps_sj = 8.9;
+Q.npr_sj = 8.1;
+Q.psl_l_sj = 3.0;
+Q.psl_w_sj = 15.0;
+Q.psl_p_sj = 11.7;
 Q.bmn_sj = 0;
-Q.zln_sj = 35.53;
+Q.zln_sj = 35.5;
 Q.pschd_sj = 0;
 Q.otherright_sj = 0;
-Q.other_sj = 17.76;
+Q.other_sj = 17.8;
 
-Q.old_pps_sj = 8.88;
-Q.old_npr_sj = 8.12;
-Q.old_psl_l_sj = 3.05;
-Q.old_psl_w_sj = 14.98;
-Q.old_psl_p_sj = 11.68;
+Q.old_pps_sj = 8.9;
+Q.old_npr_sj = 8.1;
+Q.old_psl_l_sj = 3.0;
+Q.old_psl_w_sj = 15.0;
+Q.old_psl_p_sj = 11.7;
 Q.old_bmn_sj = 0;
-Q.old_zln_sj = 35.53;
+Q.old_zln_sj = 35.5;
 Q.old_pschd_sj = 0;
 Q.old_otherright_sj = 0;
-Q.old_other_sj = 17.76;
+Q.old_other_sj = 17.8;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
