@@ -6,21 +6,13 @@ is-card: true
 card-image: img/Campaign.jpg
 frequency: 100
 tags: party_affairs
+go-to: campaign
 
 = Campaigning
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @campaign
-- @root: We either don't want to or cannot campaigning right now.
-- @easy_discard
-
 @campaign
-title: Campaign
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-
-Which demographic should we try to reach?
 
 - #campaigning
 
@@ -95,3 +87,5 @@ title: We either don't want to, cannot or have decided to stop campaigning right
 tags: campaigning
 
 We have done enough.
+
+@easy_discard
