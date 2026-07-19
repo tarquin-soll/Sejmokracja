@@ -1,0 +1,445 @@
+title: Sejm Elections
+new-page: true
+tags: event
+priority: -1
+view-if: (year = next_election_year and month >= next_election_month) or (year > next_election_year)
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4;
+set-jump: post_election_1922_sejm
+face-image: img/fl_pl.webp
+
+= Elections, [+ month : month +] [+ year +]
+
+The Sejm elections are to be held now.
+
+- @election_algorithm: May we do our best...
+
+
+@post_election_1922_sejm
+on-arrival: {!
+var new_party_sum = 0;
+for (var party of Q.parties) {
+    Q['old_' + party + '_sj'] = Q[party + '_sj'];
+    if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned'] || Q[party + '_boycott']) {
+        Q[party + '_sj'] = 0;
+    } else {
+        Q[party + '_sj'] = Q[party + '_votes'];
+    }
+    new_party_sum += Q[party + '_sj'];
+    Q[party + '_sj_disp'] = Q[party + '_sj'].toFixed(1);
+    Q['change_' + party + '_sj'] = Q[party + '_sj'] - Q['old_' + party + '_sj'];
+    var sign = Q['change_' + party + '_sj'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + party + '_sj'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+    Q['str_change_' + party] = sign + Q['change_' + party + '_sj'].toFixed(1);
+}
+
+Q.leverage = Q.pps_sj;
+
+// Reset government and ministers
+
+// pissed off being coalition dissent
+
+Q.kpp_pissedoff -= 1;
+Q.npr_pissedoff -= 1;
+Q.psl_l_pissedoff -= 2;
+Q.psl_w_pissedoff -= 2;
+Q.psl_p_pissedoff -= 1;
+Q.bmn_pissedoff -= 1;
+Q.zln_pissedoff -= 1;
+Q.pschd_pissedoff -= 1;
+Q.other_pissedoff -= 1;
+Q.otherright_pissedoff -= 1;
+
+Q.other_coalition_dissent = 0;
+
+Q.kpp_in_government = 0;
+Q.pps_in_government = 0;
+Q.npr_in_government = 0;
+Q.psl_l_in_government = 0;
+Q.psl_w_in_government = 0;
+Q.psl_p_in_government = 0;
+Q.bmn_in_government = 0;
+Q.zln_in_government = 0;
+Q.pschd_in_government = 0;
+Q.other_in_government = 0;
+Q.otherright_in_government = 0;
+
+Q.minority_government = 0;
+Q.pps_toleration = 0;
+
+Q.prime_minister_party = 'Vacant';
+Q.prime_minister = 'Vacant';
+Q.labor_minister_party = 'Vacant';
+Q.labor_minister = 'Vacant';
+Q.treasury_minister_party = 'Vacant';
+Q.treasury_minister = 'Vacant';
+Q.agriculture_minister_party = 'Vacant';
+Q.agriculture_minister = 'Vacant';
+Q.exterior_minister_party = 'Vacant';
+Q.exterior_minister = 'Vacant';
+Q.interior_minister_party = 'Vacant';
+Q.interior_minister = 'Vacant';
+Q.military_minister_party = 'Vacant';
+Q.military_minister = 'Vacant';
+Q.justice_minister_party = 'Vacant';
+Q.justice_minister = 'Vacant';
+Q.education_minister_party = 'Vacant';
+Q.education_minister = 'Vacant';
+
+Q.coalition_mandate = 0;
+Q.other_coalition_mandate = 0;
+
+// coalitions
+Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
+
+Q.strike_term_seen = 0;
+
+
+var election_result = {'date': new Date(Q.year, Q.month - 1)};
+for (var party of Q.parties) {
+    election_result[party] = Q[party + '_sj'];
+}
+Q.election_records.push(election_result);
+!}
+on-display: {!
+data = [
+    {
+        "id": "kpp",
+        "legend": "KPP",
+        "name": "KPP",
+        "seats": Math.round(Q.kpp_sj*4.44),
+    },
+    {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Math.round(Q.pps_sj*4.44),
+    },
+    {
+        "id": "npr",
+        "legend": "NPR",
+        "name": "NPR",
+        "seats": Math.round(Q.npr_sj*4.44),
+    },
+    {
+        "id": "psl_l",
+        "legend": "PSL-L",
+        "name": "PSL-L",
+        "seats": Math.round(Q.psl_l_sj*4.44),
+    },
+    {
+        "id": "psl_w",
+        "legend": "PSL-W",
+        "name": "PSL-W",
+        "seats": Math.round(Q.psl_w_sj*4.44),
+    },
+    {
+        "id": "psl_p",
+        "legend": "PSL-P",
+        "name": "PSL-P",
+        "seats": Math.round(Q.psl_p_sj*4.44),
+    },
+    {
+        "id": "bmn",
+        "legend": "BMN",
+        "name": "BMN",
+        "seats": Math.round(Q.bmn_sj*4.44),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_sj*4.44),
+    },
+    {
+        "id": "zln",
+        "legend": "ZLN",
+        "name": "ZLN",
+        "seats": Math.round(Q.zln_sj*4.44),
+    },
+    {
+        "id": "pschd",
+        "legend": "PSChD",
+        "name": "PSChD",
+        "seats": Math.round(Q.pschd_sj*4.44),
+    },
+    {
+        "id": "otherright",
+        "legend": "Other Parties",
+        "name": "Other Parties",
+        "seats": Math.round(Q.otherright_sj*4.44),
+    },
+];
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sj +]%** {!</td><td>!} **[+ str_change_pps +]** {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kpp_sj +]% {!</td><td>!} [+ str_change_kpp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [+ str_change_npr +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#80FF00'> </div> !}PSL-L: {!</td><td>!} [+ psl_l_sj +]% {!</td><td>!} [+ str_change_psl_l +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [+ str_change_psl_w +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [+ str_change_psl_p +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !}BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [+ str_change_bmn +] {!</td></tr>!}
+
+{!<tr><td>- <div class="box" style='background-color:#302060'> </div> !}ChZJN: {!</td><td>!} volk% {!</td><td>!} skibidi {!</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div> !}ZLN: {!</td><td>!} [+ zln_sj +]% {!</td><td>!} [+ str_change_zln +] {!</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div> !}PSChD: {!</td><td>!} [+ pschd_sj +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
+
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0A0'></div> !}Other parties: {!</td><td>!} [+ otherright_sj +]% {!</td><td>!} [+ str_change_otherright +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+
+
+{!</table>!}
+
+**Potential coalition partners:**
+
+skibidi
+
+@coalition_menu
+
+- @spd_majority
+
+@spd_majority
+title: SPD majority alone
+subtitle: SPD: [+ spd_r +]%
+view-if: spd_r >= 50
+on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+achievement: majority_party
+
+Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+
+Who should be chancellor?
+
+- @braun_majority_chancellor: Otto Braun for Chancellor.
+- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
+- @muller_majority_chancellor: Hermann Müller for Chancellor.
+- @wels_majority_chancellor: Otto Wels for Chancellor.
+
+@braun_majority_chancellor
+view-if: not historical_mode or not spd_prussia
+on-arrival: chancellor = "Braun"
+
+[? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Otto Braun. ?]
+[? if president != "Braun": Otto Braun has become chancellor of the SPD majority. ?]
+
+@breitscheid_majority_chancellor
+on-arrival: chancellor = "Breitscheid"
+
+Rudolf Breitscheid has become chancellor of the SPD majority.
+
+@muller_majority_chancellor
+view-if: muller_dead = 0
+on-arrival: chancellor = "Müller"
+
+Hermann Müller has become chancellor of the SPD majority.
+
+@wels_majority_chancellor
+view-if: muller_dead = 1
+on-arrival: chancellor = "Wels"
+
+Otto Wels has become chancellor of the SPD majority.
+
+- @ministries
+
+@ministries
+
+We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
+
+- #mins_1928
+- #drop_mins_1928
+
+@labor
+title: Labor Ministry
+subtitle: Taking the Labor Ministry is expected of us.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: labor_minister_party != "SPD"
+on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Wissell"
+go-to: ministries
+
+Rudolf Wissell of the SPD has been appointed labor minister.
+
+@interior
+title: Interior Ministry
+subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: interior_minister_party != "SPD"
+on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"
+go-to: ministries
+
+Carl Severing of the SPD has been appointed Interior Minister.
+
+@finance
+title: Finance Ministry
+subtitle: The Finance Ministry controls the government budget and taxes.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10 
+view-if: finance_minister_party != "SPD"
+on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"
+go-to: ministries
+
+Rudolf Hilferding of the SPD has been appointed Finance Minister.
+
+@economic
+title: Economic Ministry
+subtitle: The Economic Ministry controls broader economic policy.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10 
+view-if: economic_minister_party != "SPD"
+on-arrival: leverage -= 10; economic_minister_party = "SPD"; economic_minister = "Schmidt"
+go-to: ministries
+
+Robert Schmidt of the SPD has been appointed Economic Minister.
+
+@justice
+title: Justice Ministry
+subtitle: The Justice Ministry controls the courts.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10 
+view-if: justice_minister_party != "SPD"
+on-arrival: leverage -= 10; justice_minister_party = "SPD"; justice_minister = "Radbruch"
+go-to: ministries
+
+Gustav Radbruch of the SPD has been appointed Justice Minister.
+
+@foreign
+title: Foreign Ministry
+subtitle: This is usually the domain of Gustav Stresemann of the DVP.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10 
+view-if: foreign_minister_party != "SPD"
+on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"
+go-to: ministries
+
+Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
+
+
+@agriculture
+title: Agricultural Ministry
+subtitle: This is not our usual domain.
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 10 
+view-if: agriculture_minister_party != "SPD"
+on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
+go-to: ministries
+tags: mins_1928
+
+Fritz Baade of the SPD has been appointed Agriculture Minister.
+
+@reichswehr
+title: Reichswehr Ministry
+subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 15 
+view-if: reichswehr_minister_party != "SPD"
+on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"
+go-to: ministries
+
+Julius Leber of the SPD has been appointed Reichswehr Minister.
+
+
+
+@no_more
+title: No more ministries.
+subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
+tags: mins_1928
+
+This coalition arrangement is tolerable to all.
+
+@drop_labor
+title: Drop the Labor Ministry.
+view-if: labor_minister_party = "SPD"
+on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_interior
+title: Drop the Interior Ministry.
+view-if: interior_minister_party = "SPD"
+on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_finance
+title: Drop the Finance Ministry.
+view-if: finance_minister_party = "SPD"
+on-arrival: finance_minister_party = "DVP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "Z" if in_weimar_coalition or in_popular_front; finance_minister = "Köhler" if in_weimar_coalition or in_popular_front
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_economic
+title: Drop the Economic Ministry.
+view-if: economic_minister_party = "SPD"
+on-arrival: economic_minister_party = "DVP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = ddp_name if in_weimar_coalition or in_popular_front; economic_minister = "Dietrich" if in_weimar_coalition or in_popular_front;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_justice
+title: Drop the Justice Ministry.
+view-if: justice_minister_party = "SPD"
+on-arrival: justice_minister_party = ddp_name; justice_minister = "Koch-Weser"; leverage += 10;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_foreign
+title: Drop the Foreign Ministry.
+view-if: foreign_minister_party = "SPD"
+on-arrival: foreign_minister_party = "DVP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "Z" if in_weimar_coalition or in_popular_front; foreign_minister = "Wirth" if in_weimar_coalition or in_popular_front;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_agriculture
+title: Drop the Agriculture Ministry.
+view-if: agriculture_minister_party = "SPD"
+on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "Z" if in_weimar_coalition; agriculture_minister = "Hermes" if in_weimar_coalition
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_reichswehr
+title: Drop the Reichswehr Ministry.
+view-if: reichswehr_minister_party = "SPD"
+on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
