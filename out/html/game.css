@@ -537,7 +537,7 @@ table {
 }
 
 /* Styles for parties */
-.seat.kprp {
+.seat.kpp {
     fill: #890000;
 }
 .seat.pps {
@@ -545,7 +545,7 @@ table {
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
-.seat.nzr {
+.seat.npr {
     fill: #841839;
 }
 .seat.psl_l {
@@ -573,7 +573,7 @@ table {
     fill: #909090;
 }
 .seat.otherright {
-    fill: #A0A0A0
+    fill: #A0A0E0
 }
 
 .tooltip-text {

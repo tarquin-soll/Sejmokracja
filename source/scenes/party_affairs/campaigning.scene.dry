@@ -3,8 +3,8 @@ new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-card-image: img/Cammpaign.jpg
-frequency: 90
+card-image: img/Campaign.jpg
+frequency: 100
 tags: party_affairs
 
 = Campaigning

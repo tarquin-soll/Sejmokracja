@@ -206,7 +206,7 @@ go-to: coalition_menu
 
 {!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div> !}PSChD: {!</td><td>!} [+ pschd_sj +]% {!</td><td>!} [+ str_change_pschd +] {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0A0'></div> !}Other parties: {!</td><td>!} [+ otherright_sj +]% {!</td><td>!} [+ str_change_otherright +] {!</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0E0'></div> !}Other parties: {!</td><td>!} [+ otherright_sj +]% {!</td><td>!} [+ str_change_otherright +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
