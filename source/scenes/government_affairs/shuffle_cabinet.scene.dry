@@ -35,4 +35,4 @@ Public Enlightenment: [+ education_minister_party +]
 
 @shuffle
 on-arrival: psl_p_pissedoff += 1 if psl_p_in_government == 1; coalition_dissent += 1; month_actions += 1
-go-to: election_1922.ministries
+go-to: election_1922_sejm.ministries
