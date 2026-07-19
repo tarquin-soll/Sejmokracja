@@ -261,8 +261,6 @@ on-arrival: chancellor = "Wels"
 
 Otto Wels has become chancellor of the SPD majority.
 
-- @ministries
-
 @ministries
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
