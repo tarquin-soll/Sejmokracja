@@ -44,7 +44,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
-on-arrival: bourgeoisie_pps += 6*(1-dissent); resources -= 1; bourgeoisie_pps -= 3 if socialism <= 39; >= 51 and peoples_party == 0; bourgeoisie_pps -= 2 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+on-arrival: bourgeoisie_pps += 6*(1-dissent); resources -= 1; bourgeoisie_pps -= 3 if socialism <= 39 and peoples_party == 0; bourgeoisie_pps -= 2 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 go-to: campaign
 
 We have increased our campaigning among the bourgeoisie. [? if socialism <= 39 and peoples_party 0: This group would never even think of voting the PPS. ?][? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?]
