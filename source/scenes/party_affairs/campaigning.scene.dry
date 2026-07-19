@@ -3,68 +3,95 @@ new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-card-image: img/flags.jpg
-frequency: 100
+card-image: img/Cammpaign.jpg
+frequency: 90
 tags: party_affairs
 
 = Campaigning
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @workers: The urban working class, our traditional support base.
-- @new_middle: The "new middle class" of government employees and white-collar workers.
-- @old_middle: The "old middle class" of small independent businessmen and artisans.
-- @rural: Rural workers and small farmers, who have felt neglected by us in the past.
-- @unemployed: The unemployed.
-- @catholics: Catholics, who typically support the Center Party.
-- @root: We either don't want to or cannot campaign right now.
+- @campaign
+- @root: We either don't want to or cannot campaigning right now.
 - @easy_discard
 
+@campaign
+title: Campaign
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+
+Which demographic should we try to reach?
+
+- #campaigning
+
 @workers
+title: The urban working class, our traditional support base.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+tags: campaigning
+on-arrival: workers_pps += 10*(1-dissent); workers_pps -= 2 if unemployed >= 15; workers_pps -= 2 if unemployed >= 25; resources -= 1; workers_pps += 3*(1-dissent) if economic_democracy >= 3;
+go-to: campaign
 
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
+We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if economic_democracy >= 3: Our benefitial laws enacted to improve workers' lives, we have an easier time increasing support among the workers than before. ?]
 
-@new_middle
+@petit
+title: Useless. the "middle class" composed of government employees and white-collar workers.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+tags: campaigning
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+go-to: campaign
 
 We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
-@old_middle
+@bourgeoisie
+title: Useless. Ranging from small business owners and the self-employed to large landowners, industrialists.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+tags: campaigning
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+go-to: campaign
 
 We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
 
-@rural
+@peasants
+title: Peasants and small landowners, who typically vote for peasant parties.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
+tags: campaigning
+on-arrival: peasants_pps += 6*(1-dissent); peasants_pps -= 4*(1-dissent) if rural_policy <= 2; resources -= 1; peasants_pps += 2*(1-dissent) if rural_policy >= 4
+go-to: campaign
 
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+We have increased our campaigning among the peasant demographic. [? if rural_policy <= 2 : We haven't historically campaigned towards the peasants, and we haven't shown commitments towards them in our policies so they do not trust us yet. ?][? if rural_policy >= 4 : Our rural policies have made it easier for us to build support among farmers. ?]
 
 @unemployed
+title: Useless for now.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+tags: campaigning
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+go-to: campaign
 
 We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
 
-@catholics
+@minority
+title: Minorities, who typically vote for parties that represents them.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: peoples_party == 1
-on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
+tags: campaigning
+on-arrival: minorities_pps -= 1 if conservative_strength >= 30; minorities_pps += 4*(1-dissent) if peoples_party == 0; minorities_pps += 8*(1-dissent) if peoples_party == 1; resources -= 1
+go-to: campaign
 
-We have increased our campaigning among Catholics.
+We have increased our campaigning among Minorities. [? if peoples_party == 0; We have historically had a campaign targetted towards Minorities, and due to our patriotic past, the Minorities aren't well receptive of our campaign attempts. ?]
+
+@no_more
+title: We either don't want to, cannot or have decided to stop campaigning right now.
+tags: campaigning
+
+We have done enough.
