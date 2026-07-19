@@ -88,7 +88,7 @@ tags: campaigning
 on-arrival: minorities_pps -= 1 if conservative_strength >= 30; minorities_pps += 4*(1-dissent) if peoples_party == 0; minorities_pps += 8*(1-dissent) if peoples_party == 1; resources -= 1
 go-to: campaign
 
-We have increased our campaigning among Minorities. [? if peoples_party == 0; We have historically had a campaign targetted towards Minorities, and due to our patriotic past, the Minorities aren't well receptive of our campaign attempts. ?]
+We have increased our campaigning among Minorities. [? if peoples_party == 0: We have historically had a campaign targetted towards Minorities, and due to our patriotic past, the Minorities aren't well receptive of our campaign attempts. ?]
 
 @no_more
 title: We either don't want to, cannot or have decided to stop campaigning right now.
