@@ -39,19 +39,7 @@ Q.leverage = Q.pps_sj;
 
 // Reset government and ministers
 
-// pissed off being coalition dissent
-
-Q.kpp_pissedoff -= 1;
-Q.npr_pissedoff -= 1;
-Q.psl_l_pissedoff -= 2;
-Q.psl_w_pissedoff -= 2;
-Q.psl_p_pissedoff -= 1;
-Q.bmn_pissedoff -= 1;
-Q.zln_pissedoff -= 1;
-Q.pschd_pissedoff -= 1;
-Q.other_pissedoff -= 1;
-Q.otherright_pissedoff -= 1;
-
+Q.coalition_dissent = 0;
 Q.other_coalition_dissent = 0;
 
 Q.kpp_in_government = 0;
