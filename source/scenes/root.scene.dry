@@ -32,7 +32,7 @@ Q.historical_mode = 0;
 Q.old_demographics = 0;
 
 // party resources
-Q.resources = 2;
+Q.resources = 3;
 // party dues
 Q.dues = 2;
 
@@ -326,17 +326,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.kpp_pissedoff = 0;
-Q.npr_pissedoff = 0;
-Q.psl_l_pissedoff = 0;
-Q.psl_w_pissedoff = 0;
-Q.psl_p_pissedoff = 0;
-Q.bmn_pissedoff = 0;
-Q.zln_pissedoff = 0;
-Q.pschd_pissedoff = 0;
-Q.other_pissedoff = 0;
-Q.otherright_pissedoff = 0;
-
+Q.coalition_dissent = 0;
 Q.other_coalition_dissent = 0;
 
 Q.kpp_in_government = 0;
@@ -358,6 +348,8 @@ Q.prime_minister_party = 'Vacant';
 Q.prime_minister = 'Vacant';
 Q.labor_minister_party = 'Vacant';
 Q.labor_minister = 'Vacant';
+Q.industry_minister_party = 'Vacant';
+Q.industry_minister = 'Vacant';
 Q.treasury_minister_party = 'Vacant';
 Q.treasury_minister = 'Vacant';
 Q.agriculture_minister_party = 'Vacant';
