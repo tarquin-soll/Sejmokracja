@@ -28,7 +28,7 @@ go-to: campaign
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if economic_democracy >= 3: Our benefitial laws enacted to improve workers' lives, we have an easier time increasing support among the workers than before. ?]
 
 @petit
-title: Useless. the "middle class" composed of government employees and white-collar workers.
+title: Self Employed, Small Business Owners, Middle Classes and Civil Servants.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
@@ -39,7 +39,7 @@ go-to: campaign
 We have increased our campaigning among the petit bourgeoisie. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the petit bourgeoisie than before. ?]
 
 @bourgeoisie
-title: Large landowners, Industrialists, and major Business owners, typically voting for conservatives and
+title: Large landowners, Industrialists, and Major Business Owners.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
@@ -47,7 +47,7 @@ tags: campaigning
 on-arrival: bourgeoisie_pps += 6*(1-dissent); resources -= 1; bourgeoisie_pps -= 3 if socialism <= 39 and peoples_party == 0; bourgeoisie_pps -= 2 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 go-to: campaign
 
-We have increased our campaigning among the bourgeoisie. [? if socialism <= 39 and peoples_party 0: This group would never even think of voting the PPS. ?][? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?]
+We have increased our campaigning among the bourgeoisie. [? if socialism <= 39 and peoples_party == 0: This group would never even think of voting the PPS. ?][? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?]
 
 @peasants
 title: Peasants, farmers, rural workers and small landowners.
