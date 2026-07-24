@@ -54,6 +54,12 @@ Q.pschd_in_government = 0;
 Q.other_in_government = 0;
 Q.otherright_in_government = 0;
 
+Q.pps_attempt = 0;
+Q.zln_attempt = 0;
+Q.psl_w_attempt = 0;
+Q.psl_p_attempt = 0;
+Q.president_caretaker_government = 0;
+
 Q.minority_government = 0;
 Q.pps_toleration = 0;
 
@@ -178,7 +184,7 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
-go-to: coalition_menu
+go-to: pm_appoint
 
 = Election results
 
@@ -216,6 +222,57 @@ go-to: coalition_menu
 **Potential coalition partners:**
 
 skibidi
+
+@pm_appoint
+
+- @pps_pm
+- @zln_pm
+- @peasants_pm
+- @nogov
+
+@pps_pm
+title: President [+ president +] entrusts the PPS to form a government.
+go-to: coalition_menu
+
+@peasants_pm
+title: President [+ president +] will entrust a Peasant Party to form a government.
+go-to: coalition_menu
+
+@zln_pm
+title: President [+ president +] entrusts the ZLN to form a government.
+view-if: zln_attempt < 1 and (president_relation <= 59 or (zln_sj > pps_sj or zln_sj > (psl_w_sj + psl_p_sj)))
+go-to: zln_menu
+
+@nogov
+title: The Sejm is paralyzed.
+view-if: zln_attempt >= 1 and pps_attempt >= 1 and psl_w_attempt >= 1 and psl_p_attempt >= 1
+on-arrival: failed_forming = 1
+
+The Sejm finds that it cannot establish a mandate, for this reason, the members will reconvene next month for another attempt.
+
+@zln_menu
+
+- @wip: wip
+
+@wip
+
+wip
+
+@psl_w_menu
+
+- @wip2: wip
+
+@wip2
+
+wip
+
+@psl_p_menu
+
+- @wip3: wip
+
+@wip3
+
+wip
 
 @coalition_menu
 
