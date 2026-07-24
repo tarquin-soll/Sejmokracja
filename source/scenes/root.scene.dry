@@ -109,6 +109,7 @@ Q.z_leader = "Brüning";
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 
+Q.president_relation = 60;
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
@@ -340,6 +341,14 @@ Q.zln_in_government = 0;
 Q.pschd_in_government = 0;
 Q.other_in_government = 0;
 Q.otherright_in_government = 0;
+
+Q.pps_attempt = 0;
+Q.zln_attempt = 0;
+Q.psl_w_attempt = 0;
+Q.psl_p_attempt = 0;
+Q.failed_forming = 0;
+Q.president_attempt = 0;
+Q.president_caretaker_government = 0;
 
 Q.minority_government = 0;
 Q.pps_toleration = 0;
