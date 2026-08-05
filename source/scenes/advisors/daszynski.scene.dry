@@ -56,7 +56,7 @@ title: Mediate Coalition Dissent
 subtitle: Daszyński can mediate coalition dissent.
 choose-if: advisor_action_timer = 0 and pps_in_government and coalition_dissent >= 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?][? if coalition_dissent < 1 and pps_in_government = 0 : Our coalition partners are currently satisfied with our actions. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1; coalition dissent -= 1 if coalition_dissent >= 2
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1; coalition_dissent -= 1 if coalition_dissent >= 2
 
 Daszyński has successfully reduced dissent in the government.
 
