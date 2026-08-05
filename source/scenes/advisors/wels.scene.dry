@@ -1,19 +1,20 @@
-title: Otto Wels
+title: Ignacy Daszyński
 is-pinned-card: true
 tags: advisor, centrist
-card-image: img/portraits/WelsOtto.jpg
-view-if: wels_advisor = 1
+card-image: img/portraits/DaszyńskiIgnacy.jpg
+view-if: daszynski_advisor = 1
 new-page: true
 
-= Otto Wels
+= Ignacy Daszyński
 
-Wels is the long-time chairman of the SPD. He is a gifted organizer and a member of the centrist faction.
+Daszyński ia the co-founder of the PPS and was the brief and first prime minister of independent poland. He is an excellent orator known for his attracting speeches.
 
 - @clear_agenda
 - @party_discipline
 - @emergency_fundraising
-- @snap_election
-- @root: Return to main
+- @mediate_coalition
+- @cabinet
+- @root: Return to main- @root: Return to main
 
 @clear_agenda
 title: Clear the agenda
@@ -36,8 +37,7 @@ title: Party Discipline
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
-
+on-arrival: advisor_action_timer = 6; left_dissent -= 10; conservative_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10
 We have enforced party discipline to reduce dissent across all factions.
 
 @emergency_fundraising
@@ -50,12 +50,22 @@ on-arrival: advisor_action_timer = 6; resources += dues
 
 We have gained +[+ dues +] resources.
 
-@snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Wels" : Wels must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and (chancellor == "Wels")
-on-arrival: advisor_action_timer = 6; time_to_election = 3
-call: set_next_election_time
+@mediate_coalition
+title: Mediate Coalition Dissent
+subtitle: Daszyński can mediate coalition dissent.
+choose-if: advisor_action_timer = 0 and pps_in_government and coalition_dissent >= 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?][? if coalition_dissent < 1 and pps_in_government = 0 : Our coalition partners are currently satisfied with our actions. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1; coalition dissent -= 1 if coalition_dissent >= 2
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+Daszyński has successfully reduced dissent in the government.
+
+@cabinet
+title: Cabinet
+subtitle: Direct one of our ministries.
+choose-if: advisor_action_timer = 0 and pps_in_government
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?]
+advisor_action_timer = 6
+
+Daszyński can direct our ministries.
+
+- #cabinet

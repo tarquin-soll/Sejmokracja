@@ -212,8 +212,8 @@
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
         }
       
-        if (searchString === 'NPR' && Q.nzr_relation !== undefined) {
-            var relationText = getRelationshipText(Q.nzr_relation);
+        if (searchString === 'NPR' && Q.npr_relation !== undefined) {
+            var relationText = getRelationshipText(Q.npr_relation);
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
         }
             

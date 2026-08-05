@@ -1,0 +1,12 @@
+itle: Vilnius Dispute
+subtitle: A political question
+tags: event
+is-card: true
+on-arrival: vilnius_seen = 1
+face-image: img/vilnius.png
+view-if: vilnius_seen = 0 and year = 1922 and month >= 3
+new-page: true
+
+= Vilnius Dispute
+
+gcsjvhihguiuhiuheseihtiuwhiuhkhsdibkuhkuhiuksugiujygh7fuiuyhurfh6bd1243456789qwe3rt5yu7i8o9esedfghjkzsxdcvbnm

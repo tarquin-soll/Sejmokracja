@@ -56,21 +56,19 @@ Government Mandate: [+ government_mandate +]/100%
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Mandate</td><td>Status</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#890000;'> </div> !} **KPP**: {!</td><td>!} [+ kpp_sj +]% {!</td><td>!} [? if kpp_in_government = 0 and kpp_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if kpp_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if kpp_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#890000;'> </div> !} KPP: {!</td><td>!} [+ kpp_sj +]% {!</td><td>!} [? if kpp_in_government = 0 and kpp_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if kpp_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if kpp_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DD0000; outline: 2px; outline-style: solid;'> </div> !} **PPS**: {!</td><td>!} [+ pps_sj +]% {!</td><td>!} [? if pps_in_government = 0 and pps_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if pps_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if pps_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#841839;'> </div> !} **NPR**: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [? if npr_in_government = 0 and npr_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if npr_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if npr_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#841839;'> </div> !} NPR: {!</td><td>!} [+ npr_sj +]% {!</td><td>!} [? if npr_in_government = 0 and npr_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if npr_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if npr_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#80FF00;'> </div> !} **PSL-**: {!</td><td>!} [+ psl_l_sj +]% {!</td><td>!} [? if psl_l_in_government = 0 and psl_l_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_l_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_l_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#80FF00;'> </div> !} PSL-L: {!</td><td>!} [+ psl_l_sj +]% {!</td><td>!} [? if psl_l_in_government = 0 and psl_l_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_l_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_l_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#179900;'> </div> !} **PSL-**: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [? if psl_w_in_government = 0 and psl_w_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_w_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_w_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#179900;'> </div> !} PSL-W: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [? if psl_w_in_government = 0 and psl_w_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_w_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_w_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3A6538;'> </div> !} **PSL-**: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [? if psl_p_in_government = 0 and psl_p_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_p_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_p_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3A6538;'> </div> !} PSL-_P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [? if psl_p_in_government = 0 and psl_p_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_p_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_p_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3AF34;'> </div> !} **BMN**: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!} [? if bmn_in_government = 0 and bmn_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if bmn_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if bmn_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#312E99;'> </div> !} **ChZJN**: {!</td><td>!} [+ chzjn_sj_display +]% {!</td><td>!} {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3AF34;'> </div> !} BMN
 
 {!<tr><td style="padding-left:26px;">!}- ZLN: {!</td><td>!} [+ zln_sj +]% {!</td><td>!} [? if zln_in_government = 0 and zln_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if zln_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if zln_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
@@ -78,7 +76,7 @@ Government Mandate: [+ government_mandate +]/100%
 
 {!<tr><td style="padding-left:26px;">!}- Other parties: {!</td><td>!} [+ otherright_sj +]% {!</td><td>!} [? if otherright_in_government = 0 and otherright_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if otherright_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if otherright_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#909090;'> </div> !} **Other**: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [? if other_in_government = 0 and other_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if other_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if other_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#909090;'> </div> !} Other: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [? if other_in_government = 0 and other_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if other_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if other_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 {!</table>!}
 
 [? if year >= 1923 : <div style="text-align: center;">**Senate**</div> ?]

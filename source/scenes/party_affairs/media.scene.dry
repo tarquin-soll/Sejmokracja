@@ -36,7 +36,7 @@ Our campaign media is mostly reaching the workers who are already saturated with
 
 @regional
 title: The purpose of our media is to elect more <span style="color: #DD0000;">Social Democrats</span> regionally.
-subtitle: Our newspapers will focus on the **regional** campaign.
+subtitle: Our newspapers will focus on *regional* campaign.
 on-arrival: campaign_media += 1; workers_pps += 2*(1 - dissent); unemployed_pps += 1*(1-dissent); minorities_pps += 4*(1 - dissent)
 
 Our campaign media is being exposed to Minorities.

@@ -10,7 +10,7 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The <span style="color: #DD0000;">PPS</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The <span style="color: #DD0000;">PPS</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. We have only been able to enter governments consisting of the PSL-W, PSL-P, and other Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
 - @peasant: Strengthen our bonds with the <span style="color: #80FF00;">PSL-"Liberation"</span> and left-agrarian <span style="color: #179900;">PSL-"Left"</span>.
 - @piast: Strengthen our bonds with the conservative <span style="color: #3A6538;">PSL-"Piast"</span>.
@@ -25,7 +25,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; psl_l_relation += 8; psl_w_relation += 8
 
-I ran out of flavor text idea.
+We are ideologically close with them so it is easy to build relations with the PSL-L.
 
 @piast
 subtitle: -1 resources
@@ -64,7 +64,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; npr_relation += 8
 
-I ran out of flavor text idea.
+We are able to improve our relations with the NPR as we are ideologically similar in economic issues with the difference being that they are a conservative party.
 
 @pps_alone
 
