@@ -65,7 +65,7 @@ title: Cabinet
 subtitle: Direct one of our ministries.
 choose-if: advisor_action_timer = 0 and pps_in_government
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?]
-advisor_action_timer = 6
+on-arrival: advisor_action_timer = 6
 
 Daszyński can direct our ministries.
 
