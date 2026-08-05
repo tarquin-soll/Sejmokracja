@@ -12,12 +12,12 @@ var _newData = [];
     _addP('psl_l', 'PSL-L', Q.psl_l_sj);
     _addP('psl_w', 'PSL-W', Q.psl_w_sj);
     _addP('psl_p',  'PSL-P',  Q.psl_p_sj);
-    _addP('bmn', 'BMN', Q.bmn_seating);
+    _addP('bmn', 'BMN', Q.bmn_sj);
     _addP('chzjn', 'ChZJN', Q.chzjn_sj);
-    _addP('zln', 'ZLN', Q.zln_seating);
+    _addP('zln', 'ZLN', Q.zln_sj);
     _addP('pschd', 'PSChD', Q.pschd_sj);
     _addP('otherright', 'Other Parties', Q.otherright_sj);
-    _addP('other','Other',Q.other_sh);
+    _addP('other','Other',Q.other_sj);
 
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
