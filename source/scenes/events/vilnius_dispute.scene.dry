@@ -1,5 +1,5 @@
-title: Vilnius Dispute
-subtitle: A political question
+title: Vilnius Question
+subtitle: The Central Lithuanian republic has adopted a motion to incorporate itself to the Polish Republic
 tags: event
 is-card: true
 on-arrival: vilnius_seen = 1
@@ -7,13 +7,31 @@ face-image: img/vilnius.png
 view-if: vilnius_seen = 0 and year = 1922 and month >= 3
 new-page: true
 
-= Vilnius Dispute
+= Vilnius Question
 
-Summary
+On 20 February 1922, the Seimas of Central Lithuania adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of Poland. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the Polish state.
 
-- @party_stance
+*“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Republic of Poland”* — Point 4 of the resolution
 
-@party_stance
-title: party stance
+- @government_stance
 
-text, then go to disagreement. change government to Paderewski II government, if pps doesn't tolerate then ZLN might enter or a centrolew coalition can replace.
+@government_stance
+title: The Polish Government Responds.
+
+The Government of [+ prime_minister +] have submitted a draft "Act of Incorporation" to supplement the motion proposed by Central Lithuania which grants the Republic of Central Lithuania autonomy similar to that enjoyed by the Silesian Vovoideship
+
+- @reject
+
+@reject
+title: The Draft is Rejected
+
+The Central Lithuanian delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the Polish Republic without conditions.
+
+Due to the delegates refusal to amend the resolution, it culminated into a political crises which led to the loss of trust in the government followed by the resignation of [+ prime_minister +] as Prime Minister.
+
+- @psl_p_zln_appoint
+
+@psl_p_appoint
+title: President [+ president +] appoints the PSL-P and ZLN to form a government
+
+reject

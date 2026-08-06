@@ -66,9 +66,9 @@ Government Mandate: [+ government_mandate +]/100%
 
 {!<tr><td><div class="box" style='background-color:#179900;'> </div> !} PSL-W: {!</td><td>!} [+ psl_w_sj +]% {!</td><td>!} [? if psl_w_in_government = 0 and psl_w_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_w_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_w_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3A6538;'> </div> !} PSL-_P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [? if psl_p_in_government = 0 and psl_p_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_p_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_p_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3A6538;'> </div> !} PSL-P: {!</td><td>!} [+ psl_p_sj +]% {!</td><td>!} [? if psl_p_in_government = 0 and psl_p_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if psl_p_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if psl_p_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3AF34;'> </div> !} BMN
+{!<tr><td><div class="box" style='background-color:#E3AF34;'> </div> !} BMN: {!</td><td>!} [+ bmn_sj +]% {!</td><td>!}[? if bmn_in_government = 0 and bmn_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if bmn_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if bmn_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 
 {!<tr><td style="padding-left:26px;">!}- ZLN: {!</td><td>!} [+ zln_sj +]% {!</td><td>!} [? if zln_in_government = 0 and zln_toleration = 0 : <span style="color: #D42F2F;">Opposition</span> ?][? if zln_in_government = 1 : <span style="color: #66BB6A;">In Government</span> ?][? if zln_toleration = 1 : <span style="color: #FFB74D;">Toleration</span> ?] {!</td></tr>!}
 

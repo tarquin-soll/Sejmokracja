@@ -14,6 +14,8 @@ max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
+[? if year = 1922 and month = 2 : The Republic of Central Lithuania having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the Polish Republic. ?]
+
 - @party
 - @govt
 - #advisor
@@ -34,6 +36,8 @@ if (Q.advisor_action_timer <= 0) {
 max-cards: 4
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
+
+[? if year = 1922 and month = 2 : The Republic of Central Lithuania having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the Polish Republic. ?]
 
 - @party
 - @govt

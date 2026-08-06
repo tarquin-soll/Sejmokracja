@@ -352,7 +352,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.coalition_dissent = 0;
-Q.other_coalition_dissent = 0;
+Q.other_coalition_dissent = 2;
 
 Q.kpp_in_government = 0;
 Q.pps_in_government = 0;
@@ -363,19 +363,19 @@ Q.psl_p_in_government = 0;
 Q.bmn_in_government = 0;
 Q.zln_in_government = 0;
 Q.pschd_in_government = 1;
-Q.other_in_government = 0;
-Q.otherright_in_government = 1;
+Q.other_in_government = 1;
+Q.otherright_in_government = 0;
 // Who tolerates the government
 Q.kpp_toleration = 0;
 Q.pps_toleration = 1;
-Q.npr_toleration = 0;
+Q.npr_toleration = 1;
 Q.psl_l_toleration = 0;
 Q.psl_w_toleration = 1;
 Q.psl_p_toleration = 1;
 Q.bmn_tolerationn= 0;
 Q.zln_toleration = 0;
 Q.pschd_toleration = 0;
-Q.other_toleration = 1;
+Q.other_toleration = 0;
 Q.otherright_toleration = 0;
 
 Q.pps_attempt = 0;
@@ -387,10 +387,10 @@ Q.president_caretaker_government = 0;
 
 Q.minority_government = 0;
 
-Q.government_mandate = Q.pschd_sj + Q.otherright_sj + Q.other_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
+Q.government_mandate = Q.pschd_sj + Q.other_sj + npr_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
 
-Q.prime_minister_party = 'Ponikowski';
-Q.prime_minister = 'PSChD';
+Q.prime_minister_party = 'PSChD';
+Q.prime_minister = 'Ponikowski';
 Q.labor_minister_party = 'Independent';
 Q.labor_minister = 'Darowski';
 Q.economic_minister_party = 'Independent';
