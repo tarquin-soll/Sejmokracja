@@ -1,11 +1,11 @@
 title: Vilnius Incorporation
 subtitle: A political question
 tags: event
-is-card: true
 on-arrival: vilnius_seen = 2
 face-image: img/vilnius.png
 view-if: vilnius_seen = 1 and year = 1922 and month >= 4
 new-page: true
+priority: 1
 
 = Vilnius Incorporation
 
@@ -31,8 +31,19 @@ cheater.
 
 @vote_yes
 on-arrival: nationalism += 3*(1-dissent); west_relation -= 1
-face-image: CelebrationofVilniusIncorporation.png
-  
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/CelebrationofVilniusIncorporation.png";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
 The motion easily passes the Sejm, and **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">ish</span>**  Nationalist are in uproar. The West are displeased at our incorporation.
 
 Vilnius remained the declared capital of **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>**, though the **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">huan</span><span style="color: #BE3A34;">ian</span>** government continued to operate from Kaunas. Refusing to recognize **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>**'s claim to the region, **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>** severed communications with **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>** , effectively collapsing all hopes of improving diplomatic relations.
