@@ -1,5 +1,5 @@
 title: Vilnius Question
-subtitle: The Central Lithuanian republic has adopted a motion to incorporate itself to the Polish Republic
+subtitle: The Republic **<span style="color: #DDDDDD;">Central Lithuanian</span>** has adopted a motion to incorporate itself to the <b><span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic</span>**
 tags: event
 is-card: true
 on-arrival: vilnius_seen = 1
@@ -27,7 +27,7 @@ The Government of [+ prime_minister +] have submitted a draft "Act of Incorporat
 @reject
 title: The Draft is Rejected.
 
-The **<span style="color: #D00;">Central Lithuania</span>** delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the **<span style="color: #DDDDDD;">Polish</span><span style="color: #DC143C;">Republic</span>** without conditions.
+The **<span style="color: #D00;">Central Lithuania</span>** delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the **<span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic</span>** without conditions.
 
 Due to the delegates refusal to amend the resolution, it culminated into a political crises which led to the loss of trust in the government followed by the resignation of [+ prime_minister +] as Prime Minister.
 
