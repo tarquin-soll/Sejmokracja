@@ -279,7 +279,7 @@ Q.unemployed_otherright = 3;
 Q.unemployed_other = 6;
 
 Q.minorities_kpp = 0;
-Q.minorities_pps = 4;;
+Q.minorities_pps = 4;
 Q.minorities_npr = 0;
 Q.minorities_psl_l = 0;
 Q.minorities_psl_w = 5;
@@ -372,7 +372,7 @@ Q.npr_toleration = 1;
 Q.psl_l_toleration = 0;
 Q.psl_w_toleration = 1;
 Q.psl_p_toleration = 1;
-Q.bmn_tolerationn= 0;
+Q.bmn_toleration = 0;
 Q.zln_toleration = 0;
 Q.pschd_toleration = 0;
 Q.other_toleration = 0;
