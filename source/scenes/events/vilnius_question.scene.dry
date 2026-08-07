@@ -9,25 +9,25 @@ new-page: true
 
 = Vilnius Question
 
-On 20 February 1922, the Seimas of Central Lithuania adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of Poland. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the Polish state.
+On 20 February 1922, the Seimas of **<span style="color: #DDDDDD;">Central Lithuania</span>** adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>**. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">ish</span>** state.
 
-*“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Republic of Poland”* — Point 4 of the resolution
+*“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Republic of **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>**”* — Point 4 of the resolution
 
-Diplomatic representatives accredited in Poland warned the authorities against the "disastrous impression" that would be created by the simple incorporation of Vilnius.
+Diplomatic representatives accredited in **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>** warned the authorities against the "disastrous impression" that would be created by the simple incorporation of Vilnius.
 
 - @government_stance
 
 @government_stance
-title: The Polish Government Responds.
+title: The **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">ish</span>** Government Responds.
 
-The Government of [+ prime_minister +] have submitted a draft "Act of Incorporation" to supplement the motion proposed by Central Lithuania which grants the Republic of Central Lithuania autonomy similar to that enjoyed by the Silesian Vovoideship
+The Government of [+ prime_minister +] have submitted a draft "Act of Incorporation" to supplement the motion proposed by Central Lithuania which grants the Republic of **<span style="color: #DDDDDD;">Central Lithuania</span>** autonomy similar to that enjoyed by the Silesian Vovoideship
 
 - @reject
 
 @reject
 title: The Draft is Rejected.
 
-The Central Lithuanian delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the Polish Republic without conditions.
+The **<span style="color: #DDDDDD;">Central Lithuania</span>** delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the Polish Republic without conditions.
 
 Due to the delegates refusal to amend the resolution, it culminated into a political crises which led to the loss of trust in the government followed by the resignation of [+ prime_minister +] as Prime Minister.
 
@@ -44,7 +44,7 @@ The ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet withou
 title: The Sejm is deadlocked.
 subtitle: Piłsudski appoints [+ prime_minister +] again as non-parliamentary candidate
 
-[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other Parties, the Government is short of a majority, should we extend our support?
+[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, the Government is short of a majority, should we extend our support?
 
 - @yes
 - @no
@@ -68,7 +68,7 @@ We have decided to not tolerate the government.
 title: [+ prime_minister +] appoints the ministers.
 on-arrival: other_in_government = 0; other_toleration = 1
 
-The NZL (Other) who have previously been in government have been omitted out of the government.
+The NZL (Others) who have previously been in government have been omitted out of the government.
 
 Which ministry would be shuffled.
 
@@ -78,7 +78,7 @@ Which ministry would be shuffled.
 title: The Economic Ministry.
 on-arrival: economic_minister = 'Ossowski'
 
-[+ prime_minister +] replaces Strasburger with Ossowski in the Economic Ministry.
+[+ prime_minister +] replaces Strasburger with Ossowski (Independent) in the Economic Ministry.
 
 - @interior
 
@@ -86,8 +86,8 @@ on-arrival: economic_minister = 'Ossowski'
 title: The Interior Ministry.
 on-arrival: interior_minister = 'Kamieński'
 
-[+ prime_minister +] replaces Downarowicz with Kamieński in the Interior Ministry Ministry.
-look
+[+ prime_minister +] replaces Downarowicz with Kamieński (Independent) in the Interior Ministry Ministry.
+
 - @finalized
 
 @finalized
