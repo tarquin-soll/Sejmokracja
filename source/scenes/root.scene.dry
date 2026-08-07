@@ -92,7 +92,7 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.kpp_relation = 10
+Q.kpp_relation = 10;
 Q.npr_relation = 60;
 Q.psl_l_relation = 60;
 Q.psl_w_relation = 55;
@@ -332,7 +332,7 @@ Q.otherright_sn = 0;
 Q.other_sn = 0;
 
 Q.old_pps_sn = 0;
-Q.old_npr_s = 0;
+Q.old_npr_sn = 0;
 Q.old_psl_l_sn = 0;
 Q.old_psl_w_sn = 0;
 Q.old_psl_p_sn = 0;
@@ -387,7 +387,7 @@ Q.president_caretaker_government = 0;
 
 Q.minority_government = 0;
 
-Q.government_mandate = Q.pschd_sj + Q.other_sj + npr_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
+Q.government_mandate = Q.pschd_sj + Q.other_sj + Q.npr_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
 
 Q.prime_minister_party = 'PSChD';
 Q.prime_minister = 'Ponikowski';
