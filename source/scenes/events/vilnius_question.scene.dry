@@ -82,7 +82,7 @@ on-arrival: economic_minister = 'Ossowski'
 
 - @interior
 
-@economic
+@interior
 title: The Interior Ministry.
 on-arrival: interior_minister = 'Kamieński'
 
