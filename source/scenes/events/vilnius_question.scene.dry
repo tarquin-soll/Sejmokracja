@@ -1,5 +1,5 @@
 title: Vilnius Question
-subtitle: The Republic of **<span style="color: #D00;">Central Lithuania</span>** has adopted a motion to incorporate itself to the <b><span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic</span>**
+subtitle: The Republic of **<span style="color: #D00;">Central Lithuania</span>** has adopted a motion to incorporate itself to the <b><span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic</span>**
 tags: event
 is-card: true
 on-arrival: vilnius_seen = 1
@@ -9,16 +9,16 @@ new-page: true
 
 = Vilnius Question
 
-On 20 February 1922, the Seimas of **<span style="color: #DD0000;">Central Lithuania</span>** adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>**. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">ish</span>** state.
+On 20 February 1922, the Seimas of **<span style="color: #DD0000;">Central Lithuania</span>** adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** state.
 
-*“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Repubic of **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>**”* — Point 4 of the resolution
+*“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Repubic of **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**”* — Point 4 of the resolution
 
-Diplomatic representatives accredited in **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">and</span>** warned the authorities against the "disastrous impression" that would be created by the simple incorporation of Vilnius.
+Diplomatic representatives accredited in **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>** warned the authorities against the "disastrous impression" that would be created by the simple incorporation of Vilnius.
 
 - @government_stance
 
 @government_stance
-title: The **<span style="color: #DDD;">Pol</span><span style="color: #DC143C;">ish</span>** Government Responds.
+title: The **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** Government Responds.
 
 The Government of [+ prime_minister +] have submitted a draft "Act of Incorporation" to supplement the motion proposed by **<span style="color: #D00;">Central Lithuania</span>** which grants the Republic of **<span style="color: #D00;">Central Lithuania</span>** autonomy similar to that enjoyed by the Silesian Vovoideship
 
@@ -27,7 +27,7 @@ The Government of [+ prime_minister +] have submitted a draft "Act of Incorporat
 @reject
 title: The Draft is Rejected.
 
-The **<span style="color: #D00;">Central Lithuania</span>** delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the **<span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic</span>** without conditions.
+The **<span style="color: #D00;">Central Lithuania</span>** delegates have rejected the amendment, insisting that the Vilnius Region be incorprated to the **<span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic</span>** without conditions.
 
 Due to the delegates refusal to amend the resolution, it culminated into a political crises which led to the loss of trust in the government followed by the resignation of [+ prime_minister +] as Prime Minister.
 

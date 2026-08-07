@@ -14,7 +14,7 @@ max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic<span>**. ?]
+[? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic<span>**. ?]
 
 - @party
 - @govt
@@ -37,7 +37,7 @@ max-cards: 4
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #DDDDDD;">Polish </span><span style="color: #DC143C;">Republic</span>**. ?]
+[? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic</span>**. ?]
 
 - @party
 - @govt
