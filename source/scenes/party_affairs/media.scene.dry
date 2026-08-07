@@ -22,20 +22,20 @@ The PPS runs a modest media operation, with many newspapers throughout every Pol
 
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
-subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to <span style="color: #DD0000;">socialist</span> views.
+subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to <span style="color: #C62828;">socialist</span> views.
 on-arrival: resources += 1; commercialized_media += 1; petit_pps += 6*(1 - dissent); bourgeoisie_pps += 3*(1-dissent); left_dissent += 10
 
 Our commercialized newspapers are able to bring in more funds. However, the left faction express their displeasure.
 
 @campaign
-title: The purpose of our media is to elect more <span style="color: #DD0000;">Social Democrats</span>.
+title: The purpose of our media is to elect more <span style="color: #C62828;">Social Democrats</span>.
 subtitle: Our newspapers will focus on the electoral campaign.
 on-arrival: campaign_media += 1; workers_pps += 6*(1 - dissent); unemployed_pps += 3*(1-dissent)
 
-Our campaign media is mostly reaching the workers who are already saturated with <span style="color: #DD0000;">Socialist</span> propaganda, but it must be doing *something*, or at least that is what we hope.
+Our campaign media is mostly reaching the workers who are already saturated with <span style="color: #C62828;">Socialist</span> propaganda, but it must be doing *something*, or at least that is what we hope.
 
 @regional
-title: The purpose of our media is to elect more <span style="color: #DD0000;">Social Democrats</span> regionally.
+title: The purpose of our media is to elect more <span style="color: #C62828;">Social Democrats</span> regionally.
 subtitle: Our newspapers will focus on *regional* campaign.
 on-arrival: campaign_media += 1; workers_pps += 2*(1 - dissent); unemployed_pps += 1*(1-dissent); minorities_pps += 4*(1 - dissent)
 

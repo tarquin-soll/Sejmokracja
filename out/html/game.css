@@ -614,7 +614,7 @@ table {
     fill: #890000;
 }
 .seat.pps {
-    fill: #DD0000;
+    fill: #C62828;
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
