@@ -44,7 +44,7 @@ The ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet withou
 title: The Sejm is deadlocked.
 subtitle: Piłsudski appoints [+ prime_minister +] again as non-parliamentary candidate
 
-[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, the Government is short of a majority, should we extend our support?
+[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority, should we extend our support?
 
 - @yes
 - @no
