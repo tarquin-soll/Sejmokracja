@@ -31,18 +31,7 @@ cheater.
 
 @vote_yes
 on-arrival: nationalism += 3*(1-dissent); west_relation -= 1
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/CelebrationofVilniusIncorporation.png";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
+face-image: img/CelebrationofVilniusIncorporation.png
 
 The motion easily passes the Sejm, and **<span style="color: #DDDDDD;">Pol</span><span style="color: #DC143C;">ish</span>**  Nationalist are in uproar. The West are displeased at our incorporation.
 
