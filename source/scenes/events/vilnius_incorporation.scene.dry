@@ -1,6 +1,6 @@
 title: Vilnius Incorporation
 subtitle: A political question
-  tags: event
+tags: event
 is-card: true
 on-arrival: vilnius_seen = 2
 face-image: img/vilnius.png
