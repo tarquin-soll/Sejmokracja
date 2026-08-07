@@ -635,7 +635,7 @@ this.state.disableSaves = true;
 go-to: 1922_main
 
 @1922_main
-audio: music/MazurekDabrowskiego.mp3
+audio: shuffle music/MarszVictoria.mp3 music/KozietulskiMarsz.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
