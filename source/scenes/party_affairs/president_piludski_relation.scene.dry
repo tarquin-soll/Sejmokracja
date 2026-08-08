@@ -1,0 +1,27 @@
+title: Presidential Relation
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: president_timer = 0 and president = 'Piłsudski'
+on-arrival: month_actions += 1; president_timer = 8
+card-image: img/PilsudskiJozef.jpg
+#subtitle: Improving Presidential Relation.
+
+= Presidential Relation
+
+- @meeting
+- @no
+- @easy_discard
+
+@meeting
+title: Arrange a meeting with the President.
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources.
+on-arrival: resources -= 1; president_relation += 10; president_confidence += 8 if pps_in_government
+
+The meeting was well recieved, we were able to build a relationship with the President.
+
+[? if pps_in_government : Piłsudski have expressed his concerns about our governments action and we were able to assauge it. ?]
+
+@no
+title: Let's not do this for now.
