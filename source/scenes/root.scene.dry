@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Sejmokracja
 
 @start_menu_2
 
@@ -111,6 +111,8 @@ Q.nsdap_leader = "Hitler";
 
 Q.president_relation = 60;
 Q.president = 'Piłsudski';
+Q.president_confidence = 20;
+Q.pilsudski_relation = 60;
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
@@ -160,9 +162,9 @@ Q.reichswehr_loyalty = 0.2;
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+Q.nationalism = 90;
 // socialism vs capitalism
-Q.socialism = 40;
+Q.socialism = 20;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
 
@@ -490,7 +492,7 @@ Q.n_advisors = 3;
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
-            'iron_front', 'media', 'enemies',
+            'president_relation', 'media', 'enemies',
             'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
