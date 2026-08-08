@@ -1,0 +1,25 @@
+title: Genoa Conference
+new-page: true
+subtitle: An international economic and political conference
+tags: event
+view-if: year = 1922 and month >= 4
+max-visits: 1
+face-image: img/Genoa_conference_1922.jpg
+
+= Genoa Conference
+
+An international economic conference is held to address major economic and political issues revolving around europe and to address the status of Germany and the Soviet Union, both of which have been excluded from the Paris Conference in 1919.
+
+The conference was also held to negotiate and build a relationship between Western Europe and Eastern Europe.
+
+Poland is represented through it's formal delegates led by the Foreign Minister, [+ foreign_minister +].
+
+- @firstthingsfirst
+
+@firstthingsfirst
+title: Polish Eastern Border Question
+  
+The Western powers have initiated a discussion regarding the {!<span class="tooltip-text" title="Treaty that ended the Polish-Soviet war, not recognized by the Western Powers">**Treaty of Riga**</span>!}.
+
+
+
