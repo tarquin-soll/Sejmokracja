@@ -4,7 +4,7 @@ is-card: true
 tags: party_affairs
 view-if: president_timer = 0 and president = 'Piłsudski'
 on-arrival: month_actions += 1; president_timer = 8
-card-image: img/PilsudskiJozef.jpg
+card-image: img/portraits/PilsudskiJozef.jpg
 #subtitle: Improving Presidential Relation.
 
 = Presidential Relation
