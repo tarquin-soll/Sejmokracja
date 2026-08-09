@@ -88,9 +88,9 @@ KPP: Leninism-Trotskyism-Luxemburgism ([+ kpp_leader +])
 
 NPR: Left-Wing Nationalism ([+ npr_leader +])
 
-PSL-L: [? if psl_l_ideology == 'Left' : Agrarian Socialism ?][? if psl_l_ideology == 'Center' : Social Agrarianism ?] ([+ psl_l_leader +])
+PSL-L: [? if psl_l_ideology == 'Left' : Agrarian Socialism ?][? if psl_l_ideology == 'Center' : Social Agrarianism ?][? if psl_l_ideology == 'Right' : Agrarianism ?] ([+ psl_l_leader +])
 
-PSL-W: [? if psl_w_ideology == 'Center' : Social Agrarianism ?][? if psl_w_ideology == 'Right' : Agrarianism ?] ([+ psl_w_leader +])
+PSL-W: [? if psl_w_ideology == 'Left' : Social Agrarianism ?][? if psl_w_ideology == 'Center' : Agrarianism ?] ([+ psl_w_leader +])
 
 PSL-P: [? if psl_p_ideology == 'Center' : Agrarianism ?][? if psl_p_ideology == 'Right' : Conservative Agrarianism ?] ([+ psl_p_leader +])
 
