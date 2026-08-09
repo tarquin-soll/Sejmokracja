@@ -66,30 +66,49 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+KPP: [+ kpp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+NPR: [+ npr_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+PSL-L: [+ psl_l_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+PSL-W: [+ psl_w_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+PSL-P: [+ psl_p_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+BMN: [+ bmn_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+ZLN: [+ zln_relation : relationships +]
 
-= Internal Factions of the SPD
+PSChD: [+ pschd_relation : relationships +]
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+= Party Leadership
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+KPP: Leninism-Trotskyism-Luxemburgism ([+ kpp_leader +])
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+NPR: Left-Wing Nationalism ([+ npr_leader +])
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+PSL-L: [? if psl_l_ideology == 'Left' : Agrarian Socialism ?][? if psl_l_ideology == 'Center' : Social Agrarianism ?] ([+ psl_l_leader +])
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+PSL-W: [? if psl_w_ideology == 'Center' : Social Agrarianism ?][? if psl_w_ideology == 'Right' : Agrarianism ?] ([+ psl_w_leader +])
+
+PSL-P: [? if psl_p_ideology == 'Center' : Agrarianism ?][? if psl_p_ideology == 'Right' : Conservative Agrarianism ?] ([+ psl_p_leader +])
+
+BMN: Minority Interest ([+ bmn_leader +])
+
+ZLN: National Conservatism ([+ zln_leader +])
+
+PSChD: Christian Democracy ([+ pschd_leader +])
+
+= Internal Factions of the PPS
+
+{!<span class="tooltip-text" title="WIP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Conservative</span>!} strength: [+ conservative_strength : strength +], dissent: [+ conservative_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 @polls
 on-arrival: {!
