@@ -34,7 +34,7 @@ Q.old_demographics = 0;
 // party resources
 Q.resources = 3;
 // party dues
-Q.dues = 2;
+Q.dues = 3;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
@@ -96,10 +96,10 @@ Q.kpp_relation = 10;
 Q.npr_relation = 60;
 Q.psl_l_relation = 60;
 Q.psl_w_relation = 55;
-Q.psl_p_relation = 45;
-Q.bmn_relation = 40;
+Q.psl_p_relation = 35;
+Q.bmn_relation = 35;
 Q.zln_relation = 5;
-Q.pschd_relation = 5;
+Q.pschd_relation = 15;
 
 Q.kpp_leader = 'Central Committee';
 Q.npr_leader = 'Jankowski';
