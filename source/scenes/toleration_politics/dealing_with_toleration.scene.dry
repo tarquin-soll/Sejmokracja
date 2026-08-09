@@ -1,0 +1,12 @@
+title: Dealing with Toleration
+new-page: true
+is-card: true
+card-image:
+view-if: pps_toleration = 1
+on-arrival: month_actions += 1
+tags: tol_politics
+#subtitle: Despite not being in government, we can still provide support.
+
+= Dealing with Toleration
+  
+wip
