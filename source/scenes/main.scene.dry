@@ -41,6 +41,7 @@ max-cards: 4
 
 - @party
 - @govt
+- @tol
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -59,3 +60,11 @@ card-image: img/Sejm.jpg
 is-deck: true
 
 - #govt_affairs
+
+@tol
+title: Toleration Politics
+view-if: time >= 4 and pps_toleration == 1
+card-image: img/portraits/DaszyńskiIgnacy2.jpg
+is-deck: true
+
+- #tol_politics
