@@ -101,6 +101,19 @@ Q.bmn_relation = 40;
 Q.zln_relation = 5;
 Q.pschd_relation = 5;
 
+Q.kpp_leader = 'Central Committee';
+Q.npr_leader = 'Jankowski';
+Q.psl_l_leader = 'Stapiński';
+Q.psl_l_ideology = 'Left';
+Q.psl_w_leader = 'Thugutt';
+Q.psl_w_ideology = 'Left';
+Q.psl_p_leader = 'Wintos';
+Q.psl_p_ideology = 'Center';
+Q.bmn_leader = 'Grünbaum';
+Q.zln_leader = 'Grabski';
+Q.pschd_leader = 'Korfanty';
+
+
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
