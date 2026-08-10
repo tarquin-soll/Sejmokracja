@@ -4,7 +4,7 @@ view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
 tags: event
-go-to: image_thing_put
+go-to: rg_banned
 on-arrival: {!
 for (var party of Q.parties) {
     Q[party + '_pres_votes'] = Math.round(((Q[party + '_sj'] + Q[party + '_sn']) / 2) * 10) / 10;
@@ -32,10 +32,10 @@ Q.chzjn_choice = 'Zamoyski';
 
 =  1922 Presidential Election
 
-@image_thing_put
+@rg_banned
 on-display: {!  
     var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure-2";  
+    cardEl.className = "face-figure2";  
 
     var image = new Image();  
     image.className = "face-img";  
@@ -45,6 +45,7 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
+
 
 Its time to view the candidates. Now, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followe- what? <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> isnt running? 
 
