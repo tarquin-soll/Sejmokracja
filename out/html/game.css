@@ -763,7 +763,7 @@ body.dark-mode .parliament-tooltip {
   opacity: 1;
 }
 .wide_tooltip-tip img {
-  width: 50%;
+  width: 100%;
   display: block;
   margin: 0 auto 6px auto;
   border: 1px solid #999;
@@ -771,7 +771,7 @@ body.dark-mode .parliament-tooltip {
 body.dark-mode .wide_tooltip-tip {
   background-color: #1a1a2e;
   color: #e0e0e0;
-  border: 1px solid #DC143C;
+  border: 2px solid #DC143C;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 body.dark-mode .wide_tooltip-tip img {
