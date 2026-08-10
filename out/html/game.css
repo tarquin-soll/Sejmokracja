@@ -778,8 +778,8 @@ body.dark-mode .wide_tooltip-tip img {
   border-color: #555; 
 }
 body.dark-mode .wide_tooltip-tip::after {
-  border-color: #8093ff transparent transparent transparent;
+  border-color: #DC143C transparent transparent transparent;
 }
 body.dark-mode .wide_tooltip-tip::before {
-  border-color: #1a1a2e transparent transparent transparent;
+  border-color: #DC143C transparent transparent transparent;
 }
