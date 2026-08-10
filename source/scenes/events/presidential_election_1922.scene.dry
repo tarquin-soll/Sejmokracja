@@ -10,19 +10,23 @@ for (var party of Q.parties) {
 }
 Q.witos_votes = 0;
 
-Q.daszynski_votes = 0:
+Q.narutowicz_votes = 0;
+Q.daszynski_votes = 0;
 Q.wojciechowski_votes = 0;
 Q.courtenay_votes = 0;
 Q.zamoyski_votes = 0;
 
 Q.endorsement_daszynski = 0;
-Q.psl_l_support_pps = 0;
-Q.psl_w_support_pps = 0;
-Q.psl_p_support = 0;
-Q.npr_support = 0;
-Q.bmn_support = 0;
-Q.other_support = 0;
-Q.kpp_support = 0;
+Q.psl_l_choice = 'Narutowicz';
+Q.psl_w_choice = 'Narutowicz';
+Q.psl_p_choice = 'Wojciechowski';
+Q.npr_choice = 'Wojciechowski';
+Q.pps_choice = '0';
+Q.kpp_choice = '0';
+Q.bmn_choice = 'Courtenay';
+Q.other_choice = 'Courtenay';
+Q.chzjn_choice = 'Zamoyski';
+
 !}
 
 = Presidential Election
