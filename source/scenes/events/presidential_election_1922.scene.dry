@@ -4,18 +4,6 @@ view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
 tags: event
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/Jozef-Pilsudski-Polish-soldiers.webp";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
 on-arrival: {!
 for (var party of Q.parties) {
     Q[party + '_pres_votes'] = Math.round(((Q[party + '_sj'] + Q[party + '_sn']) / 2) * 10) / 10;
@@ -40,8 +28,23 @@ Q.other_choice = 'Courtenay';
 Q.chzjn_choice = 'Zamoyski';
 
 !}
+go-to: image_thing_put
 
 =  1922 Presidential Election
+
+@image_thing_put
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/Jozef-Pilsudski-Polish-soldiers.webp";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 Its time to view the candidates. Now, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followe- what? <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> isnt running? 
 
