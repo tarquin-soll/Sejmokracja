@@ -4,6 +4,7 @@ view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
 tags: event
+go-to: image_thing_put
 on-arrival: {!
 for (var party of Q.parties) {
     Q[party + '_pres_votes'] = Math.round(((Q[party + '_sj'] + Q[party + '_sn']) / 2) * 10) / 10;
@@ -28,14 +29,13 @@ Q.other_choice = 'Courtenay';
 Q.chzjn_choice = 'Zamoyski';
 
 !}
-go-to: image_thing_put
 
 =  1922 Presidential Election
 
 @image_thing_put
 on-display: {!  
     var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure";  
+    cardEl.className = "face-figure-2";  
 
     var image = new Image();  
     image.className = "face-img";  
@@ -55,7 +55,7 @@ After his decision to not put forward a candidacy, many parties have been left s
 - @who
 
 @who
-title: Who will be the successor of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>i?
+title: Who will be the successor of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
 subtitle: Good question.
 
 Without a unifying figure such as <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> around, many fear the ChZJN might win the presidency, however, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> must have a plan, right? He wouldnt have dropped out without having a plan. Yes..
