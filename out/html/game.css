@@ -745,7 +745,7 @@ body.dark-mode .parliament-tooltip {
   left: 15px;
   border-width: 7px;
   border-style: solid;
-  border-color: #2235b2 transparent transparent transparent;
+  border-color: #DC143C transparent transparent transparent;
 }
 .wide_tooltip-tip::before {
   content: "";
@@ -754,7 +754,7 @@ body.dark-mode .parliament-tooltip {
   left: 16px; 
   border-width: 6px;
   border-style: solid;
-  border-color: #d8ddef transparent transparent transparent;
+  border-color: #edf0fa transparent transparent transparent;
   z-index: 1;
 }
 .wide_tooltip-wrap:hover .wide_tooltip-tip,
@@ -763,7 +763,7 @@ body.dark-mode .parliament-tooltip {
   opacity: 1;
 }
 .wide_tooltip-tip img {
-  width: 100%;
+  width: 50%;
   display: block;
   margin: 0 auto 6px auto;
   border: 1px solid #999;
@@ -771,7 +771,7 @@ body.dark-mode .parliament-tooltip {
 body.dark-mode .wide_tooltip-tip {
   background-color: #1a1a2e;
   color: #e0e0e0;
-  border: 1px solid #8093ff;
+  border: 1px solid #DC143C;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 body.dark-mode .wide_tooltip-tip img {
