@@ -3,6 +3,7 @@ view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
 tags: event
+face-image: img/Jozef-Pilsudski-Polish-soldiers.webp
 on-arrival: {!
 for (var party of Q.parties) {
     Q[party + '_pres_votes'] = Math.round(((Q[party + '_sj'] + Q[party + '_sn']) / 2) * 10) / 10;
@@ -23,7 +24,6 @@ Q.bmn_support = 0;
 Q.other_support = 0;
 Q.kpp_support = 0;
 !}
-face-image: img/Jozef-Pilsudski-Polish-soldiers.webp
 
 = Presidential Election
 
