@@ -766,7 +766,7 @@ body.dark-mode .parliament-tooltip {
   width: 100%;
   display: block;
   margin: 0 auto 6px auto;
-  border: 1px solid #999;
+  border: 1.5px solid #999;
 }
 body.dark-mode .wide_tooltip-tip {
   background-color: #1a1a2e;
