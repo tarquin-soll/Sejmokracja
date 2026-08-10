@@ -275,7 +275,7 @@ blockquote + blockquote.attribution {
   position: fixed;
   z-index: 999999;
   width: 130px;
-  background: #FFFFFF;
+  background: #edf0fa;
   color: #3b1f0a;
   text-align: left;
   border-radius: 8px;
