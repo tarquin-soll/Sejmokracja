@@ -1,0 +1,50 @@
+title: Vilnius Incorporation
+subtitle: A political question
+tags: event
+on-arrival: vilnius_seen = 2
+face-image: img/vilnius.png
+view-if: vilnius_seen = 1 and year = 1922 and month >= 4
+new-page: true
+priority: 1
+
+= Vilnius Incorporation
+
+The government have put forward a motion On Assuming State Authority over the Vilnius Region in pursuant of the resolution passed by the Seimas of **<span style="color: #D00;">Central Lithuanian</span>** wherein the region is to be annexed by the **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** state.
+
+The motion have received broad support from the Sejm and is guaranteed to pass, our partners and party members expects us to vote for the motion, voting against the motion could easily frame our party as against **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** national interest.
+
+- @vote_yes: Vote yes, for the incorporation of Vilnius.
+- @vote_no: Vote no, against the incorporation of Vilnius.
+- @abstain: Abstain from the vote.
+  
+@vote_no
+unavailable-subtitle: Wip I'm doing historical path first
+choose-if: resources >= 99
+
+cheater.
+
+@abstain
+unavailable-subtitle: Wip I'm doing historical path first
+choose-if: resources >= 99
+
+cheater.
+
+@vote_yes
+on-arrival: nationalism += 3*(1-dissent); west_relation -= 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/CelebrationofVilniusIncorporation.png";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+The motion easily passes the Sejm, and **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>**  Nationalists are in uproar with this achievement. However, The West Powers are displeased at our incorporation.
+
+Vilnius remained the declared capital of **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>**, though the **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">huan</span><span style="color: #BE3A34;">ian</span>** government continued to operate from Kaunas. Refusing to recognize **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**'s claim to the region, **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>** severed communications with **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>** , effectively collapsing all hopes of improving diplomatic relations.
+  

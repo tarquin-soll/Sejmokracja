@@ -12,6 +12,10 @@ for (var c of Q.classes) {
     }
 }
 
+if (Q.president = 'Piłsudski') {
+    Q.pilsudski_relation = Q.president_relation;
+}
+
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);

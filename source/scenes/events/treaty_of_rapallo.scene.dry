@@ -1,0 +1,18 @@
+title: Treaty of Rapallo
+new-page: true
+subtitle: German-Soviet relations rekindled
+tags: event
+view-if: year = 1922 and month = 4
+max-visits: 1
+face-image: img/RapalloTreaty.jpg
+
+= Treaty of Rapallo
+
+Treaty, what happened
+
+- @consequence
+
+@consequence
+title: consequence
+
+Piłsudski is mad or some shit wtf is wirth doing, what does this entail to poland

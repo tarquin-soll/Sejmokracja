@@ -1,0 +1,36 @@
+title: Genoa Conference
+new-page: true
+subtitle: An international economic and political conference
+tags: event
+view-if: year = 1922 and month >= 4
+max-visits: 1
+face-image: img/Genoa_conference_1922.jpg
+
+= Genoa Conference
+
+An international economic conference is held to address major economic and political issues revolving around europe and to address the status of **<span style="color: #000;">Ge</span><span style="color: #D00;">rma</span><span style="color: #FC0;">ny</span>** and the **<span style="color: #CD0000;">Soviet Union</span>**, both of which have been excluded from the **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>** Conference in 1919.
+
+The conference was also held to negotiate and build a relationship between **<span style="color: #000091;">West</span><span style="color: #CCC;">ern Eu</span><span style="color: #E1000F;">rope</span>** and **<span style="color: #FFB81C;">East</span><span style="color: #046A38;">ern Eu</span><span style="color: #BE3A34;">rope</span>**.
+
+**<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>** is represented through it's formal delegates led by the Foreign Minister, [+ foreign_minister +].
+
+- @pebq
+
+@pebq
+title: Polish Eastern Border Question
+  
+The **<span style="color: #000091;">West</span><span style="color: #CCC;">ern Po</span><span style="color: #E1000F;">wers</span>** have initiated a discussion regarding the <span class="tooltip-text" title="Treaty that ended the Polish-Soviet war, not recognized by the Western Powers">*Treaty of Riga*</span>.
+
+- @asratgr
+
+@asratgr
+title: About Soviet Russia and the German Republic
+
+wtf
+
+- @gold
+
+@gold
+title: Return to **<span style="color: #FC0;">Gold</span> Standard
+
+wtf

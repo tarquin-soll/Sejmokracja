@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #DD0000;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span> position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span> position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -30,11 +30,11 @@ President: [+ president +]
 
 President Relation: [+ president_relation : relationships +]
 
-Prime Minister: [+ chancellor +] ([+ chancellor_party +])
+Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Sejm:
 
-<span style="color: #890000;"><span class="tooltip-text" title="Communist Party of Poland">**KPP**</span></span>: [+ kpp_sj +]% <span style="color: #DD0000;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span>: [+ pps_sj +]% <span style="color: #841839;"><span class="tooltip-text" title="National Workers' Party">**NPR**</span></span>: [+ npr_sj +]% <span style="color: #80FF00;"><span class="tooltip-text" title="Polish People's Party 'Left' (Lewica)">**PSL-L**</span></span>: [+ psl_l_sj +]% <span style="color: #179900;"><span class="tooltip-text" title="Polish People's Party 'Liberation' (Wyzwolenie)">**PSL-W**</span></span>: [+ psl_w_sj +]% <span style="color: #3A6538;"><span class="tooltip-text" title="Polish People's Party 'Piast' (Piast)">**PSL-P**</span></span>: [+ psl_p_sj +]% <span style="color: #E3AF34;"><span class="tooltip-text" title="National Minorities Bloc">**BMN**</span></span>: [+ bmn_sj +]%
+<span style="color: #890000;"><span class="tooltip-text" title="Communist Party of Poland">**KPP**</span></span>: [+ kpp_sj +]% <span style="color: #C62828;"><span class="tooltip-text" title="Polish Socialist Party">**PPS**</span></span>: [+ pps_sj +]% <span style="color: #841839;"><span class="tooltip-text" title="National Workers' Party">**NPR**</span></span>: [+ npr_sj +]% <span style="color: #80FF00;"><span class="tooltip-text" title="Polish People's Party 'Left' (Lewica)">**PSL-L**</span></span>: [+ psl_l_sj +]% <span style="color: #179900;"><span class="tooltip-text" title="Polish People's Party 'Liberation' (Wyzwolenie)">**PSL-W**</span></span>: [+ psl_w_sj +]% <span style="color: #3A6538;"><span class="tooltip-text" title="Polish People's Party 'Piast' (Piast)">**PSL-P**</span></span>: [+ psl_p_sj +]% <span style="color: #E3AF34;"><span class="tooltip-text" title="National Minorities Bloc">**BMN**</span></span>: [+ bmn_sj +]%
 
 <span style="color: #312E99;"><span class="tooltip-text" title="Christian Union of National Unity (Chjena)">**ChZJN**</span></span>: 0%
 
@@ -66,30 +66,49 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+KPP: [+ kpp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+NPR: [+ npr_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+PSL-L: [+ psl_l_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+PSL-W: [+ psl_w_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+PSL-P: [+ psl_p_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+BMN: [+ bmn_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+ZLN: [+ zln_relation : relationships +]
 
-= Internal Factions of the SPD
+PSChD: [+ pschd_relation : relationships +]
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+= Party Leadership
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+KPP: Leninism-Trotskyism-Luxemburgism ([+ kpp_leader +])
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+NPR: Left-Wing Nationalism ([+ npr_leader +])
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+PSL-L: [? if psl_l_ideology == 'Left' : Agrarian Socialism ?][? if psl_l_ideology == 'Center' : Social Agrarianism ?][? if psl_l_ideology == 'Right' : Agrarianism ?] ([+ psl_l_leader +])
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+PSL-W: [? if psl_w_ideology == 'Left' : Social Agrarianism ?][? if psl_w_ideology == 'Center' : Agrarianism ?] ([+ psl_w_leader +])
+
+PSL-P: [? if psl_p_ideology == 'Center' : Agrarianism ?][? if psl_p_ideology == 'Right' : Conservative Agrarianism ?] ([+ psl_p_leader +])
+
+BMN: Minority Interest ([+ bmn_leader +])
+
+ZLN: National Conservatism ([+ zln_leader +])
+
+PSChD: Christian Democracy ([+ pschd_leader +])
+
+= Internal Factions of the PPS
+
+{!<span class="tooltip-text" title="WIP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Conservative</span>!} strength: [+ conservative_strength : strength +], dissent: [+ conservative_dissent : dissent +]
+
+{!<span class="tooltip-text" title="WIP.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 @polls
 on-arrival: {!
@@ -135,3 +154,7 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, 
 Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
+
+Nationalism: [+ nationalism_disp +]%
+
+Support for Socialism: [+ socialism_disp +]%

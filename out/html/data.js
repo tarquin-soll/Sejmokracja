@@ -1,6 +1,6 @@
 const colourList = [{
         word: "PPS",
-        style: "color: #DD0000; font-weight: bold;"
+        style: "color: #C62828; font-weight: bold;"
    },
     {
         word: "KPP",

@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Sejmokracja
 
 @start_menu_2
 
@@ -34,7 +34,7 @@ Q.old_demographics = 0;
 // party resources
 Q.resources = 3;
 // party dues
-Q.dues = 2;
+Q.dues = 3;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
@@ -92,14 +92,27 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.kpp_relation = 10
-Q.nzr_relation = 60;
+Q.kpp_relation = 10;
+Q.npr_relation = 60;
 Q.psl_l_relation = 60;
 Q.psl_w_relation = 55;
-Q.psl_p_relation = 45;
-Q.bmn_relation = 40;
+Q.psl_p_relation = 35;
+Q.bmn_relation = 35;
 Q.zln_relation = 5;
-Q.pschd_relation = 5;
+Q.pschd_relation = 15;
+
+Q.kpp_leader = 'Central Committee';
+Q.npr_leader = 'Jankowski';
+Q.psl_l_leader = 'Stapiński';
+Q.psl_l_ideology = 'Left';
+Q.psl_w_leader = 'Thugutt';
+Q.psl_w_ideology = 'Left';
+Q.psl_p_leader = 'Wintos';
+Q.psl_p_ideology = 'Center';
+Q.bmn_leader = 'Grünbaum';
+Q.zln_leader = 'Grabski';
+Q.pschd_leader = 'Korfanty';
+
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -111,6 +124,8 @@ Q.nsdap_leader = "Hitler";
 
 Q.president_relation = 60;
 Q.president = 'Piłsudski';
+Q.president_confidence = 20;
+Q.pilsudski_relation = 60;
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
@@ -160,9 +175,9 @@ Q.reichswehr_loyalty = 0.2;
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+Q.nationalism = 90;
 // socialism vs capitalism
-Q.socialism = 40;
+Q.socialism = 20;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
 
@@ -279,7 +294,7 @@ Q.unemployed_otherright = 3;
 Q.unemployed_other = 6;
 
 Q.minorities_kpp = 0;
-Q.minorities_pps = 4;;
+Q.minorities_pps = 4;
 Q.minorities_npr = 0;
 Q.minorities_psl_l = 0;
 Q.minorities_psl_w = 5;
@@ -332,7 +347,7 @@ Q.otherright_sn = 0;
 Q.other_sn = 0;
 
 Q.old_pps_sn = 0;
-Q.old_npr_s = 0;
+Q.old_npr_sn = 0;
 Q.old_psl_l_sn = 0;
 Q.old_psl_w_sn = 0;
 Q.old_psl_p_sn = 0;
@@ -352,7 +367,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.coalition_dissent = 0;
-Q.other_coalition_dissent = 0;
+Q.other_coalition_dissent = 2;
 
 Q.kpp_in_government = 0;
 Q.pps_in_government = 0;
@@ -363,19 +378,19 @@ Q.psl_p_in_government = 0;
 Q.bmn_in_government = 0;
 Q.zln_in_government = 0;
 Q.pschd_in_government = 1;
-Q.other_in_government = 0;
-Q.otherright_in_government = 1;
+Q.other_in_government = 1;
+Q.otherright_in_government = 0;
 // Who tolerates the government
 Q.kpp_toleration = 0;
 Q.pps_toleration = 1;
-Q.npr_toleration = 0;
+Q.npr_toleration = 1;
 Q.psl_l_toleration = 0;
 Q.psl_w_toleration = 1;
 Q.psl_p_toleration = 1;
-Q.bmn_tolerationn= 0;
+Q.bmn_toleration = 0;
 Q.zln_toleration = 0;
 Q.pschd_toleration = 0;
-Q.other_toleration = 1;
+Q.other_toleration = 0;
 Q.otherright_toleration = 0;
 
 Q.pps_attempt = 0;
@@ -387,10 +402,10 @@ Q.president_caretaker_government = 0;
 
 Q.minority_government = 0;
 
-Q.government_mandate = Q.pschd_sj + Q.otherright_sj + Q.other_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
+Q.government_mandate = Q.pschd_sj + Q.other_sj + Q.npr_sj + Q.psl_p_sj + Q.psl_w_sj + Q.pps_sj;
 
-Q.prime_minister_party = 'Ponikowski';
-Q.prime_minister = 'PSChD';
+Q.prime_minister_party = 'PSChD';
+Q.prime_minister = 'Ponikowski';
 Q.labor_minister_party = 'Independent';
 Q.labor_minister = 'Darowski';
 Q.economic_minister_party = 'Independent';
@@ -420,7 +435,7 @@ Q.panzerkreuzer_failed = 0;
 Q.unemployment_insurance_seen = 0;
 // unemployment insurance event is seen if the unemployment level is at least 4 more than the threshold...
 Q.unemployment_insurance_threshold = 10;
-Q.vilnius = 0;
+Q.vilnius_seen = 0;
 Q.blutmai = 0;
 
 // have we reformed these institutions to be more democratic?
@@ -490,7 +505,7 @@ Q.n_advisors = 3;
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
-            'iron_front', 'media', 'enemies',
+            'president_relation', 'media', 'enemies',
             'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
@@ -635,12 +650,12 @@ this.state.disableSaves = true;
 go-to: 1922_main
 
 @1922_main
-audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
+audio: shuffle music/WaltzInAMinor.mp3 music/KozietulskiMarsz.mp3 music/MarszVictoria.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1922
 
-Following a period of struggle, It is a relatively stable time for the Second <span style="color: #DDDDDD;"><b>Polish</b></span> <span style="color: #DC143C;"><b>Republic</b></span>, our borders are settled and we we're able to form comfortable governments in the past, and the economy is controlled and relaxed.
+Following a period of struggle, It is a relatively stable time for the Second <span style="color: #CCCCCC;"><b>Polish</b></span> <span style="color: #DC143C;"><b>Republic</b></span>, our borders are settled and we we're able to form comfortable governments in the past, and the economy is controlled and relaxed.
 
 Now, the task of <span style="color: #C62828;"><b>Social Democracy</b></span> is to prepare for the next election scheduled in November of this year.
