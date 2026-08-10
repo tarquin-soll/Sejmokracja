@@ -1,22 +1,42 @@
 title: Presidential Election
-view-if: year = 1922 and month >= 12
+view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
 tags: event
+on-arrival: {!
+for (var party of Q.parties) {
+    Q[party + '_pres_votes'] = Math.round(((Q[party + '_sj'] + Q[party + '_sn']) / 2) * 10) / 10;
+}
+Q.witos_votes = 0;
+
+Q.daszynski_votes = 0:
+Q.wojciechowski_votes = 0;
+Q.courtenay_votes = 0;
+Q.zamoyski_votes = 0;
+
+Q.endorsement_daszynski = 0;
+Q.psl_l_support_pps = 0;
+Q.psl_w_support_pps = 0;
+Q.psl_p_support = 0;
+Q.npr_support = 0;
+Q.bmn_support = 0;
+Q.other_support = 0;
+Q.kpp_support = 0;
+!}
 face-image: img/Jozef-Pilsudski-Polish-soldiers.webp
 
 = Presidential Election
 
 The Presidential Election is to be held now
 
-The absence of a candidate for the Polish moderates leaves behind a vacuum, many parties supporting Piłsudski are scrambling to push a candidate to fill the gap left behind by Piłsudski.
+The absence of a candidate for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates leaves behind a vacuum, many parties supporting Piłsudski are scrambling to push a candidate to fill the gap left behind by Piłsudski.
 
 - @who
 
 @who
 title: Who will be the successor of Piłsudski?
 
-Without a unifying figure, the ChZJB might win the presidency
+Without a unifying figure, the ChZJN might win the presidency
 
 - @witos
 
@@ -24,7 +44,7 @@ Without a unifying figure, the ChZJB might win the presidency
 title: Piłsudski proposes Witos as a candidate
 face-image: img/portraits/WitosWincenty.jpeg
 
-To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the Polish moderates which is Wincenty Witos, leader of the PSL-P, and Former Prime Minister. but Witos refuses.
+To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates which is Wincenty Witos, leader of the PSL-P, and Former Prime Minister. but Witos refuses.
 
 - @narutowicz
 
@@ -32,7 +52,7 @@ To ensure that the Sejm and Senat are united against a National Democrats (ChZJN
 title: Piłsudski proposes Narutowicz as a candidate
 face-image: img/Narutowicz_Pilsudski.jpg
 
-To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the Polish moderates which is Gabriel Narutowicz, a non-partisan candidate, closely aligned with Piłsudski, Formed Minister of Public Works and Current Minister of Foreign Affairs.
+To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates which is Gabriel Narutowicz, a non-partisan candidate, closely aligned with Piłsudski, Formed Minister of Public Works and Current Minister of Foreign Affairs.
 
 - @narutoyay
   
@@ -55,10 +75,11 @@ title: View the other running candidates
 - @communist
 
 @zamoyski
-title: Maurycy Zamoyski
+title: Maurycy Zamoyski, a non-partisan candidate fielded by the ChZJN. Largest estate and the biggest land owner. Serving as the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>**.
 on-arrival: candidate += 1
 go-to: candidate
-face-image: img/portraits/ZamoyskiMaurucy.jpg
+max-visits: 1
+face-image: img/portraits/ZamoyskiMaurycy.jpg
 
 His candidacy is supported by the ChZJN.
 
@@ -66,6 +87,7 @@ His candidacy is supported by the ChZJN.
 title: Jan Baudouin de Courtenay
 on-arrival: candidate += 1
 go-to: candidate
+max-visits: 1
 face-image: img/portraits/CourtenayJan.jpg
 
 His candidacy is supported by the BMN and Other minority parties.
@@ -74,12 +96,29 @@ His candidacy is supported by the BMN and Other minority parties.
 title: Stanisław Wojciechowski
 on-arrival: candidate += 1
 go-to: candidate
-face-image: img/portraits/WojciechowskiStanislaw.jpg
+max-visits: 1
+face-image: img/portraits/WojciechowskiStanisław.jpg
 
-His candidacy is supported by the PSL-W and NPR.
+Wincenty Witos was perceived as a person communicating with the right and not paying attention to the interests of rural villages. Hence, Stanisław Wojciechowski was fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P.
+
+His candidacy is supported by the PSL-P and NPR.
 
 @communist
-title: We await the decision of the Communists.
+title: How about the Communists?
 view-if: candidate >= 3
 
-they don't wanna run lol 💔 I'm crine 😭 😭 😭 
+The Communist delegates have decided to Boycott the Presidential Election.
+
+- @pps
+
+@pps
+title: So, what is our decision? Should we run our own candidate?
+
+- @daszynski: Run Ignacy Daszyński of the PPS.
+- @narutowicz: Support Narutowicz.
+- @wojciechowski: Support Wojciechowski of the PSL-P.
+
+
+
+
+
