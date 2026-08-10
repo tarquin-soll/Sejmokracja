@@ -732,7 +732,7 @@ body.dark-mode .parliament-tooltip {
 
   background-color: #edf0fa;
   color: #3b1f0a;
-  border: 2px solid #DC143C;
+  border: 1px solid #DC143C;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   visibility: hidden;
   opacity: 0;
@@ -771,7 +771,7 @@ body.dark-mode .parliament-tooltip {
 body.dark-mode .wide_tooltip-tip {
   background-color: #1a1a2e;
   color: #e0e0e0;
-  border: 2px solid #DC143C;
+  border: 1px solid #DC143C;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 body.dark-mode .wide_tooltip-tip img {
