@@ -1,0 +1,81 @@
+title: Presidential Election
+view-if: year = 1922 and month >= 12
+max-visits: 1
+new-page: true
+tags: event
+face-image: img/Jozef-Pilsudski-Polish-soldiers.webp
+
+= Presidential Election
+
+The Presidential Election is to be held now
+
+The absence of a candidate for the Polish moderates leaves behind a vacuum, many parties supporting Piłsudski are scrambling to push a candidate to fill the gap left behind by Piłsudski.
+
+- @who
+
+@who
+title: Who will be the successor of Piłsudski?
+
+- @witos
+
+@witos
+title: Piłsudski proposes Witos as a candidate
+face-image: img/portraits/WitosWincenty.jpeg
+
+To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the Polish moderates which is Wincenty Witos, leader of the PSL-P, and Former Prime Minister. but Witos refuses.
+
+@narutowicz
+title: Piłsudski proposes Narutowicz as a candidate
+face-image: img/Narutowicz_Pilsudski.jpg
+
+To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the Polish moderates which is Gabriel Narutowicz, a non-partisan candidate, closely aligned with Piłsudski, Formed Minister of Public Works and Current Minister of Foreign Affairs.
+
+- @narutoyay
+  
+@narutoyay
+title: Narutowicz Accepts
+face-image: img/portraits/NarutowiczGabriel.jpg
+
+With Narutowicz nominated to replace Piłsudski can he expect the Polish Moderates throw their support for him?
+
+For better or worse, Narutowicz candidacy is only supported by the PSL-L and PSL-W.
+
+- @candidate
+
+@candidate
+title: View the other running candidates
+
+- @zamoyski
+- @courtenay
+- @wojciechowski
+- @communist
+
+@zamoyski
+title: Maurycy Zamoyski
+on-arrival: candidate += 1
+go-to: candidate
+face-image: img/portraits/ZamoyskiMaurucy.jpg
+
+His candidacy is supported by the ChZJN.
+
+@courtenay
+title: Jan Baudouin de Courtenay
+on-arrival: candidate += 1
+go-to: candidate
+face-image: img/portraits/CourtenayJan.jpg
+
+His candidacy is supported by the BMN and Other minority parties.
+
+@wojciechowski
+title: Stanisław Wojciechowski
+on-arrival: candidate += 1
+go-to: candidate
+face-image: img/portraits/WojciechowskiStanislaw.jpg
+
+His candidacy is supported by the PSL-W and NPR.
+
+@communist
+title: We await the decision of the Communists.
+view-if: candidate >= 3
+
+they don't wanna run lol 💔 I'm crine 😭 😭 😭 
