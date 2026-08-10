@@ -275,14 +275,14 @@ blockquote + blockquote.attribution {
   position: fixed;
   z-index: 999999;
   width: 130px;
-  background: #d8ddef;
+  background: #FFFFFF;
   color: #3b1f0a;
   text-align: left;
   border-radius: 8px;
   padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-  border: 1px solid #2235b2;
+  border: 1px solid #DC143C;
   pointer-events: none;
   font-size: 14px !important;
   line-height: 1.5em !important;
