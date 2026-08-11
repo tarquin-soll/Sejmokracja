@@ -1,4 +1,4 @@
-title: 1922 Presidential Election 
+etitle: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
 view-if: year = 1922 and month >= 2
 max-visits: 1
@@ -94,9 +94,9 @@ go-to: candidate
 max-visits: 1
 face-image: img/portraits/ZamoyskiMaurycy.jpg
 
-Maurycy Zamoyski, one of Poland's wealthiest landowners and its envoy to Paris, is the candidate of the ChZJN. His nationalist and aristocratic background, combined with his experience in foreign affairs as part of the Polish delegation to the Paris Conference, which concluded with the signing of the Treaty of Versailles, makes him the preferred candidate of the Conservatives.
+<span class="wide_tooltip-wrap">Maurycy Zamoyski<span class="wide_tooltip-tip"><img src="img/portraits/ZamoyskiMaurycy.jpg">Noble</span></span>, one of **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**'s wealthiest landowners and its envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>** he is the candidate of the ChZJN. His nationalist and aristocratic background, combined with his experience in foreign affairs as part of the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegation to the **Paris Conference**, which concluded with the signing of the Treaty of Versailles, makes him the preferred candidate of the ChZJN.
 
-His Candidacy is supported by the ChZJN.
+His candidacy is supported by the ChZJN.
 
 @courtenay
 title: Jan Baudouin de Courtenay.
@@ -106,18 +106,18 @@ go-to: candidate
 max-visits: 1
 face-image: img/portraits/CourtenayJan.jpg
 
-<span class="wide_tooltip-wrap">Jan Baudouin de Courtenay<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> is a relative obscure candidate, known for his theory of Phoneme. His candidacy was proposwd by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
+<span class="wide_tooltip-wrap">Jan Baudouin de Courtenay<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> is a relative obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
 
-Although <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
+Even though <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
 
 @wojciechowski
-title: Stanisław Wojciechowski
+title: Stanisław Wojciechowski.
 on-arrival: candidate += 1
 go-to: candidate
 max-visits: 1
 face-image: img/portraits/WojciechowskiStanisław.jpg
 
-Wincenty Witos was perceived as a person communicating with the right and not paying attention to the interests of rural villages. Hence, Stanisław Wojciechowski was fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P.
+<span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P </br></br> Previous Prime-Minister</span></span> has been a bit unpopular with the more moderate wings of the PSL-P, primarily due to his right-wing tendencies and many saying he was not paying attention to the rural villages.  Hence, <span class="wide_tooltip-wrap">Stanisław Wojciechowski<span class="wide_tooltip-tip"><img src="img/portraits/WojciechowskiStanisław.jpg">Member of the PSL-P</span></span> has been  fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P. Surprisingly, he was previously a member of our party.
 
 His candidacy is supported by the PSL-P and NPR.
 
@@ -132,11 +132,6 @@ The KPP has decided to boycott the presidential election.
 @pps
 title: So, what is our decision? Should we run our own candidate?
 
-- @daszynski: Run Ignacy Daszyński of the PPS.
-- @narutowicz: Support Narutowicz.
-- @wojciechowski: Support Wojciechowski of the PSL-P.
-
-
-
-
-
+- @daszynskielection: Run Ignacy Daszyński of the PPS.
+- @narutowiczelection: Support Narutowicz.
+- @wojciechowskielection: Support Wojciechowski of the PSL-P.
