@@ -62,7 +62,7 @@ face-image: img/portraits/WitosWincenty.jpeg
 title: Gabriel Narutowicz.
 face-image: img/portraits/NarutowiczGabriel.jpg
 
-<span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P </br></br> refused. However, he still has not officially agreed to this.
+<span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P</span></span> refused. However, he still has not officially agreed to this.
 
  However, <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>  has still not agreed, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> will have to convince him.. now, lets see..
 
@@ -112,6 +112,7 @@ Even though <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_toolti
 
 @wojciechowski
 title: Stanisław Wojciechowski.
+subtitle: Previously a member of our party, the PPS.
 on-arrival: candidate += 1
 go-to: candidate
 max-visits: 1
