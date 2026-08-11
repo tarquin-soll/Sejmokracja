@@ -165,7 +165,7 @@ We can't win this election alone, we need support from other parties.
 - @viewscout: View party endorsements.
 - @scoutdone: We have concluded negotiating with other parties.
 
-@viewscout:
+@viewscout
 go-to: scouting
 
 **<span style="color: #C62828;">Ignacy Daszyński</span>** — supported by:
