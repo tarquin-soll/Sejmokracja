@@ -1,4 +1,4 @@
-etitle: 1922 Presidential Election 
+title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
 view-if: year = 1922 and month >= 2
 max-visits: 1
