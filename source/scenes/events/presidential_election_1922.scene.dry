@@ -1,4 +1,5 @@
-title: Presidential Election
+title: 1922 Presidential Election 
+subtitle: The first presidential election of our young Republic.
 view-if: year = 1922 and month >= 2
 max-visits: 1
 new-page: true
@@ -29,49 +30,56 @@ Q.chzjn_choice = 'Zamoyski';
 
 !}
 
-= Presidential Election
+=  1922 Presidential Election
 
-The Presidential Election is to be held now
+Its time to view the candidates. Now, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followe- what? <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> isnt running? 
 
-The absence of a candidate for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates leaves behind a vacuum, many parties supporting Piłsudski are scrambling to push a candidate to fill the gap left behind by Piłsudski.
+It seems <span class="wide_tooltip-wrap">Marshal Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> has decided not to run in these presidential elections, instead, most believe he will attempt to rally the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** parties  towards a unity candidate he supports.
+
+After his decision to not put forward a candidacy, many parties have been left scrambling to put forward a candidate that is **not** <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>, due to this decision coming close to the presidential elections.  Now, lets see..
 
 - @who
 
 @who
-title: Who will be the successor of Piłsudski?
+title: Who will be the successor of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
+subtitle: Good question.
 
-Without a unifying figure, the ChZJN might win the presidency
+Without a unifying figure such as <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> around, many fear the ChZJN might win the presidency, however, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> must have a plan, right? He wouldnt have dropped out without having a plan. Yes..
+
+Now, from all these possible candidates, the one that is Piłsudski's first choice is..
 
 - @witos
 
 @witos
-title: Piłsudski proposes Witos as a candidate
+title: Witos Wincenty?
 face-image: img/portraits/WitosWincenty.jpeg
 
-To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates which is Wincenty Witos, leader of the PSL-P, and Former Prime Minister. but Witos refuses.
+<span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P </br></br> Previous Prime-Minister</span></span>, a moderate and leader of the PSL-P, has been suggested as a unity candidate agaisnt the ChZJN by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>, however he has declined, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> starts searching for someone else. Now, who is second on his list..
 
 - @narutowicz
 
 @narutowicz
-title: Piłsudski proposes Narutowicz as a candidate
-face-image: img/Narutowicz_Pilsudski.jpg
+title: Gabriel Narutowicz.
+face-image: img/portraits/NarutowiczGabriel.jpg
 
-To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates which is Gabriel Narutowicz, a non-partisan candidate, closely aligned with Piłsudski, Formed Minister of Public Works and Current Minister of Foreign Affairs.
+<span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P</span></span> refused. However, he still has not officially agreed to this.
+
+ However, <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>  has still not agreed, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> will have to convince him.. now, lets see..
 
 - @narutoyay
   
 @narutoyay
-title: Narutowicz Accepts
-face-image: img/portraits/NarutowiczGabriel.jpg
+title: Narutowicz accepts!
+face-image: img/Narutowicz_Pilsudski.jpg
 
-With Narutowicz nominated to replace Piłsudski can he expect the Polish Moderates throw their support for him?
+With <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span> nominated to replace <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> can he expect the moderates throw their support for him, especially due to some moderates looking at him as a puppet of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
 
-For better or worse, Narutowicz candidacy is only supported by the PSL-L and PSL-W.
+<span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span> is supported by the PSL-L and PSL-W.
 
 - @candidate
 
 @candidate
-title: View the other running candidates
+title: What other candidates are going on the <span class="wide_tooltip-wrap">campaign trail<span class="wide_tooltip-tip"><img src="img/campaign_trail.webp">good game</span></span>?
 
 - @zamoyski
 - @courtenay
@@ -79,31 +87,38 @@ title: View the other running candidates
 - @communist
 
 @zamoyski
-title: Maurycy Zamoyski, a non-partisan candidate fielded by the ChZJN. Largest estate and the biggest land owner. Serving as the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>**.
+title: Maurycy Zamoyski.
+subtitle: A non-partisan candidate fielded by the ChZJN. Largest estate and the biggest land owner. Serving as the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>**.
 on-arrival: candidate += 1
 go-to: candidate
 max-visits: 1
 face-image: img/portraits/ZamoyskiMaurycy.jpg
 
+<span class="wide_tooltip-wrap">Maurycy Zamoyski<span class="wide_tooltip-tip"><img src="img/portraits/ZamoyskiMaurycy.jpg">Noble</span></span>, one of **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**'s wealthiest landowners and its envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>** he is the candidate of the ChZJN. His nationalist and aristocratic background, combined with his experience in foreign affairs as part of the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegation to the **Paris Conference**, which concluded with the signing of the Treaty of Versailles, makes him the preferred candidate of the ChZJN.
+
 His candidacy is supported by the ChZJN.
 
 @courtenay
-title: Jan Baudouin de Courtenay
+title: Jan Baudouin de Courtenay.
+subtitle: **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** and <span style="color: #CCC;">**Ru**</span><span style="color: #0036A7;">**ssi**</span><span style="color: #D62718;">**an**</span> Linguist and a staunch supporter for Minority rights.
 on-arrival: candidate += 1
 go-to: candidate
 max-visits: 1
 face-image: img/portraits/CourtenayJan.jpg
 
-His candidacy is supported by the BMN and Other minority parties.
+<span class="wide_tooltip-wrap">Jan Baudouin de Courtenay<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> is a relative obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
+
+Even though <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
 
 @wojciechowski
-title: Stanisław Wojciechowski
+title: Stanisław Wojciechowski.
+subtitle: Previously a member of our party, the PPS.
 on-arrival: candidate += 1
 go-to: candidate
 max-visits: 1
 face-image: img/portraits/WojciechowskiStanisław.jpg
 
-Wincenty Witos was perceived as a person communicating with the right and not paying attention to the interests of rural villages. Hence, Stanisław Wojciechowski was fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P.
+<span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P </br></br> Previous Prime-Minister</span></span> has been a bit unpopular with the more moderate wings of the PSL-P, primarily due to his right-wing tendencies and many saying he was not paying attention to the rural villages.  Hence, <span class="wide_tooltip-wrap">Stanisław Wojciechowski<span class="wide_tooltip-tip"><img src="img/portraits/WojciechowskiStanisław.jpg">Member of the PSL-P</span></span> has been  fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P. Surprisingly, he was previously a member of our party.
 
 His candidacy is supported by the PSL-P and NPR.
 
@@ -111,18 +126,27 @@ His candidacy is supported by the PSL-P and NPR.
 title: How about the Communists?
 view-if: candidate >= 3
 
-The Communist delegates have decided to Boycott the Presidential Election.
+The KPP has decided to boycott the presidential election.
 
 - @pps
 
 @pps
 title: So, what is our decision? Should we run our own candidate?
 
-- @daszynski: Run Ignacy Daszyński of the PPS.
-- @narutowicz: Support Narutowicz.
-- @wojciechowski: Support Wojciechowski of the PSL-P.
+- @daszynskielection: Run Ignacy Daszyński of the PPS.
+- @narutowiczelection: Support Narutowicz.
+- @wojciechowskielection: Support Wojciechowski of the PSL-P.
+
+@wojciechowskielection
+
+We have chosen to support WIP.
 
 
+@narutowiczelection
 
+We have chosen to support WIP.
 
+@daszynskielection
+
+We have chosen to support WIP.
 
