@@ -146,7 +146,7 @@ title: So, what is our decision? Should we run our own candidate?
 
 @daszynskielection
 subtitle: This is the default choice 
-on-arrival pps_choice = 'Daszynski'
+on-arrival: pps_choice = 'Daszynski'
 
 We have chosen to field <span class="wide_tooltip-wrap">Ignacy Dasyznski<span class="wide_tooltip-tip"><img src="img/portraits/DaszyńskiIgnacy.jpg"> Leader of the PPS </span></span>.
 
