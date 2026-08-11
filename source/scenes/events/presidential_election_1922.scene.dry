@@ -70,18 +70,7 @@ face-image: img/portraits/NarutowiczGabriel.jpg
   
 @narutoyay
 title: Narutowicz accepts!
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/Narutowicz_Pilsudski.jpg";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
+face-image: img/Narutowicz_Pilsudski.jpg
 
 With Narutowicz nominated to replace Piłsudski can he expect the Polish Moderates throw their support for him?
 
