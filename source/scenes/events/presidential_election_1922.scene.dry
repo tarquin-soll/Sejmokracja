@@ -204,7 +204,7 @@ go-to: scouting
 
 **<span style="color: #302060;">Maurycy Zamoyski</span>** - supported by:
 
-[? if round >= 0 : - ZLN ??
+[? if round >= 0 : - ZLN ?]
 
 [? if round >= 0 : - PSChD ?]
 
