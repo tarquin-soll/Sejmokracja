@@ -204,11 +204,11 @@ go-to: scouting
 
 **<span style="color: #302060;">Maurycy Zamoyski</span>** - supported by:
 
-- **ZLN**
+[? if round >= 0 : - ZLN ??
 
-- **PSChD**
+[? if round >= 0 : - PSChD ?]
 
-- **Other Parties**
+[? if round >= 0 : - Other Parties ?]
 
 @npr_scout
 
