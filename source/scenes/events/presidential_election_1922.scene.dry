@@ -60,15 +60,28 @@ face-image: img/portraits/WitosWincenty.jpeg
 
 @narutowicz
 title: Gabriel Narutowicz.
-face-image: img/portraits/Narutowicz.jpeg
+face-image: img/portraits/NarutowiczGabriel.jpg
 
-To ensure that the Sejm and Senat are united against a National Democrats (ChZJN) Presidency, Piłsudski proposes another unity figure for the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** moderates which is Gabriel Narutowicz, a non-partisan candidate, closely aligned with Piłsudski, Formed Minister of Public Works and Current Minister of Foreign Affairs.
+<span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P </br></br> refused. However, he still has not officially agreed to this.
+
+ However, <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Formed Minister of Public Works </span></span>  has still not agreed, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> will have to convince him.. now, lets see..
 
 - @narutoyay
   
 @narutoyay
-title: Narutowicz Accepts
-face-image: img/portraits/NarutowiczGabriel.jpg
+title: Narutowicz accepts!
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/Narutowicz_Pilsudski.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 With Narutowicz nominated to replace Piłsudski can he expect the Polish Moderates throw their support for him?
 
