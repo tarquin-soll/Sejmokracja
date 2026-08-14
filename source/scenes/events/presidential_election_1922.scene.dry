@@ -39,26 +39,26 @@ Q.chzjn_choice = 'Zamoyski';
 
 =  1922 Presidential Election
 
-Its time to view the candidates. Now, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followe- what? <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> isnt running? 
+Its time to view the candidates. Now, Piłsudski is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followers- wait, what? Piłsudski isnt running? 
 
-It seems <span class="wide_tooltip-wrap">Marshal Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> has decided not to run in these presidential elections, instead, most believe he will attempt to rally the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** parties  towards a unity candidate he supports.
+It seems Marshal Piłsudski has decided not to run in these presidential elections, instead, most believe he will attempt to rally the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** parties  towards a unity candidate he supports.
 
-After his decision to not put forward a candidacy, many parties have been left scrambling to put forward a candidate that is **not** <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>, due to this decision coming close to the presidential elections.  Now, lets see..
+After his decision to not put forward a candidacy, many parties have been left scrambling to put forward a candidate that is **not** Piłsudski, due to this decision coming close to the presidential elections.  Now, lets see..
 
 - @who
 
 @who
-title: Who will be the successor of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
+title: Who will be the successor of Piłsudski?
 subtitle: Good question.
 
-Without a unifying figure such as <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> around, many fear the ChZJN might win the presidency, however, <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> must have a plan, right? He wouldnt have dropped out without having a plan. Yes..
+Without a unifying figure such as Piłsudski around, many fear the ChZJN might win the presidency, however, Piłsudski must have a plan, right? He wouldnt have dropped out without having a plan. Yes..
 
-Now, from all these possible candidates, the one that is Piłsudski's first choice is..
+Now, from all these possible candidates, Piłsudski's first choice is..
 
 - @witos
 
 @witos
-title: Witos Wincenty?
+title: Witos Wincenty
 face-image: img/portraits/WitosWincenty.jpeg
 
 <span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Leader of the PSL-P </br></br> Former Prime-Minister</span></span>, a moderate and leader of the PSL-P, has been suggested as a unity candidate agaisnt the ChZJN by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>, however he has declined, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> starts searching for someone else. Now, who is second on his list..
@@ -67,7 +67,7 @@ face-image: img/portraits/WitosWincenty.jpeg
 
 @narutowicz
 title: Gabriel Narutowicz.
-face-image: img/portraits/NarutowiczGabriel.jpg
+face-image: img/portraits/Narutowicz_Pilsudski.jpg
 
 <span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P</span></span> refused. However, he still has not officially agreed to this.
 
@@ -77,7 +77,7 @@ face-image: img/portraits/NarutowiczGabriel.jpg
   
 @narutoyay
 title: Narutowicz accepts!
-face-image: img/Narutowicz_Pilsudski.jpg
+face-image: img/NarutowiczGabriel.jpg
 on-arrival: narutowicz_votes = (psl_l_pres_votes + psl_w_pres_votes)
 
 With <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span> nominated to replace <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> can he expect the moderates throw their support for him, especially due to some moderates looking at him as a puppet of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
