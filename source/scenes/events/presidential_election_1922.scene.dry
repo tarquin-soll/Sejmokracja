@@ -1,7 +1,8 @@
 title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
-view-if: year = 1922 and month >= 2
+view-if: year = 1922 and month >= 12
 max-visits: 1
+priority: -2
 new-page: true
 tags: event
 face-image: img/Jozef-Pilsudski-Polish-soldiers.webp
@@ -58,10 +59,10 @@ Now, from all these possible candidates, Piłsudski's first choice is..
 - @witos
 
 @witos
-title: Witos Wincenty
+title: Witos Wincenty.
 face-image: img/portraits/WitosWincenty.jpeg
 
-<span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Leader of the PSL-P </br></br> Former Prime-Minister</span></span>, a moderate and leader of the PSL-P, has been suggested as a unity candidate agaisnt the ChZJN by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>, however he has declined, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> starts searching for someone else. Now, who is second on his list..
+Witos Wincenty, former Prime Minister, a moderate and leader of the PSL-P, has been suggested as a unity candidate against the ChZJN by Piłsudski, however he has declined the candidacy, and Piłsudski starts searching for someone else. Now, who is second on his list..
 
 - @narutowicz
 
@@ -69,9 +70,9 @@ face-image: img/portraits/WitosWincenty.jpeg
 title: Gabriel Narutowicz.
 face-image: img/portraits/Narutowicz_Pilsudski.jpg
 
-<span class="wide_tooltip-wrap">Gabriel Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span>, a independent,  has been suggested by <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> as a unity candidate agaisnt the ChZJN, after <span class="wide_tooltip-wrap">Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Member of the PSL-P</span></span> refused. However, he still has not officially agreed to this.
+Piłsudski talks with Gabriel Narutowitcz, a friend of his and former Public Works and Foreign minister, to discuss his candidacy agaisnt the ChZJN, after Wicenty refused to take the candidacy.
 
- However, <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span>  has still not agreed, and <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> will have to convince him.. now, lets see..
+Piłsudski attempts to convince Narutowicz...
 
 - @narutoyay
   
@@ -80,14 +81,14 @@ title: Narutowicz accepts!
 face-image: img/NarutowiczGabriel.jpg
 on-arrival: narutowicz_votes = (psl_l_pres_votes + psl_w_pres_votes)
 
-With <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span> nominated to replace <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span> can he expect the moderates throw their support for him, especially due to some moderates looking at him as a puppet of <span class="wide_tooltip-wrap">Piłsudski<span class="wide_tooltip-tip"><img src="img/portraits/PilsudskiJozef.jpg">Józef Piłsudski </br></br> Marshal Of Poland</span></span>?
+With Narutowicz nominated to replace Piłsudski, can he expect the moderates throw their support behind him, especially due to some moderates looking at him as a puppet or tool of Piłsudski?
 
-For better or worse, <span class="wide_tooltip-wrap">Narutowitcz<span class="wide_tooltip-tip"><img src="img/portraits/Narutowicz.jpeg">Minister of Foreign Affairs </br></br> Former Minister of Public Works </span></span> did not secure the support of the moderates, However his candidacy is still supported by the PSL-L and PSL-W.
+For better or worse, Narutowicz did not secure the support of the moderates, However his candidacy is still supported by the PSL-L and PSL-W.
 
 - @candidate
 
 @candidate
-title: What other candidates are going on the <span class="wide_tooltip-wrap">campaign trail<span class="wide_tooltip-tip"><img src="img/campaign_trail.webp">good game</span></span>?
+title: What other candidates will be present in the <span class="wide_tooltip-wrap">campaign trail<span class="wide_tooltip-tip"><img src="img/campaign_trail.webp">good game</span></span>?
 
 - @zamoyski
 - @courtenay
@@ -102,7 +103,7 @@ go-to: candidate
 max-visits: 1
 face-image: img/portraits/ZamoyskiMaurycy.jpg
 
-<span class="wide_tooltip-wrap">Maurycy Zamoyski<span class="wide_tooltip-tip"><img src="img/portraits/ZamoyskiMaurycy.jpg">Richest Polish Noble</span></span>, one of **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**'s wealthiest landowners and its envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>** he is the candidate of the ChZJN. His nationalist and aristocratic background, combined with his experience in foreign affairs as part of the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegation to the **Paris Conference**, which concluded with the signing of the Treaty of Versailles, makes him the preferred candidate of the ChZJN.
+Maurycy Zamoyski, one of **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**'s wealthiest landowners and its envoy to **<span style="color: #000091;">Pa</span><span style="color: #CCC;">r</span><span style="color: #E1000F;">is</span>** is the chosen candidate of the ChZJN. His nationalist and aristocratic background, combined with his experience in foreign affairs as part of the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegation to the **Paris Conference**, which concluded with the signing of the **Treaty of Versailles**, makes him the preferred candidate of the ChZJN.
 
 His candidacy is supported by the ChZJN.
 
@@ -114,19 +115,19 @@ go-to: candidate
 max-visits: 1
 face-image: img/portraits/CourtenayJan.jpg
 
-<span class="wide_tooltip-wrap">Jan Baudouin de Courtenay<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> is a relative obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
+Jan Baudouin de Courtenay is a relatively obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
 
 Even though <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
 
 @wojciechowski
 title: Stanisław Wojciechowski.
-subtitle: Previously a member of our party, the PPS.
+subtitle: A Moderate member of the PSL-P, former Interior Minister
 on-arrival: candidate += 1; wojciechowski_votes = (npr_pres_votes + psl_p_pres_votes)
 go-to: candidate
 max-visits: 1
 face-image: img/portraits/WojciechowskiStanisław.jpg
 
-<span class="wide_tooltip-wrap">Witos Wincenty<span class="wide_tooltip-tip"><img src="img/portraits/WitosWincenty.jpeg">Leader of the PSL-P </br></br> Previous Prime-Minister</span></span> has been a bit unpopular with the more moderate wings of the PSL-P, primarily due to his right-wing tendencies and many saying he was not paying attention to the rural villages.  Hence, <span class="wide_tooltip-wrap">Stanisław Wojciechowski<span class="wide_tooltip-tip"><img src="img/portraits/WojciechowskiStanisław.jpg">Member of the PSL-P</span></span> has been  fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P. Surprisingly, he was previously a member of our party.
+Witos Wincenty has been a bit unpopular with the more moderate wings of the PSL-P, primarily due to his right-wing tendencies and his neglect of attention to the rural villages.  Hence, Stanisław Wojciechowski, who is also a former Interior Minister serving from 1919 to 1920 has been fielded as a compromise candidate representing the Centrist and Moderates of the PSL-P. Interestingly enough, he was previously a member of our party.
 
 His candidacy is supported by the PSL-P and NPR.
 
@@ -134,7 +135,7 @@ His candidacy is supported by the PSL-P and NPR.
 title: How about the Communists?
 view-if: candidate >= 3
 
-The KPP has decided to boycott the presidential election.
+The KPP *as expected* has decided to boycott the presidential election.
 
 - @pps
 
@@ -148,6 +149,7 @@ title: So, what is our decision? Should we run our own candidate?
 @daszynskielection
 subtitle: This is the default choice 
 on-arrival: pps_choice = 'Daszynski'; daszynski_votes = pps_pres_votes
+face-image: img/portraits/DaszyńskiIgnacy
 
 We have chosen to field <span class="wide_tooltip-wrap">Ignacy Dasyznski<span class="wide_tooltip-tip"><img src="img/portraits/DaszyńskiIgnacy.jpg"> Leader of the PPS </span></span>.
 
@@ -228,9 +230,11 @@ We can't win this election alone, we need support from other parties.
 @scoutdone
 
 @narutowiczelection
+subtitle: WIP
 
 WIP.
 
 @wojciechowskielection
+subtitle: WIP
 
 WIP.
