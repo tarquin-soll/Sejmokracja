@@ -650,7 +650,7 @@ this.state.disableSaves = true;
 go-to: 1922_main
 
 @1922_main
-audio: shuffle music/WaltzInAMinor.mp3 music/KozietulskiMarsz.mp3 music/MarszVictoria.mp3 
+audio: shuffle music/KozietulskiMarsz.mp3 music/MarszVictoria.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
