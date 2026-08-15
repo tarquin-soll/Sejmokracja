@@ -1,6 +1,6 @@
 title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
-view-if: year = 1922 and month >= 12
+view-if: year = 1922 and month >= 2
 max-visits: 1
 priority: -2
 new-page: true
@@ -17,11 +17,11 @@ Q.wojciechowski_votes = 0;
 Q.courtenay_votes = 0;
 Q.zamoyski_votes = 0;
 
-Q.narutowicz_round = 1;
-Q.daszynski_round = 1;
-Q.wojciechowski_round = 1;;
-Q.courtenay_round = 1;
-Q.zamoyski_round = 1;
+Q.narutowicz_dropped = 0;
+Q.daszynski_dropped = 0;
+Q.wojciechowski_round = 0;
+Q.courtenay_round = 0;
+Q.zamoyski_round = 0;
 
 Q.round = 1;
 
@@ -115,9 +115,9 @@ go-to: candidate
 max-visits: 1
 face-image: img/portraits/CourtenayJan.jpg
 
-Jan Baudouin de Courtenay is a relatively obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to  him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
+Jan Baudouin de Courtenay is a relatively obscure candidate, known for his theory of Phoneme. His candidacy was proposed by the BMN due to him being a strong supporter of the national revival of various national minority and ethnic groups, taking a relatively pro-minority stance.
 
-Even though <span class="wide_tooltip-wrap">Jan Baudouin<span class="wide_tooltip-tip"><img src="img/portraits/CourtenayJan.jpg">Linguist</span></span> isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
+Even though Courtenay isn't expected to win, His candidacy is supported by the BMN and the other minority parties as a show of solidarity against right-wing dominance.
 
 @wojciechowski
 title: Stanisław Wojciechowski.
@@ -149,7 +149,7 @@ title: So, what is our decision? Should we run our own candidate?
 @daszynskielection
 subtitle: This is the default choice 
 on-arrival: pps_choice = 'Daszynski'; daszynski_votes = pps_pres_votes
-face-image: img/portraits/DaszyńskiIgnacy
+face-image: img/portraits/DaszyńskiIgnacy.jpg
 
 We have chosen to field <span class="wide_tooltip-wrap">Ignacy Dasyznski<span class="wide_tooltip-tip"><img src="img/portraits/DaszyńskiIgnacy.jpg"> Leader of the PPS </span></span>.
 
@@ -213,28 +213,81 @@ go-to: scouting
 [? if round >= 0 : - Other Parties ?]
 
 @npr_scout
+unavailable-subtitle: [? if npr_choice != 'Daszynski' : They insist on supporting <span style="color: #3A6538;">Wojciechowski</span>. ?][? if npr_choice == 'Daszynski' : They're already convinced. ?]
+choose-if: npr_relation >= 100
+max-visits: 1
+go-to: scouting
+
+Dawg stop cheating 💔 
 
 @psl_l_scout
+max-visits: 1
+go-to: scouting
+on-arrival: {!
+if (psl_l_relation >= 70) {
+   }
+!}
 
 @psl_w_scout
+max-visits: 1
+go-to: scouting
+on-arrival: {!
+if (psl_w_relation >= 70 and narutowicz_votes > daszynski_votes) {
+   }
+!}
+
+test
 
 @psl_p_scout
 max-visits: 1
 go-to: scouting
-on-arrival: daszynski_votes += psl_p_pres_votes if psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes
+on-arrival: {!
+if (psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes) {
+    daszynski_votes += psl_p_pres_votes;
+    daszynski_votes += npr_pres_votes;
+    
+    wojciechowski_votes -= psl_p_pres_votes;
+    wojciechowski_votes -= npr_pres_votes;
 
-We can't win this election alone, we need support from other parties.
+    psl_p_choice = 'Daszynski';
+    npr_choice = 'Daszynski';
+
+    peasants_psl_p -= 4;
+    petit_psl_p -= 3;
+    peasants_zln += 3;
+   }
+!}
+
+[? if psl_p_relation >= 70 and daszynski_votes > wojciechowski : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>, They have also convinced the NPR to support our candidate. ?][? if psl_relation < 70 and daszynski_votes <= wojciechowski_votes : They aren't convinced. They know they are more popular than us, additionally, socialism is currently unpopular so supporting a socialist candidate may be harmful to their conservative agrarian bases. We can't win this election alone, we need support from other parties. ?]
 
 @bmn_scout
+max-visits: 1
+go-to: scouting
+
+The BMN delegates have respectfully declined supporting <span style="color: #C62828;">Daszyński</span> in the first round as a show of solidarity for minorities. perhaps we can convince them after they have dropped or after we've moved to the second round.
 
 @scoutdone
 
+The first round of voting has concluded.
+
+**<span style="color: #C62828;">Ignacy Daszyński</span>** [+ daszynski_votes +]%
+
+**Gabriel Narutowicz**: [+ narutowicz_votes +]%
+
+**<span style="color: #3A6538;">Stanisław Wojciechowski</span>**: [+ wojciechowski_votes +]%
+
+**<span style="color: #E3AF34;">Baudouin de Courtenay</span>**: [+ courtenay_votes +]%
+
+**<span style="color: #302060;">Maurycy Zamoyski</span>**: [+ zamoyski_votes +]%
+
 @narutowiczelection
-subtitle: WIP
+unavailable-subtitle: WIP
+choose-if: dues >= 6
 
 WIP.
 
 @wojciechowskielection
-subtitle: WIP
+unavailable-subtitle: WIP
+choose-if: dues >= 6
 
 WIP.
