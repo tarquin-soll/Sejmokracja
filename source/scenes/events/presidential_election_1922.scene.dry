@@ -1,6 +1,6 @@
 title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
-view-if: year = 1922 and month >= 2
+view-if: year = 1922 and month >= 12
 max-visits: 1
 priority: -2
 new-page: true
@@ -42,9 +42,9 @@ Q.chzjn_choice = 'Zamoyski';
 
 Its time to view the candidates. Now, Piłsudski is expected to run after calls for him to contend from moderates, <span style="color: #c00000;">socialists</span>, and even some right-wing followers- wait, what? Piłsudski isnt running? 
 
-It seems Marshal Piłsudski has decided not to run in these presidential elections, instead, most believe he will attempt to rally the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** parties  towards a unity candidate he supports.
+It seems that Marshal Piłsudski has decided not to run for the presidential election due to the constitution limiting the powers of the head of state, instead, he will attempt to rally the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** parties  towards a unity candidate he supports.
 
-After his decision to not put forward a candidacy, many parties have been left scrambling to put forward a candidate that is **not** Piłsudski, due to this decision coming close to the presidential elections.  Now, lets see..
+After his decision to not run as a candidate, many parties have been left scrambling to put forward a candidate that is **not** Piłsudski, due to this decision coming close to the presidential elections.
 
 - @who
 
@@ -52,7 +52,7 @@ After his decision to not put forward a candidacy, many parties have been left s
 title: Who will be the successor of Piłsudski?
 subtitle: Good question.
 
-Without a unifying figure such as Piłsudski around, many fear the ChZJN might win the presidency, however, Piłsudski must have a plan, right? He wouldnt have dropped out without having a plan. Yes..
+Without a unifying figure such as Piłsudski around, many fear the ChZJN might win the presidency, however, Piłsudski must have a plan, right? He wouldnt have dropped out without having a plan.
 
 Now, from all these possible candidates, Piłsudski's first choice is..
 
@@ -68,7 +68,7 @@ Witos Wincenty, former Prime Minister, a moderate and leader of the PSL-P, has b
 
 @narutowicz
 title: Gabriel Narutowicz.
-face-image: img/portraits/Narutowicz_Pilsudski.jpg
+face-image: img/Narutowicz_Pilsudski.jpg
 
 Piłsudski talks with Gabriel Narutowitcz, a friend of his and former Public Works and Foreign minister, to discuss his candidacy agaisnt the ChZJN, after Wicenty refused to take the candidacy.
 
@@ -78,7 +78,7 @@ Piłsudski attempts to convince Narutowicz...
   
 @narutoyay
 title: Narutowicz accepts!
-face-image: img/NarutowiczGabriel.jpg
+face-image: img/portraits/NarutowiczGabriel.jpg
 on-arrival: narutowicz_votes = (psl_l_pres_votes + psl_w_pres_votes)
 
 With Narutowicz nominated to replace Piłsudski, can he expect the moderates throw their support behind him, especially due to some moderates looking at him as a puppet or tool of Piłsudski?
@@ -168,7 +168,7 @@ We can't win this election alone, we need support from other parties.
 - @scoutdone: We have concluded negotiating with other parties.
 
 @viewscout
-go-to: scouting
+go-to: scouting if round = 1; secondround if round = 2
 
 **<span style="color: #C62828;">Ignacy Daszyński</span>** - supported by:
 
@@ -277,6 +277,7 @@ go-to: scouting
 The BMN delegates have respectfully declined supporting <span style="color: #C62828;">Daszyński</span> in the first round as a show of solidarity for minorities. perhaps we can convince them after they have dropped or after we've moved to the second round.
 
 @scoutdone
+on-arrival: round += 1
 
 The first round of voting has concluded.
 
@@ -289,6 +290,27 @@ The first round of voting has concluded.
 **<span style="color: #E3AF34;">Baudouin de Courtenay</span>**: [+ courtenay_votes +]%
 
 **<span style="color: #302060;">Maurycy Zamoyski</span>**: [+ zamoyski_votes +]%
+
+The BMN has shown an outstanding result on the first round of the presidential election, the minorities have been emboldened by this show of strength, now, they must still face the reality that <span style="color: #E3AF34;">Courtenay</span> cannot win on his own, the <span style="color: #E3AF34;">Minority Bloc</span> has scattered to support the centrist candidate which are Narutowicz and <span style="color: #3A6538;">Wojciechowski</span> to ensure that the center candidates move through the last round. Perhaps we can convince them to support <span style="color: #C62828;">Daszyński</span>?
+
+- @secondround: Let us prepare for the second round.
+
+@secondround
+
+We still need to solidify our votes, we need the help of other parties
+
+- @bmn_scout2: Convince the BMN to support <span style="color: #C62828;">Ignacy Daszyński</span>
+- @dropout: Drop out of the Presidential Election and support Narutowicz
+- @viewscout: View party endorsements.
+- @scoutdone: We have concluded negotiating with other parties.
+
+@dropout
+
+wip
+
+@bmn_scout2
+
+wip
 
 @narutowiczelection
 unavailable-subtitle: WIP
