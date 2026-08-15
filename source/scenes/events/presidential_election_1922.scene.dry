@@ -225,11 +225,11 @@ max-visits: 1
 go-to: scouting
 on-arrival: {!
 if (psl_l_relation >= 70) {
-    daszynski_votes += psl_w_pres_votes;
+    daszynski_votes += psl_l_pres_votes;
     
-    narutowicz_votes -= psl_w_pres_votes;
+    narutowicz_votes -= psl_l_pres_votes;
 
-    psl_w_choice = 'Daszynski';
+    psl_l_choice = 'Daszynski';
    }
 !}
 
@@ -238,6 +238,11 @@ max-visits: 1
 go-to: scouting
 on-arrival: {!
 if (psl_w_relation >= 70 and narutowicz_votes > daszynski_votes) {
+    daszynski_votes += psl_w_pres_votes;
+    
+    narutowicz_votes -= psl_w_pres_votes;
+
+    psl_w_choice = 'Daszynski';
    }
 !}
 
