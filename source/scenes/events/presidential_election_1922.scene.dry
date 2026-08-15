@@ -252,7 +252,7 @@ test
 max-visits: 1
 go-to: scouting
 on-arrival: {!
-if (Q.psl_p_relation >= 70 and Q.daszynski_votes > Q.wojciechowski_votes) {
+if (Q.psl_p_relation >= 70 && Q.daszynski_votes > Q.wojciechowski_votes) {
     Q.daszynski_votes += Q.psl_p_pres_votes;
     Q.daszynski_votes += Q.npr_pres_votes;
     
