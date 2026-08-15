@@ -224,12 +224,12 @@ Dawg stop cheating 💔
 max-visits: 1
 go-to: scouting
 on-arrival: {!
-if (psl_l_relation >= 70) {
-    daszynski_votes += psl_l_pres_votes;
+if (Q.psl_l_relation >= 70) {
+    Q.daszynski_votes += Q.psl_l_pres_votes;
     
-    narutowicz_votes -= psl_l_pres_votes;
+    Q.narutowicz_votes -= Q.psl_l_pres_votes;
 
-    psl_l_choice = 'Daszynski';
+    Q.psl_l_choice = 'Daszynski';
    }
 !}
 
@@ -237,12 +237,12 @@ if (psl_l_relation >= 70) {
 max-visits: 1
 go-to: scouting
 on-arrival: {!
-if (psl_w_relation >= 70 and narutowicz_votes > daszynski_votes) {
-    daszynski_votes += psl_w_pres_votes;
+if (Q.psl_w_relation >= 70 && Q.narutowicz_votes > Q.daszynski_votes) {
+    Q.daszynski_votes += Q.psl_w_pres_votes;
     
-    narutowicz_votes -= psl_w_pres_votes;
+    Q.narutowicz_votes -= Q.psl_w_pres_votes;
 
-    psl_w_choice = 'Daszynski';
+    Q.psl_w_choice = 'Daszynski';
    }
 !}
 
@@ -252,23 +252,23 @@ test
 max-visits: 1
 go-to: scouting
 on-arrival: {!
-if (psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes) {
-    daszynski_votes += psl_p_pres_votes;
-    daszynski_votes += npr_pres_votes;
+if (Q.psl_p_relation >= 70 and Q.daszynski_votes > Q.wojciechowski_votes) {
+    Q.daszynski_votes += Q.psl_p_pres_votes;
+    Q.daszynski_votes += Q.npr_pres_votes;
     
-    wojciechowski_votes -= psl_p_pres_votes;
-    wojciechowski_votes -= npr_pres_votes;
+    Q.wojciechowski_votes -= Q.psl_p_pres_votes;
+    Q.wojciechowski_votes -= Q.npr_pres_votes;
 
-    psl_p_choice = 'Daszynski';
-    npr_choice = 'Daszynski';
+    Q.psl_p_choice = 'Daszynski';
+    Q.npr_choice = 'Daszynski';
 
-    peasants_psl_p -= 4;
-    petit_psl_p -= 3;
-    peasants_zln += 3;
+    Q.peasants_psl_p -= 4;
+    Q.petit_psl_p -= 3;
+    Q.peasants_zln += 3;
    }
 !}
 
-[? if psl_p_relation >= 70 and daszynski_votes > wojciechowski : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>, They have also convinced the NPR to support our candidate. ?][? if psl_relation < 70 and daszynski_votes <= wojciechowski_votes : They aren't convinced. They know they are more popular than us, additionally, socialism is currently unpopular so supporting a socialist candidate may be harmful to their conservative agrarian bases. We can't win this election alone, we need support from other parties. ?]
+[? if psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>, They have also convinced the NPR to support our candidate. ?][? if psl_relation < 70 and daszynski_votes <= wojciechowski_votes : They aren't convinced. They know they are more popular than us, additionally, socialism is currently unpopular so supporting a socialist candidate may be harmful to their conservative agrarian bases. We can't win this election alone, we need support from other parties. ?]
 
 @bmn_scout
 max-visits: 1
