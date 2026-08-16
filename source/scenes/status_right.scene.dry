@@ -88,6 +88,8 @@ Government Mandate: [+ government_mandate +]/100%
 
 = Cabinet
 
+Government Action: [+ government_action +]
+
 Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Labor Minister: [+ labor_minister +] ([+ labor_minister_party +])
