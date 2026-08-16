@@ -1,6 +1,6 @@
 title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
-view-if: year = 1922 and month >= 12
+view-if: year = 1921 and month >= 1
 max-visits: 1
 priority: -2
 new-page: true
@@ -402,7 +402,7 @@ The second round of voting has concluded.
 
 No plurality yet, a party would be dropped in the third round.
 
-- @thirdround
+- @thirdround: third round plss sop
 
 @thirdround
 
