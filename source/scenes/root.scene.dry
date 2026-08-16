@@ -201,7 +201,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 4;
+Q.budget = -1;
 
 // Proportion of different social groups
 // source: chatgpt lol
@@ -213,7 +213,7 @@ Q.unemployed = 8;
 Q.minorities = 31;
 
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
+Q.inflation = 602.0;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 4.4;
@@ -525,7 +525,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes',
             // legislative affairs
-            'addressing_the_deficit',
+            'government', 'addressing_the_deficit',
             // sub legislative affairs
             'streamline', 'printmoney', 'welfarecut', 'taxrich'];
 Q.advisor_action_timer = 0;
@@ -620,8 +620,8 @@ on-arrival: {!
 Q.difficulty = -1;
 Q.sejm_mode = 1;
 Q.resources = 2;
-Q.dues = 1;
-Q.budget = 2;
+Q.dues = 2;
+Q.budget = -4;
 !}
 go-to: 1922_main
 
