@@ -1,0 +1,50 @@
+title: Addressing the Deficit
+new-page: true
+is-card: true
+on-arrival: addressing_the_deficit_timer += 3; month_actions += 1
+view-if: Finance_minister_party != 'PPS' and government_action == 'Addressing the Deficit'
+card-image: img/PolishNationalFundBank.jpg
+tags: leg_politics
+
+= Addressing the Deficit
+
+Finance Minister, [+ finance_minister +] ([+ finance_minister_party +]), has decided to approach the deficit in our treasury. What would his policy be?
+
+- @streamline: Streamline our tax collection agency to prevent fraud.
+- @printmoney: Print more money to fill the deficit.
+- @welfarecut: Cut social spending.
+- @taxrich: Tax the rich.
+
+@streamline
+subtitle: +0.5 budget
+unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
+on-arrival: taxrich_timer += 12
+choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+
+@printmoney
+subtitle: +3 budget
+unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
+on-arrival: taxrich_timer += 12
+choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+                                                                                
+@welfarecut
+subtitle: +1 Budget
+unavailable-subtitle: [? if welfare < -5 : There is nothing left to cut ?][? if welfarecut_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
+on-arrival: welfarecut_timer += 8
+choose-if: welfare >= -5; welfarecut_timer == 0
+
+The Finance Minister has decided to approach this option and has now submitted it for the Sejm to vote on.
+
+- @welfarecutno: Vote against the motion.
+- @welfarecutyes: Support the motion.
+
+@welfarecutno
+                                                                           
+@welfarecutyes                                                                         
+
+@taxrich
+subtitle: +2 budget
+unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
+on-arrival: taxrich_timer += 12
+choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+                                                                                
