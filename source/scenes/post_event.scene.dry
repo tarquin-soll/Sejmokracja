@@ -103,7 +103,7 @@ if (Q.dissent < 0) {
 
 // Legislative Affairs
 if (Q.government_timer == 0) {
-    if (Q.budget < -1 and Q.addressing_the_deficit_timer = 0) {
+    if (Q.budget < -1 && Q.addressing_the_deficit_timer == 0) {
         Q.government_action = 'Addressing the Deficit';
     }
 }
