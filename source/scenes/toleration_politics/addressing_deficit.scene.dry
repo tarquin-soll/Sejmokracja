@@ -19,19 +19,19 @@ Finance Minister, [+ finance_minister +] ([+ finance_minister_party +]), has dec
 subtitle: +0.5 budget
 unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
 on-arrival: taxrich_timer += 12
-choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+choose-if: upper_tax_rates <= 5 and taxrich_timer == 0
 
 @printmoney
 subtitle: +3 budget
 unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
 on-arrival: taxrich_timer += 12
-choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+choose-if: upper_tax_rates <= 5 and taxrich_timer == 0
                                                                                 
 @welfarecut
 subtitle: +1 Budget
 unavailable-subtitle: [? if welfare < -5 : There is nothing left to cut ?][? if welfarecut_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
 on-arrival: welfarecut_timer += 8
-choose-if: welfare >= -5; welfarecut_timer == 0
+choose-if: welfare >= -5 and welfarecut_timer == 0
 
 The Finance Minister has decided to approach this option and has now submitted it for the Sejm to vote on.
 
@@ -46,5 +46,5 @@ The Finance Minister has decided to approach this option and has now submitted i
 subtitle: +2 budget
 unavailable-subtitle: [? if upper_tax_rates > 6 : Taxes are already too high ?][? if taxrich_timer > 0 : ,  The Finance Minister isn't interested in this option right now. ?]
 on-arrival: taxrich_timer += 12
-choose-if: upper_tax_rates <= 5; taxrich_timer == 0
+choose-if: upper_tax_rates <= 5 and taxrich_timer == 0
                                                                                 
