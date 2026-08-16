@@ -316,8 +316,45 @@ We still need to solidify our votes, we need the help of other parties
 - @scoutdone: We have concluded negotiating with other parties.
 
 @dropout
+unavailable-subtitle: Narutowicz have lost the support of the PSL-W, it would be unnecessary to switch our votes to him
+choose-if: psl_w_choice = 'Narutowicz'
+on-arrival: {!
+Q.daszynski_votes -= Q.daszynski_votes;
+Q.narutowicz_votes += Q.pps_pres_votes;
 
-We have decided to dropout of the election and instead support
+Q.workers_pps -= 2;
+
+if (Q.psl_w_choice != 'Narutowicz) {
+    Q.psl_w_choice = 'Narutowicz';
+    Q.npr_choice = 'Narutowicz';
+    Q.narutowicz_votes += Q.psl_w_pres_votes;
+    Q.narutowicz_votes += Q.npr_pres_votes;
+
+    Q.left_dissent += 8;
+    Q.center_dissent += 5;
+    Q.reformist_dissent += 5;
+    Q.conservative_dissent += 8;
+    Q.workers_pps -= 2;
+    Q.peasants_pps -= 4;
+   }
+
+if (Q.psl_l_choice = 'Daszynski') {
+    Q.psl_l_choice = 'Narutowicz';
+    Q.narutowicz_votes += Q.psl_l_pres_votes;
+   }
+
+if (Q.psl_p_choice = 'Daszynski') {
+    Q.psl_p_choice = 'Wojciechowski';
+    Q.wojciechowski_votes += Q.psl_p_pres_votes;
+    Q.psl_p_relation -= 5;
+   }
+
+if (Q.bmn_choice = 'ScatterDaszynski') {
+    Q.bmn_sj += 676767;
+   }
+!}
+
+[? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
 
 @bmn_scout2
 
