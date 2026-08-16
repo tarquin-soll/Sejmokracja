@@ -356,7 +356,7 @@ if (Q.bmn_choice == 'ScatterDaszynski') {
    }
 !}
 
-[? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz' : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
+[? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz' : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz' : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
 
 @bmn_scout2
 go-to: secondround
@@ -373,8 +373,10 @@ if (Q.bmn_relation >= 60 && Q.minority_policy > 1) {
 [? if bmn_relation < 60 : ... ?] [? if minority_policy < 1 : ... ?][? if bmn_relation >= 60 and minority_policy > 1 : ... ?]
 
 @scoutdone2
-
+on-arrival: round += 1
 The second round of voting has concluded.
+
+**<span style="color: #C62828;">Ignacy Daszyński</span>**: [? if daszynski_dropped == 0 : [+ daszynski_votes +]% ?][? if daszynski_dropped == 1 : Dropped Out ?]
 
 **Gabriel Narutowicz**:  [? if narutowicz_dropped == 0 : [+ narutowicz_votes +]% ?][? if narutowicz_dropped == 1 : Dropped Out ?]
 
@@ -383,6 +385,8 @@ The second round of voting has concluded.
 **<span style="color: #E3AF34;">Baudouin de Courtenay</span>**: [? if courtenay_dropped == 0 : [+ courtenay_votes +]% ?] [? if courtenay_dropped == 1 : Dropped Out ?]
 
 **<span style="color: #302060;">Maurycy Zamoyski</span>**: [? if zamoyski_dropped == 0 : [+ zamoyski_votes +]% ?][? if zamoyski_dropped == 1 : Dropped Out ?]
+
+No plurality yet, a party would be dropped in the third round.
 
 @narutowiczelection
 unavailable-subtitle: WIP
