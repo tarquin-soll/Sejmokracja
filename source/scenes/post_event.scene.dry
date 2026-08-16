@@ -101,6 +101,13 @@ if (Q.dissent < 0) {
     Q.dissent = 0.95;
 }
 
+// Legislative Affairs
+if (Q.government_timer == 0) {
+    if (Q.budget < -1 and Q.addressing_the_deficit_timer = 0) {
+        Q.government_action = 'Addressing the Deficit';
+    }
+}
+
 // 1. update dates
 if (Q.month_actions >= 1) {
     Q.time += 1;
