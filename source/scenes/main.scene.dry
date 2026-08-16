@@ -18,6 +18,7 @@ max-cards: 3
 
 - @party
 - @govt
+- @leg
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -41,7 +42,7 @@ max-cards: 4
 
 - @party
 - @govt
-- @tol
+- @leg
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -55,16 +56,16 @@ is-deck: true
 
 @govt
 title: Government Affairs
-view-if: time >= 4
+view-if: time >= 4 and pps_in_government == 1
 card-image: img/Sejm.jpg
 is-deck: true
 
 - #govt_affairs
 
-@tol
-title: Toleration Politics
-view-if: time >= 4 and pps_toleration == 1
+@leg
+title: Legislature Politics
+view-if: time >= 3
 card-image: img/portraits/DaszyńskiIgnacy2.jpg
 is-deck: true
 
-- #tol_politics
+- #leg_politics
