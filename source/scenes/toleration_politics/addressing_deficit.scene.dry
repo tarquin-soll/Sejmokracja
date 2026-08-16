@@ -2,7 +2,7 @@ title: Addressing the Deficit
 new-page: true
 is-card: true
 on-arrival: addressing_the_deficit_timer += 3; month_actions += 1
-view-if: Finance_minister_party != 'PPS' and government_action == 'Addressing the Deficit'
+view-if: finance_minister_party != 'PPS' and government_action == 'Addressing the Deficit'
 card-image: img/PolishNationalFundBank.jpg
 tags: leg_politics
 
