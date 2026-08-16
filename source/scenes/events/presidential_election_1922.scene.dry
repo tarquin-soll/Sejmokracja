@@ -356,7 +356,7 @@ if (Q.bmn_choice == 'ScatterDaszynski') {
    }
 !}
 
-[? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
+[? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz' : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
 
 @bmn_scout2
 go-to: secondround
