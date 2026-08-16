@@ -580,6 +580,14 @@ Q.sa_ban_timer = 0;
 Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
+// legislation timer
+Q.government_timer = 0;
+Q.addressing_the_deficit_timer = 0;
+// sub legislation timer
+Q.streamline_timer = 0;
+Q.printmoney_timer = 0;
+Q.welfarecut_timer = 0;
+Q.taxrich_timer = 0;
 
 
 // all the initial advisors are centrists.
