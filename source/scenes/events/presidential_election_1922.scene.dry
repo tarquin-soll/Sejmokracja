@@ -374,6 +374,7 @@ if (Q.bmn_relation >= 60 && Q.minority_policy > 1) {
 
 @scoutdone2
 on-arrival: round += 1
+
 The second round of voting has concluded.
 
 **<span style="color: #C62828;">Ignacy Daszyński</span>**: [? if daszynski_dropped == 0 : [+ daszynski_votes +]% ?][? if daszynski_dropped == 1 : Dropped Out ?]
