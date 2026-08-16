@@ -157,8 +157,6 @@ We have chosen to field <span class="wide_tooltip-wrap">Ignacy Dasyznski<span cl
 
 @scouting
 
-We can't win this election alone, we need support from other parties.
-
 - @npr_scout: Convice the NPR to support <span style="color: #C62828;">Ignacy Daszyński</span>
 - @psl_l_scout: Convice the PSL-L to support <span style="color: #C62828;">Ignacy Daszyński</span>
 - @psl_w_scout: Convice the PSL-W to support <span style="color: #C62828;">Ignacy Daszyński</span>
@@ -241,7 +239,7 @@ if (Q.psl_l_relation >= 70) {
    }
 !}
 
-[? if psl_l_relation >= 70 : They're convinced! They have dropped their support behind Narutowicz and will now support <span style="color: #C62828;">Daszyński</span>. ?][? if psl_l_relation < 70 : We are unable to convince them, We can't win this election alone, we need support from other parties. ?]
+[? if psl_l_relation >= 70 : They're convinced! The PSL-L have dropped their support behind Narutowicz and will now support <span style="color: #C62828;">Daszyński</span>. ?][? if psl_l_relation < 70 : We are unable to convince them, We can't win this election alone, we need support from other parties. ?]
 
 
 @psl_w_scout
@@ -257,7 +255,7 @@ if (Q.psl_w_relation >= 70 && Q.narutowicz_votes > Q.daszynski_votes) {
    }
 !}
 
-[? if psl_w_relation >= 70 and narutowicz_votes > wojciechowski_votes : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>. ?][? if psl_w_relation < 70 and daszynski_votes <= narutowicz_votes : They aren't convinced. Our relationship with them is quite poor and they know that they are more popular than us, We can't win this election alone, we need support from other parties. ?]
+[? if psl_w_relation >= 70 and narutowicz_votes > wojciechowski_votes : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>. ?][? if psl_w_relation < 70 or daszynski_votes <= narutowicz_votes : They aren't convinced. Our relationship with them is quite poor and they know that they are more popular than us, We can't win this election alone, we need support from other parties. ?]
 
 @psl_p_scout
 max-visits: 1
@@ -279,7 +277,7 @@ if (Q.psl_p_relation >= 70 && Q.daszynski_votes > Q.wojciechowski_votes) {
    }
 !}
 
-[? if psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes : They're convinced! They will support <span style="color: #C62828;">Daszyński</span>, They have also convinced the NPR to support our candidate. ?][? if psl_p_relation < 70 and daszynski_votes <= wojciechowski_votes : They aren't convinced. They know they are more popular than us, additionally, socialism is currently unpopular so supporting a socialist candidate may be harmful to their conservative agrarian bases. We can't win this election alone, we need support from other parties. ?]
+[? if psl_p_relation >= 70 and daszynski_votes > wojciechowski_votes : They're convinced! The PSL-W will support <span style="color: #C62828;">Daszyński</span>, They have also convinced the NPR to support our candidate. ?][? if psl_p_relation < 70 or daszynski_votes <= wojciechowski_votes : They aren't convinced. They know they are more popular than us, additionally, socialism is currently unpopular so supporting a socialist candidate may be harmful to their conservative agrarian bases. We can't win this election alone, we need support from other parties. ?]
 
 @bmn_scout
 max-visits: 1
@@ -288,7 +286,7 @@ go-to: scouting
 The BMN delegates have respectfully declined supporting <span style="color: #C62828;">Daszyński</span> in the first round as a show of solidarity for minorities. perhaps we can convince them after they have dropped or after we've moved to the second round.
 
 @scoutdone
-on-arrival: round += 1; bmn_choice = 'Scatter'; courtenay_votes -= bmn_pres_votes; wojciechowski_votes += bmn_pres_votes*.5; narutowicz_votes += bmn_pres_votes*.5
+on-arrival: round += 1; bmn_choice = 'Scatter'; courtenay_votes -= bmn_pres_votes; wojciechowski_votes += bmn_pres_votes*.5; narutowicz_votes += bmn_pres_votes*.5; courtenay_votes -= other_pres_votes; wojciechowski_votes += other_pres_votes*.5; narutowicz_votes += other_pres_votes*.5
 
 The first round of voting has concluded.
 
@@ -319,6 +317,7 @@ We still need to solidify our votes, we need the help of other parties
 go-to: secondround
 max-visits: 1
 on-arrival: {!
+Q.pps_choice = 'Narutowicz';
 Q.daszynski_votes -= Q.daszynski_votes;
 Q.narutowicz_votes += Q.pps_pres_votes;
 
@@ -350,9 +349,14 @@ if (Q.psl_p_choice == 'Daszynski') {
    }
 
 if (Q.bmn_choice == 'ScatterDaszynski') {
+    Q.bmn_choice = 'Scatter';
+
     Q.wojciechowski_votes += Q.bmn_pres_votes*.17;
     Q.narutowicz_votes += Q.bmn_pres_votes*.16;
     Q.daszynski_votes -= Q.bmn_pres_votes*.33;
+    Q.wojciechowski_votes += Q.other_pres_votes*.17;
+    Q.narutowicz_votes += Q.other_pres_votes*.16;
+    Q.daszynski_votes -= Q.other_pres_votes*.33;
    }
 !}
 
@@ -366,14 +370,23 @@ if (Q.bmn_relation >= 60 && Q.minority_policy > 1) {
     Q.wojciechowski_votes -= Q.bmn_pres_votes*.17;
     Q.narutowicz_votes -= Q.bmn_pres_votes*.16;
 
+    Q.wojciechowski_votes -= Q.other_pres_votes*.17;
+    Q.narutowicz_votes -= Q.other_pres_votes*.16;
+    Q.daszynski_votes += Q.other_pres_votes*.33;
+
     Q.bmn_choice = 'ScatterDaszynski';
    }
 !}
 
-[? if bmn_relation < 60 : ... ?] [? if minority_policy < 1 : ... ?][? if bmn_relation >= 60 and minority_policy > 1 : ... ?]
+[? if bmn_relation < 60 : We are unable to convince the BMN due to our poor relation with them. ?] [? if minority_policy < 1 : We haven't enacted beneficial policies affecting minorities in government. ?][? if bmn_relation >= 60 and minority_policy > 1 : Our efforts in minority rights and good relations with the BMN mad it possible to convince them to support our candidate! ?]
 
 @scoutdone2
 on-arrival: round += 1
+on-departure: {!
+if (Q.daszynski_dropped == 0 && (Q.daszynski_votes < Q.narutowicz_votes && Q.daszynski_votes < Q.narutowicz_votes && Q.daszynski_votes < Q.narutowicz_votes && Q.daszynski_votes < Q.narutowicz_votes)){
+    Q.daszynski_dropped = 1;
+   }
+!}
 
 The second round of voting has concluded.
 
@@ -388,6 +401,23 @@ The second round of voting has concluded.
 **<span style="color: #302060;">Maurycy Zamoyski</span>**: [? if zamoyski_dropped == 0 : [+ zamoyski_votes +]% ?][? if zamoyski_dropped == 1 : Dropped Out ?]
 
 No plurality yet, a party would be dropped in the third round.
+
+- @thirdround
+
+@thirdround
+
+The third round of voting has concluded.
+
+**<span style="color: #C62828;">Ignacy Daszyński</span>**: [? if daszynski_dropped == 0 : [+ daszynski_votes +]% ?][? if daszynski_dropped == 1 : Dropped Out ?]
+
+**Gabriel Narutowicz**:  [? if narutowicz_dropped == 0 : [+ narutowicz_votes +]% ?][? if narutowicz_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #3A6538;">Stanisław Wojciechowski</span>**: [? if wojciechowski_dropped == 0 : [+ wojciechowski_votes +]% ?][? if wojciechowski_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #E3AF34;">Baudouin de Courtenay</span>**: [? if courtenay_dropped == 0 : [+ courtenay_votes +]% ?] [? if courtenay_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #302060;">Maurycy Zamoyski</span>**: [? if zamoyski_dropped == 0 : [+ zamoyski_votes +]% ?][? if zamoyski_dropped == 1 : Dropped Out ?]
+
 
 @narutowiczelection
 unavailable-subtitle: WIP
