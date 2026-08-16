@@ -288,7 +288,7 @@ go-to: scouting
 The BMN delegates have respectfully declined supporting <span style="color: #C62828;">Daszyński</span> in the first round as a show of solidarity for minorities. perhaps we can convince them after they have dropped or after we've moved to the second round.
 
 @scoutdone
-on-arrival: round += 1; bmn_choice = 'Scatter'
+on-arrival: round += 1; bmn_choice = 'Scatter'; courtenay_votes -= bmn_pres_votes; wojciechowski_votes += bmn_pres_votes*.5; narutowicz_votes += bmn_pres_votes*.5
 
 The first round of voting has concluded.
 
@@ -313,16 +313,18 @@ We still need to solidify our votes, we need the help of other parties
 - @bmn_scout2: Convince the BMN to support <span style="color: #C62828;">Ignacy Daszyński</span>
 - @dropout: Drop out of the Presidential Election and support Narutowicz
 - @viewscout: View party endorsements.
-- @scoutdone: We have concluded negotiating with other parties.
+- @scoutdone2: We have concluded negotiating with other parties.
 
 @dropout
+go-to: secondround
+max-visits: 1
 on-arrival: {!
 Q.daszynski_votes -= Q.daszynski_votes;
 Q.narutowicz_votes += Q.pps_pres_votes;
 
 Q.workers_pps -= 2;
 
-if (Q.psl_w_choice != 'Narutowicz) {
+if (Q.psl_w_choice != 'Narutowicz') {
     Q.psl_w_choice = 'Narutowicz';
     Q.npr_choice = 'Narutowicz';
     Q.narutowicz_votes += Q.psl_w_pres_votes;
@@ -347,16 +349,40 @@ if (Q.psl_p_choice == 'Daszynski') {
     Q.psl_p_relation -= 5;
    }
 
-if (Q.bmn_choice = 'ScatterDaszynski') {
-    Q.bmn_sj += 676767;
+if (Q.bmn_choice == 'ScatterDaszynski') {
+    Q.wojciechowski_votes += Q.bmn_pres_votes*.17;
+    Q.narutowicz_votes += Q.bmn_pres_votes*.16;
+    Q.daszynski_votes -= Q.bmn_pres_votes*.33;
    }
 !}
 
 [? if psl_w_choice != 'Narutowicz' : This is unprecedented! despite recieving support from the PSL-W and with Narutowicz declining to stand, we ?][? if psl_w_choice = 'Narutowicz : We ?] have decided to dropout of the election and instead support Narutowicz against the right[? if psl_w_choice = 'Narutowicz' : . ?][? if psl_w_choice != 'Narutowicz : ? Our party is displeased about our shift in support, our voter base will be displeased. ?]
 
 @bmn_scout2
+go-to: secondround
+on-arrival: {!
+if (Q.bmn_relation >= 60 && Q.minority_policy > 1) {
+    Q.daszynski_votes += Q.bmn_pres_votes*.33;
+    Q.wojciechowski_votes -= Q.bmn_pres_votes*.17;
+    Q.narutowicz_votes -= Q.bmn_pres_votes*.16;
 
-wip
+    Q.bmn_choice = 'ScatterDaszynski';
+   }
+!}
+
+[? if bmn_relation < 60 : ... ?] [? if minority_policy < 1 : ... ?][? if bmn_relation >= 60 and minority_policy > 1 : ... ?]
+
+@scoutdone2
+
+The second round of voting has concluded.
+
+**Gabriel Narutowicz**:  [? if narutowicz_dropped == 0 : [+ narutowicz_votes +]% ?][? if narutowicz_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #3A6538;">Stanisław Wojciechowski</span>**: [? if wojciechowski_dropped == 0 : [+ wojciechowski_votes +]% ?][? if wojciechowski_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #E3AF34;">Baudouin de Courtenay</span>**: [? if courtenay_dropped == 0 : [+ courtenay_votes +]% ?] [? if courtenay_dropped == 1 : Dropped Out ?]
+
+**<span style="color: #302060;">Maurycy Zamoyski</span>**: [? if zamoyski_dropped == 0 : [+ zamoyski_votes +]% ?][? if zamoyski_dropped == 1 : Dropped Out ?]
 
 @narutowiczelection
 unavailable-subtitle: WIP
