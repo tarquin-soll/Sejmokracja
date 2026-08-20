@@ -42,16 +42,14 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'conservative', 'reformist'];
+Q.factions = ['internationalist', 'center', 'nationalist'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
+Q.internationalist_strength = 25;
+Q.internationalist_dissent = 30;
+Q.center_strength = 40;
 Q.center_dissent = 0;
-Q.conservative_strength = 25;
-Q.conservative_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
+Q.nationalist_strength = 35;
+Q.nationalist_dissent = 5;
 
 // secret events...
 Q.unions_independent = 0;
@@ -594,12 +592,10 @@ Q.taxrich_timer = 0;
 Q.daszynski_advisor = 1; // Ignacy Daszyński
 Q.niedziawkowski_advisor = 1; // Mieczysław Niedziałkowski
 
-// left advisors
-
-// Reformist advisors
+// Internationalist advisors
 
 
-// Conservative advisors
+// Nationalist advisors
 Q.moraczewski_advisor = 1; // Jędrzej Moraczewski
 
 // Nonfactional advisors
@@ -650,7 +646,7 @@ Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
-Q.left_dissent = 30;
+Q.internationalist_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;

@@ -1,7 +1,7 @@
 title: Party Disunity
 new-page: true
 is-card: true
-view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not sapd_formed) or (conservative_dissent > 30))
+view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (center_dissent > 30 and not centrists_resign) or (internationalist_dissent > 30 and not internationalist_split) or (internationalist_dissent > 30))
 on-arrival: month_actions += 1; party_disunity_timer = 4
 card-image: img/Klubpps.jpg
 frequency: 200
@@ -11,24 +11,22 @@ tags: party_affairs
 
 The party is being torn apart by internal dissent. Upset at the leadership and general direction, factions have started sabotaging their rivals, hampering our efforts to win votes and carry out our policies.
 
-[? if reformist_dissent > 30 : The reformists are upset at our direction.  ?]
 [? if center_dissent > 30 : The centrists are displeased with the direction of our party. ?]
-[? if conservative_dissent > 30 : The conservatives are are upset with the actions of our party. ?]
-[? if left_dissent > 30: Leftists are making noises about another party split. ?]
+[? if nationalist_dissent > 30 : The nationalist are upset with the actions of our party. ?]
+[? if internationalist_dissent > 30: internationalists are making noises about another party split. ?]
 
 Something must be done to reinforce party unity.
 
 - @enforce_unity
-- @concessions_reformists
+- @concessions_internationalist
 - @concessions_center
-- @concessions_left
-- @concessions_conservative
+- @concessions_nationalist
 - @do_nothing
 
 
 @enforce_unity
 title: Enforce party discipline.
-on-arrival: reformist_dissent -= 5; center_dissent -= 5; conservative_dissent -= 5; left_dissent -= 5; workers_pps -= 4; petit_pps -= 2; unemployed_pps -= 2
+on-arrival: center_dissent -= 5; nationalist_dissent -= 5; internationalist_issent -= 5; workers_pps -= 4; petit_pps -= 2; unemployed_pps -= 2
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
 
@@ -36,38 +34,30 @@ Enforcing party discipline reduces dissent, but it could lead to an exit of diss
 
 # each party has a concessions action and an expulsions action.
 
-@concessions_reformists
-title: Give concessions to the reformists.
-view-if: reformist_dissent > 30
-on-arrival: reformist_dissent -= 7; left_dissent += 5
-
-We have promised to adopt a more reformist posture. This may alienate the left, however.
-
 @concessions_center
 title: Give concessions to the centrists.
 view-if: center_dissent > 30
-on-arrival: center_dissent -= 7; reformist_dissent += 2; left_dissent += 2
+on-arrival: center_dissent -= 7; nationalist_dissent += 2; internationalist_dissent += 2
 
-We have promised to take more policy suggestions from the centrists. Both the left and reformist wings of the party might be displeased.
+We have promised to take more policy suggestions from the centrists. Both the nationalist and internationalist wings of the party might be displeased.
 
-@concessions_left
-title: Give concessions to the left.
-view-if: left_dissent > 30
-on-arrival: left_dissent -= 7; reformist_dissent += 2; conservative_dissent += 3
+@concessions_internationalist
+title: Give concessions to the internationalists.
+view-if: internationalist_dissent > 30
+on-arrival: internationalist_dissent -= 7; internationalist_dissent += 2; nationalist_dissent += 3
 
 We have promised that we will listen to the left wing of the party. Of course, this leads to increased dissent from the republicans and conservatives.
 
-@concessions_conservative
-title: Give concessions to the conservatives.
-view-if: conservative_dissent > 30
-on-arrival: comservative_dissent -= 7; center_dissent += 2; left_dissent += 3
+@concessions_nationalist
+title: Give concessions to the nationalists.
+view-if: nationalist_dissent > 30
+on-arrival: nationalist_dissent -= 7; center_dissent += 2; internationalist_dissent += 3
 
-We have promised to adopt a more conservative stance for our policies. This displeases the left and centrists of our party.
-
+We have promised to adopt a more nationalist stance for our policies. This displeases the internationalist and centrists of our party.
 
 @do_nothing
 title: Let the factions argue with themselves.
-on-arrival: conservative_dissent += 1; left_dissent += 1; center_dissent += 1; reformist_dissent += 1
+on-arrival: nationalist_dissent += 1; internationalist_dissent += 1; center_dissent += 1
 
 Let the factions bicker; perhaps dissent is healthy for the party.
 

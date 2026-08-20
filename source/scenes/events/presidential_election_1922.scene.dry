@@ -329,10 +329,10 @@ if (Q.psl_w_choice != 'Narutowicz') {
     Q.narutowicz_votes += Q.psl_w_pres_votes;
     Q.narutowicz_votes += Q.npr_pres_votes;
 
-    Q.left_dissent += 8;
+    Q.internationalist_dissent += 8;
     Q.center_dissent += 5;
     Q.reformist_dissent += 5;
-    Q.conservative_dissent += 8;
+    Q.nationalist_dissent += 8;
     Q.workers_pps -= 2;
     Q.peasants_pps -= 4;
    }
