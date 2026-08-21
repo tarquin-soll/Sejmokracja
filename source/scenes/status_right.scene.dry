@@ -6,18 +6,18 @@ var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    _addP('kpp', "KPP", Q.kpp_sj);
-    _addP('pps', 'PPS', Q.pps_sj);
-    _addP('npr', 'NPR', Q.npr_sj);
-    _addP('psl_l', 'PSL-L', Q.psl_l_sj);
-    _addP('psl_w', 'PSL-W', Q.psl_w_sj);
-    _addP('psl_p',  'PSL-P',  Q.psl_p_sj);
-    _addP('bmn', 'BMN', Q.bmn_sj);
-    _addP('chzjn', 'ChZJN', Q.chzjn_sj);
-    _addP('zln', 'ZLN', Q.zln_sj);
-    _addP('pschd', 'PSChD', Q.pschd_sj);
-    _addP('otherright', 'Other Parties', Q.otherright_sj);
-    _addP('other','Other',Q.other_sj);
+    _addP('kpp', "KPP", Q.kpp_sj*4.44);
+    _addP('pps', 'PPS', Q.pps_sj*4.44);
+    _addP('npr', 'NPR', Q.npr_sj*4.44);
+    _addP('psl_l', 'PSL-L', Q.psl_l_sj*4.44);
+    _addP('psl_w', 'PSL-W', Q.psl_w_sj*4.44);
+    _addP('psl_p',  'PSL-P',  Q.psl_p_sj*4.44);
+    _addP('bmn', 'BMN', Q.bmn_sj*4.44);
+    _addP('chzjn', 'ChZJN', Q.chzjn_sj*4.44);
+    _addP('zln', 'ZLN', Q.zln_sj*4.44);
+    _addP('pschd', 'PSChD', Q.pschd_sj*4.44);
+    _addP('otherright', 'Other Parties', Q.otherright_sj*4.44);
+    _addP('other','Other',Q.other_sj*4.44);
 
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
