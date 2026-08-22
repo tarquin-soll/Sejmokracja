@@ -77,7 +77,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 tags: campaigning
-on-arrival: minorities_pps -= 1 if conservative_strength >= 30; minorities_pps += 4*(1-dissent) if peoples_party == 0; minorities_pps += 8*(1-dissent) if peoples_party == 1; resources -= 1
+on-arrival: minorities_pps -= 1 if nationalist_strength >= 35; minorities_pps += 4*(1-dissent) if peoples_party == 0; minorities_pps += 8*(1-dissent) if peoples_party == 1; resources -= 1
 go-to: campaign
 
 We have increased our campaigning among Minorities. [? if peoples_party == 0: We have historically had a campaign targetted towards Minorities, and due to our patriotic past, the Minorities aren't well receptive of our campaign attempts. ?]
