@@ -13,11 +13,13 @@ card-image: img/portraits/PilsudskiJozef.jpg
 - @no
 - @easy_discard
 
+Our relationship with with Piłsudski has been mixed after he left the party. although the Presidency had been weaken by the constitution, it is still ideal to have the President to our side if we wish to lead the Sejm.
+
 @meeting
 title: Arrange a meeting with the President.
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources.
-on-arrival: resources -= 1; president_relation += 10; president_confidence += 8 if pps_in_government
+on-arrival: resources -= 1; president_relation += 8; president_confidence += 6 if pps_in_government
 
 The meeting was well recieved, we were able to build a relationship with the President.
 
@@ -25,3 +27,4 @@ The meeting was well recieved, we were able to build a relationship with the Pre
 
 @no
 title: Let's not do this for now.
+
