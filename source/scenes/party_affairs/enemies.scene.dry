@@ -4,7 +4,7 @@ view-if: year <= 1924 and enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
 max-visits: 3
 is-card: true
-card-image: img/poster_1.png
+card-image: img/Choosing_our_enemies.jpg
 tags: party_affairs
 
 = Choosing our enemies
@@ -21,9 +21,9 @@ In our media and campaign materials, who should we consider as our main opponent
 - @easy_discard
 
 @authoritarian
-on-arrival: enemies = "authoritarian"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+on-arrival: enemies = "authoritarian"; center_strength += 3; internationalist_strength += 3; workers_kpp -= 4; workers_zln -= 2; workers_pschd -= 2; kpp_relation -= 10; zln_relation -= 10;
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Attacking the authoritarians is popular among all but the conservatives nationalist in our party, who would prefer to be fighting foreign powers, however, they are content with this direction. This might also hamper our ability to develop goodwill with the KPP in the future.
 
 @false_left
 on-arrival: enemies = "false left"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
@@ -38,7 +38,7 @@ on-arrival: enemies = "ChZJN"; neorevisionist_strength += 5; nazi_urgency += 1; 
 @kpp
 on-arrival: enemies = "KPP"; internationalist_dissent += 4; center_dissent -= 5; nationalist_dissent -= 5; kpp_relation -= 10; psl_w_relation += 5; psl_p_relation += 5; workers_kpp -= 6;
 
-Attacking the KPP is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPP, this may not be the best choice.
+Attacking the KPP is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to pursue goodwill with the KPP, this may not be the best choice.
 
 @foreign
 on-arrival: enemies = "foreign powers"; nationalist_strength += 5; nationalist_dissent -= 5; germany_relation -= 2; soviet_relation -= 2; psl_p_relation += 2; npr_relation += 3; zln_relation += 2; internationalist_dissent += 8; nationalism += 3; peasants_pps += 4; petit_pps += 3;
