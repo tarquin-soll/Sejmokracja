@@ -19,30 +19,24 @@ The motion have received broad support from the Sejm and is guaranteed to pass, 
   
 @vote_no
 unavailable-subtitle: Wip I'm doing historical path first
-choose-if: resources >= 99
+on-arrival: nationalism += 8; socialism -= 5; west_relation -= 1; president_confidence += 2; workers_pps -= 6*(1 + dissent); unemployed_pps -= 4*(1 + dissent); peasants_pps -= 8*(1 + dissent); nationalist_dissent += 25; internationalist_dissent -= 10; internationalist_strength += 20
 
-cheater.
+Other party is shocked by our apostasy! this enrages the nationalist faction and even those that are centrists. Some members in our party defected but most have just decided to disobey the orders.
+
+The motion easily passes the Sejm, and **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>**  Nationalists are in uproar with this achievement. However, The West Powers are displeased at our incorporation.
+
+Vilnius remained the declared capital of **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>**, though the **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">huan</span><span style="color: #BE3A34;">ian</span>** government continued to operate from Kaunas. Refusing to recognize **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**'s claim to the region, **<span style="color: #FFB81C;">Lit</span><span style="color: #046A38;">hua</span><span style="color: #BE3A34;">nia</span>** severed communications with **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>** , effectively collapsing all hopes of improving diplomatic relations.
+
+The nationalist are attacking the PPS, our actions were framed as an act of betrayal against the **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** state.
 
 @abstain
 unavailable-subtitle: Wip I'm doing historical path first
-choose-if: resources >= 99
 
-cheater.
+Other party is shocked by our apostasy! this upsets the nationalist and conservative socialist in our party, some of them disobeyed an still voted yes for the bill.
 
 @vote_yes
-on-arrival: nationalism += 3*(1-dissent); west_relation -= 1
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/CelebrationofVilniusIncorporation.png";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
+on-arrival: nationalism += 5; west_relation -= 1; president_confidence += 2; internationalist_dissent += 5; nationalist_strength += 5
+face-image: img/CelebrationofVilniusIncorporation.png  
 
 The motion easily passes the Sejm, and **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>**  Nationalists are in uproar with this achievement. However, The West Powers are displeased at our incorporation.
 
