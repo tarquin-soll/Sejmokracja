@@ -9,7 +9,7 @@ new-page: true
 
 = Vilnius Question
 
-On 20 February 1922, the Seimas of **<span style="color: #DD0000;">Central Lithuania</span>** adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** state.
+On the 20th of February 1922, the Seimas of **<span style="color: #DD0000;">Central Lithuania</span>** adopted a resolution declaring the Vilnius Region an inseparable part of the Republic of **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**. The motion passed by 96 votes to none, with six abstentions, rejecting all foreign claims to the territory and requesting its immediate incorporation into the **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">ish</span>** state.
 
 *“The Vilnius Land constitutes, without conditions or reservations, an inseparable part of the Repubic of **<span style="color: #CCCCCC;">Pol</span><span style="color: #DC143C;">and</span>**”* — Point 4 of the resolution
 
@@ -36,13 +36,13 @@ Due to the delegates refusal to amend the resolution, it culminated into a polit
 @psl_p_zln_appoint
 title: President [+ president +] appoints the PSL-P and ZLN to form a government.
 
-The ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet without support from the NPR, since the NPR hesitated to join a government with the National Democrats due to political disagreement.
+The ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet without support from the NPR, since the NPR hesitated to join a government with the National Democrats due to political disagreement...
 
 - @deadlock
 
 @deadlock
 title: The Sejm is deadlocked.
-subtitle: Piłsudski appoints [+ prime_minister +] again as non-parliamentary candidate
+subtitle: Piłsudski appoints [+ prime_minister +] again as a non-parliamentary candidate
 
 [+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority, should we extend our support?
 
@@ -58,9 +58,9 @@ We have decided to tolerate the government.
 
 @no
 title: Don't tolerate the government.
-on-arrival: pps_toleration = 0; left_strength += 10
+on-arrival: pps_toleration = 0; internationalist_strength += 10
 
-We have decided to not tolerate the government.
+We have decided to not tolerate the government, however, they still have a majority, albeit not a stable one.
 
 - @cabinet
 
@@ -68,7 +68,7 @@ We have decided to not tolerate the government.
 title: [+ prime_minister +] appoints the ministers.
 on-arrival: other_in_government = 0; other_toleration = 1
 
-The NZL (Others) who have previously been in government have been omitted out of the government.
+The <span class="wide_tooltip-wrap">NZL<span class="wide_tooltip-tip">Extra-parliamentary party consisting of centre-right members.</span></span> (Extra-parliamentary) who have previously been in government have been omitted out of the government.
 
 Which ministry would be shuffled.
 
@@ -93,4 +93,4 @@ on-arrival: interior_minister = 'Kamieński'
 @finalized
 title: The new government is finalized
 
-The new government is finalized, we wait on how [+ prime_minister +] would approach the Question of Vilnius.
+The new government is finalized, we wait on how [+ prime_minister +] and his cabinet would approach the Question of Vilnius.
