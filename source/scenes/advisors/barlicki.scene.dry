@@ -1,0 +1,32 @@
+title: Norbert Barlicki
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/BarlickiNorbert.jpg
+view-if: barlicki_advisor = 1
+new-page: true 
+
+= Norbert Barlicki
+
+Barlicki is one of the few who has a background in rural and agricultural affairs in the PPS due to his history in participating in agricultural unions.
+
+- @agriculture
+- @rural_campaign
+- @root: Return to main
+
+@agriculture
+title: Agricultural Policy
+subtitle: Barlicki is the Minister of Agriculture.
+choose-if: advisor_action_timer <= 0 and pps_in_government and agriculture_minister_party == "PPS"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not pps_in_government : The PPS is not in government. ?][? if agriculture_minister_party != "PPS": The PPS does not have the Agriculture Ministry. ?]
+on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
+go-to: agricultural_policy
+
+
+@rural_campaign
+title: Rural Campaign
+subtitle: Try to campaign among the rural populace.
+choose-if: advisor_action_timer == 0 and rural_policy > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
+on-arrival: advisor_action_timer = 6; peasants_pps += 6*(1-dissent); peoples_party_support += 1
+
+We have increased our campaigning among farmers and the rural populace.
