@@ -11,7 +11,6 @@ Moraczewski is one of the PPS leaders. He is a great supporter of Piłsudski. Th
 
 - @peasants_right
 - @president
-- @finance_ministry_
 - @root: Return to main
 
 @peasants_right
@@ -32,10 +31,3 @@ on-arrival: advisor_action_timer = 6; president_relation += 5; president_relatio
 
 We have improved our relations with [+ President +]
 
-@finance_ministry_
-title: Fiscal Policy
-subtitle: As Finance Minister, Moraczewski can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if pps_in_government = 0 : PPS not in government: ?] [? if finance_minister_party != "PPS" : The PPS does not control the finance ministry. ?]
-choose-if: advisor_action_timer == 0 and pps_in_government == 1 and finance_minister_party == "PPS"
-on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
-go-to: fiscal_policy
