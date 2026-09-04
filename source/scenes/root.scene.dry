@@ -65,8 +65,9 @@ Q.nazi_urgency = 0;
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
-Q.pacifism = 0;
+// Support for Pacifism and Nationalism within the PPS
+Q.pacifism = -1;
+Q.pps_nationalism = 2;
 // Support for democratic reform within the SPD relative to 1928
 Q.democratization = 0;
 // Support for a communist coalition relative to 1928
@@ -593,12 +594,14 @@ Q.taxrich_timer = 0;
 // all the initial advisors are centrists.
 Q.daszynski_advisor = 1; // Ignacy Daszyński
 Q.niedziawkowski_advisor = 1; // Mieczysław Niedziałkowski
+// labor sub faction (IN CASE I MAKE LABOR, since there's not enough advisors in labor)
+Q.barlicki_advisor = 1; // Norbert Barlicki
 
 // Internationalist advisors
 
 
 // Nationalist advisors
-Q.moraczewski_advisor = 1; // Jędrzej Moraczewski
+Q.moraczewski_advisor = 0; // Jędrzej Moraczewski
 
 // Nonfactional advisors
 
