@@ -98,11 +98,11 @@ PSChD: Christian Democracy ([+ pschd_leader +])
 
 = Internal Factions of the PPS
 
-<span class="wide_tooltip-wrap">Internationalist<span class="wide_tooltip-tip">The internationalist faction, they are closely aligned with the splinter "Left" or "Young" faction of the PPS. They advocate for uncompromising socialism and internationalism.</span><span> strength: [+ internationalist_strength : strength +], dissent: [+ internationist_dissent : dissent +]
+<span class="wide_tooltip-wrap">Internationalist<span class="wide_tooltip-tip">The internationalist faction, they are closely aligned with the splinter "Left" or "Young" faction of the PPS. They advocate for uncompromising socialism and internationalism.</span></span> strength: [+ internationalist_strength : strength +], dissent: [+ internationist_dissent : dissent +]
 
-<span class="wide_tooltip-wrap">Center<span class="wide_tooltip-tip">Center, parliamentary cooperation, participation in government text.</span><span> strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+<span class="wide_tooltip-wrap">Center<span class="wide_tooltip-tip">The Centrist faction are more focused on parliamentary cooperation, participation in the government and offering a middle way for the other factions.</span></span> strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-<span class="wide_tooltip-wrap">Nationalist<span class="wide_tooltip-tip">The nationalist faction also known as the "Revolutionary" or the "Old" faction are closely aligned with former leader Jozéf Piłsudski are fierce defenders of polish nationalism unlike the typical internationalist socialist party.</span><span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
+<span class="wide_tooltip-wrap">Nationalist<span class="wide_tooltip-tip">Nationalist, also known as the "Revolutionary" or the "Old" faction are closely aligned with former leader Jozéf Piłsudski are fierce defenders of polish nationalism.</span></span> strength: [+ nationalist_strength : strength +], dissent: [+ nationalist_dissent : dissent +]
 
 
 @polls
