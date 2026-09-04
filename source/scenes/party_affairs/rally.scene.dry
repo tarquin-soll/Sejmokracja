@@ -11,25 +11,25 @@ card-image: img/rally.jpg
 Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
+- @welfare: The maintenance and expansion of social welfare programs to combat post-partition struggles.
+- @democracy: Defending democracy and the republic against authoritarian dictatorships.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @nationalism: Defending polish nationalism and military dignity.
+- @nationalism: Defending polish sovereignty and national identity.
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_pps += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2;
+on-arrival: workers_pps += 4*(1-dissent); unemployed_pps += 4*(1-dissent) if internationalist_strength > nationalist_strength; workers_pps += 4*(1-dissent) if nationalization_progress > 0; unemployed_pps += 3*(1-dissent) if nationalization_progress > 0; internationalist_strength += 5; internationalist_dissent -= 5; bourgeoisie_pps -= 3; petit_pps -= 2;
 
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
 @welfare
-on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
+on-arrival: workers_pps += 4*(1-dissent); workers_pps += 4*(1-dissent) if welfare > 0; unemployed_pps += 4*(1-dissent) if welfare > 0; unemployed_pps += 4*(1-dissent) if welfare > 1; center_strength += 3; center_dissent -= 3; internationalist_dissent -= 3;
 
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+The maintenance and expansion of social welfare programs appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
-on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
+on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_pps += 4*(1-dissent) if democratization >= 3; unemployed_pps += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; petit_spd += 4*(1-dissent) if democratization >= 3; center_strength += 3
 
 Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
 
@@ -37,7 +37,7 @@ Our speakers defend the republican system and rail against the monarchists and a
 [? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @pacifism
-on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
+on-arrival: pacifism += 1.5; pps_nationalism -= 1; nationalism -= 2*(1 - dissent); workers_pps += 4*(1 - dissent) if pacifism >= 3; unemployed_pps += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; petit_pps += 4*(1-dissent) if pacifism >= 3; internationalist_strength -= 5; internationalist_dissent -= 5; nationalist_dissent += 5
 
 Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
 
@@ -45,10 +45,14 @@ Our speakers denounce the military establishment and all the spending entering t
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @nationalism
+on-arrival: pps_nationalism += 1.5; pacifism -= 1; nationalism += 3*(1 - dissent); workers_pps += 4*(1 - dissent) if nationalism >= 3; unemployed_pps += 3*(1-dissent) if nationalism >= 3; nationalism += 5*(1-dissent) if pps_nationalism >= 3; peasants_pps += 4*(1-dissent) if pacifism >= 3; nationalist_strength -= 5; nationalist_dissent -= 5; internationalist_dissent += 5
 
-wip
+Our speakers defends Polish sovereignty and emphasises the necessity of defense. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+
+[? if pps_nationalism < 3 : Given that our party have previously supported pacifism, it is difficult to argue for nationalism. ?]
+[? if pps_nationalism >= 3 : Since we have consistently made nationalism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @local
-on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
+on-arrival: workers_pps += 4*(1-dissent); peasants_pps += 2*(1-dissent); petit_pps += 2*(1-dissent); unemployed_pps += 3*(1-dissent);
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
