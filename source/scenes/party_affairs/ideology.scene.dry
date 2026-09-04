@@ -15,8 +15,8 @@ The PPS is torn between many different ideological currents. What should be our 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @international: We should be receptive to internationalism, work with parties similar to our views and be uncompromising to the right.
-- @centrist: We work to unite the party by being receptive to both side whilst strengthening democracy and defending it against extremist by participating with the establishment and cooperating with the center and the democratic right.
-- @national: Strengthening the Nationalist Faction, we should work for left-wing nationalism, defend polish nationalism and democracy against foreign enemies, provide for the workers through active pragmatic participation in the Sejm.
+- @centrist: We work to unite the party by being receptive to both side whilst strengthening democracy and defending it.
+- @national: Strengthening the Nationalist Faction, we should work for left-wing nationalism whilst protecting the workerd.
 - @easy_discard
 
 @international
@@ -48,7 +48,7 @@ if (Q.ideology && Q.ideology != "nationalist") {
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "nationalist"; nationalist_strength += 10; democratization += 1; nationalism += 2; nationalist_dissent -= 5; psl_w_relation += 5; psl_p_relation += 5; kpp_relation -= 8
+on-departure: ideology = "nationalist"; nationalist_strength += 10; democratization += 1; pps_nationalism += 2; nationalist_dissent -= 5; psl_w_relation += 5; psl_p_relation += 5; kpp_relation -= 8
 
 The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
 
