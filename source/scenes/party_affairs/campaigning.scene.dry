@@ -6,7 +6,6 @@ is-card: true
 card-image: img/Campaign.jpg
 frequency: 100
 tags: party_affairs
-go-to: campaign
 
 = Campaigning
 
