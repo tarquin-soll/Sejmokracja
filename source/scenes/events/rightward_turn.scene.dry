@@ -1,0 +1,44 @@
+title: A rightward turn?
+new-page: true
+subtitle: The PSL-P meets with the ChZJN.
+tags: event
+view-if: year = 1923 and month = 5
+max-visits: 1
+
+= A rightward turn?
+
+Following deep political instability produced by the failure of the Sejm to build a stable governing majority[? if president != 'Wojciechowski' and president != "Zamoyski" : and the result of the presidential election. ?]
+
+The parties will meet in Lanckorona to discuss how to approach the current problems plaguing **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**.
+
+- @discuss: The parties discuss...
+
+@discuss
+go-to: lanckorona_pact if psl_p_right >= (psl_p_left + (psl_p_relation*(3/100))
+
+The PSL-P err striking ideological difference, commited with cooperation from the Center and the Left
+
+- @compromise: The ChZJN attempts to compromise with the PSL-P
+
+@compromise
+
+higher tariffs err more agricultural policy etc.
+
+- @result: The result?
+
+@result
+
+After careful diplomatic exchange
+
+- @deal: The PSL-P agrees.
+- @nodeal: Ths PSL-P refuses.
+
+@deal
+view-if: psl_p_right >= (psl_p_left + (psl_p_relation*(3/100))
+go-to: lanckorona_pact
+
+@nodeal
+view-if: psl_p_right < (psl_p_left + (psl_p_relation*(3/100))
+on-arrival: psl_p_left += 2
+
+Ah Shucks
