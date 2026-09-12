@@ -10,13 +10,13 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The <span style="color: #C62828;">PPS</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. We have only been able to enter governments consisting of the PSL-W, PSL-P, and other Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The PPS cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. We have only been able to enter governments consisting of the PSL-W, PSL-P, and other Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @peasant: Strengthen our bonds with the <span style="color: #80FF00;">PSL-"Liberation"</span> and left-agrarian <span style="color: #179900;">PSL-"Left"</span>.
-- @piast: Strengthen our bonds with the conservative <span style="color: #3A6538;">PSL-"Piast"</span>.
-- @bmn: Strengthen our bonds with centrist <span style="color: #E3AF34;">Minority Parties</span>.
-- @npr: Strengthen our bonds with the conservative left <span style="color: #841839;">NPR</span>.
-- @pps_alone: The <span style="color: #C62828;">PPS</span> can stand alone for now.
+- @peasant: Strengthen our bonds with the **<span style="color: #80FF00;">PSL-"Liberation"</span>** and left-agrarian **<span style="color: #179900;">PSL-"Left"</span>**.
+- @piast: Strengthen our bonds with the conservative **<span style="color: #3A6538;">PSL-"Piast"</span>**.
+- @bmn: Strengthen our bonds with centrist **<span style="color: #E3AF34;">Minority Parties</span>**.
+- @kpp: Work towards repairing relationships with the KPP
+- @pps_alone: The PPS can stand alone for now.
 - @easy_discard
 
 @peasant
@@ -32,17 +32,27 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
-go-to: piast_op if psl_p_in_government = 1 and pps_in_government = 0; piast_coalition if pps_in_government = 1 and psl_p_in_government = 1
+go-to: lanckorona if lanckorona_pact = 1; piast_op_2 if psl_p_in_government = 0 and pps_in_government = 0; piast_op if psl_p_in_government = 1 and pps_in_government = 0; piast_coalition if pps_in_government = 1 and psl_p_in_government = 1
 
 @piast_op
-on-arrival: psl_p_relation += 4*(1 - dissent); psl_p_relation += 2*(1 - dissent) if pps_toleration; psl_p_relation -= 3 if lanckorona_pact = 1
+on-arrival: psl_p_relation += 5*(1 - dissent); psl_p_relation += 2*(1 - dissent) if pps_toleration; psl_p_left += 0.5
 
-[? if pps_toleration != 1 : We are currently in opposition to the current government, but that does not preclude the general building of feelings of good will. ?][? if pps_toleration : We are currently tolerating the government, so we are able to build relations with them. ?][? if lanckorona_pact : However the rightward turn of the <span style="color: #3A6538;">PSL-P</span> has made building relations difficult, but not impossible ?]
+[? if pps_toleration != 1 : We are currently in opposition to the current government, but that does not preclude the general building of feelings of good will. ?][? if pps_toleration : We are currently tolerating the government, so we are able to build relations with them. ?]
+
+@piast_op_2
+on-arrival: piast_relation += 6*(1 - dissent); psl_p_left += 0.5
+
+Together with the <span style="color: #000000;">Center</span>, we share a common opposition to the incumbent cabinet, making improving relations easier.
 
 @piast_coalition
-on-arrival: psl_p_relation += 8*(1 - dissent); psl_p_relation -= 4 if lanckorona_pact = 1
+on-arrival: psl_p_relation += 8*(1 - dissent); psl_p_left += 1
 
-We are currently coalition partners with them, so improving relations comes naturally. [? if lanckorona_pact : However the rightward turn of the <span style="color: #3A6538;">PSL-P</span> has made building relations difficult, but not impossible ?]
+We are currently coalition partners with them, so improving relations comes naturally.
+
+@lanckorona
+on-arrival: psl_p_relation += 4*(1 - dissent); psl_p_left += 0.5
+
+The rightward turn of the PSL-P has made building relations difficult, but not impossible
 
 @bmn
 subtitle: -1 resources
@@ -51,20 +61,20 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; bmn_relation += 5*(1 - dissent)
 go-to: bmn_coalition if bmn_in_government and pps_in_government = 1
 
-We are able through build a relationship with the <span style="color: #E3AF34;">BMN</span>.
+We are able through build a relationship with the BMN.
 
 @bmn_coalition
-on-arrival: bmn_relation += 5
+on-arrival: bmn_relation += 3*(1 - dissent)
 
 We are currently coalition partners with them, and historically, they haven't been able to enter the government without our help so improving relations comes naturally.
 
-@npr
+@kpp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; npr_relation += 8
+on-arrival: resources -= 1; kpp_relation += 10
 
-We are able to improve our relations with the NPR as we are ideologically similar in economic issues with the difference being that they are a conservative party.
+Here you go 10 KPP relations for FREE
 
 @pps_alone
 
