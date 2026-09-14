@@ -55,4 +55,4 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; petit_pps += 3*(1 - dissent); bourgeoisie_pps += 2*(1 - dissent); peasants_pps += 3*(1 - dissent); workers_pps += 3*(1 - dissent); labor_dissent += 10; socialism += 3*(1 - dissent); pro_republic += 3*(1-dissent) if democratization > 1
 
-Our posters reaches the Peasants on the countryside and is exposed to more audience in busy areas. However, the extra burden for laborers upsets them.
+Our posters reaches the Peasants on the countryside and is exposed to more audience in busy areas. However, the extra burden for workers upsets the labor faction.
