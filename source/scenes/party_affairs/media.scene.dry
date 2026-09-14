@@ -23,7 +23,7 @@ The PPS runs a modest media operation, with many newspapers throughout every Pol
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to <span style="color: #C62828;">socialist</span> views.
-on-arrival: resources += 1; commercialized_media += 1; petit_pps += 6*(1 - dissent); bourgeoisie_pps += 3*(1-dissent); internationalist_dissent += 10; workers_pps -= 2*(1 + dissent)
+on-arrival: resources += 1; commercialized_media += 1; petit_pps += 6*(1 - dissent); bourgeoisie_pps += 3*(1-dissent); internationalist_dissent += 10; labor_dissent += 10; workers_pps -= 2*(1 + dissent)
 
 Our commercialized newspapers are able to bring in more funds. However, the leftist and labourers in our party expresses their displeasure.
 
@@ -44,7 +44,7 @@ Our campaign media is being exposed to Minorities.
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
 subtitle: There will be space for all factions to air their views.
-on-arrival: left_dissent -= 6; conservative_dissent -= 6; center_dissent -= 6;
+on-arrival: left_dissent -= 6; conservative_dissent -= 6; center_dissent -= 6; labor_dissent += 6
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
 
@@ -53,6 +53,6 @@ title: Utilize our printing press to produce posters and pamphlets.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; petit_pps += 3*(1 - dissent); bourgeoisie_pps += 2*(1 - dissent); peasants_pps += 3*(1 - dissent); workers_pps += 3*(1 - dissent); center_dissent += 5; socialism += 3*(1 - dissent); pro_republic += 3*(1-dissent) if democratization > 1
+on-arrival: resources -= 1; petit_pps += 3*(1 - dissent); bourgeoisie_pps += 2*(1 - dissent); peasants_pps += 3*(1 - dissent); workers_pps += 3*(1 - dissent); labor_dissent += 10; socialism += 3*(1 - dissent); pro_republic += 3*(1-dissent) if democratization > 1
 
-Our posters reaches the Peasants on the countryside and is exposed to more audience in busy areas.
+Our posters reaches the Peasants on the countryside and is exposed to more audience in busy areas. However, the extra burden for laborers upsets them.
