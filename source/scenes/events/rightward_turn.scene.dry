@@ -14,7 +14,7 @@ The parties will meet in Lanckorona to discuss how to approach the current probl
 - @discuss: The parties discuss...
 
 @discuss
-go-to: lanckorona_pact if psl_p_right >= (psl_p_left + (psl_p_relation*(3/100))
+go-to: lanckorona_pact if psl_p_right >= (psl_p_left + (psl_p_relation*(3/100)))
 
 The PSL-P err striking ideological difference, commited with cooperation from the Center and the Left
 
@@ -34,11 +34,11 @@ After careful diplomatic exchange
 - @nodeal: Ths PSL-P refuses.
 
 @deal
-view-if: psl_p_right >= (psl_p_left + (psl_p_relation*(3/100))
+view-if: psl_p_right >= (psl_p_left + (psl_p_relation*(3/100)))
 go-to: lanckorona_pact
 
 @nodeal
-view-if: psl_p_right < (psl_p_left + (psl_p_relation*(3/100))
+view-if: psl_p_right < (psl_p_left + (psl_p_relation*(3/100)))
 on-arrival: psl_p_left += 2
 
 Ah Shucks
