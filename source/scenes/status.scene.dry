@@ -30,6 +30,8 @@ President: [+ president +]
 
 President Relation: [+ president_relation : relationships +]
 
+President Confidence in Government: [+ president_confidence : president_confidence +]
+
 Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
 Sejm:
