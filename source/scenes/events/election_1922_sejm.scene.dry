@@ -273,7 +273,7 @@ on-arrival: prime_minister_party = "PSL-P"; prime_minister = "Witos"
 go-to: ministries
 
 @thugutt
-title:
+title: Let the PSL-W have the prime ministry.
 subtitle: Stanisław Thugutt will be the prime minister, This is an unexpected choice, however this may bring the PSL-P closer to the left.
 on-arrival: prime_minister_party = "PSL-W"; prime_minister = "Thugutt"; psl_w_relation += 5; psl_w_left += 1; psl_p_left += 2
 go-to: ministries
