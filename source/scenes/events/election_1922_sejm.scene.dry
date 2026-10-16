@@ -76,12 +76,16 @@ Q.prime_minister_party = 'Vacant';
 Q.prime_minister = 'Vacant';
 Q.labor_minister_party = 'Vacant';
 Q.labor_minister = 'Vacant';
+Q.publicworks_minister_party = 'Vacant';
+Q.publicworks_minister = 'Vacant';
+Q.industry_minister_party = 'Vacant'
+Q industry_minister = 'Vacant';
 Q.treasury_minister_party = 'Vacant';
 Q.treasury_minister = 'Vacant';
 Q.agriculture_minister_party = 'Vacant';
 Q.agriculture_minister = 'Vacant';
-Q.exterior_minister_party = 'Vacant';
-Q.exterior_minister = 'Vacant';
+Q.foreign_minister_party = 'Vacant';
+Q.foreign_minister = 'Vacant';
 Q.interior_minister_party = 'Vacant';
 Q.interior_minister = 'Vacant';
 Q.military_minister_party = 'Vacant';
@@ -254,10 +258,13 @@ The Sejm finds that it cannot establish a mandate, for this reason, the members 
 
 @coalition_menu
 
+- @grand_coalition
+
 @grand_coalition
 title: We can form a Grand Coalition.
 subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)
-choose-if: grand_coalition >= 50
+unavailable-subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)[? : - We do not have good enough relations with the PSL-P. ?]
+choose-if: grand_coalition >= 50 and psl_p_relation <= 50
 on-arrival: pps_in_government = 1; npr_in_government = 1; psl_w_in_government = 1; psl_p_in_government = 1
 
 Who should be prime minister?
