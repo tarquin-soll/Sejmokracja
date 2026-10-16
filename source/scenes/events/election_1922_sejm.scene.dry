@@ -203,7 +203,7 @@ if (window && d3) {
     d3.select("#sejm").datum(data_sj).call(parliament);
 }
 !}
-go-to: pm_appoint
+go-to: coalition_menu
 
 = Election results
 
