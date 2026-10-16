@@ -68,10 +68,6 @@ Q.pschd_toleration = 0;
 Q.other_toleration = 0;
 Q.otherright_toleration = 0;
 
-Q.pps_attempt = 0;
-Q.zln_attempt = 0;
-Q.psl_w_attempt = 0;
-Q.psl_p_attempt = 0;
 Q.president_caretaker_government = 0;
 
 Q.minority_government = 0;
@@ -98,13 +94,19 @@ Q.education_minister = 'Vacant';
 Q.coalition_mandate = 0;
 Q.other_coalition_mandate = 0;
 
+Q.soc_agr_wholsom = 0;
+
 // coalitions
-Q.social_peasant_coalition = Q.pps_sj + Q.psl_w_sj + Q.pps_p_sj;
-if (Q.social_peasant_coalition <= 50) {
-    Q.social_peasant_coalition += Q.psl_l_sj;
+Q.social_agrarian_coalition = parseFloat((Q.pps_sj + Q.psl_w_sj + Q.pls_p_sj).toFixed(1));
+if (Q.social_agrarian_coalition <= 50) {
+    Q.social_agrarian_coalition += parseFloat((Q.psl_l_sj).toFixed(1));
+    Q.soc_agr_wholsom = 1;
 }
-Q.conservative_peasant_coalition = Q.psl_p + Q.zln + Q.otherright_sj + Q.pschd_sj;
-Q.chzjn_majority = Q.zln_sj + Q.otherright_sj + Q.pschd_sj;
+Q.grand_coalition = parseFloat((Q.pps_sj + Q.npr_sj + Q.psl_w_sj + Q.pls_p_sj).toFixed(1));
+Q.left_agrarian_coalition = parseFloat((Q.pps_sj + Q.npr_sj + Q.psl_l_sj + Q.psl_w_sj).toFixed(1));
+Q.broad_right_coalition = parseFloat((Q.psl_w_sj + Q.psl_p_sj + Q.zln_sj + Q.other_sj + Q.otherright_sj + Q.pschd_sj).toFixed(1));
+Q.bourgeois_coalition = parseFloat((Q.psl_p_sj + Q.pschd_sj + Q.zln_sj + Q.otherright_sj).toFixed(1));
+Q.chjena_piast = parseFloat((Q.zln_sj + pschd_sj + Q.psl_p_sj).toFixed(1));
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -233,81 +235,21 @@ go-to: pm_appoint
 
 {!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sj +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-
 {!</table>!}
 
 **Potential coalition partners:**
 
-Social-Peasant Coalition
+Social-Agrarian Coalition (PPS[? if soc_agr_wholsom == 1 : + PSL-L ?]+ PSL-W + PSL-P): [+ social_agrarian_coalition +]
 
-@pm_appoint
+Grand Coalition (PPS + NPR + PSL-W + PSL-P): [+ grand_coalition +]
 
-- @pps_pm
-- @zln_pm
-- @peasants_pm
-- @nogov
+Bourgeois Coalition (PSL-P + ZLN + PSChD + Other parties): [+ bourgeois_coalition +]
 
-@pps_pm
-title: President [+ president +] appoints the PPS to form a government.
-unavailable-subtitle: President [+ president +] isn't looking to appoint a PPS prime minister.
-choose-if: pps_attempt < 1 and (((pps_sj*president_relation)/zln_sj) >= 40) or (psl_w_attempt == 1 and psl_p_attempt == 1)
-on-arrival: coalition_mandate += pps_sj
-go-to: coalition_menu
+Broad-Right Coalition (PSL-W + PSL-P + Others + ZLN + PSChD + Other parties): [+ broad_right_coalition +]
 
-@zln_pm
-title: President [+ president +] appoints the ZLN to form a government.
-view-if: zln_attempt < 1 and (president_relation <= 65 or ((zln_sj*1.4) > (pps_sj + psl_w_sj) or zln_sj > (psl_w_sj + psl_p_sj))) or (psl_w_attempt == 1 and psl_p_attempt == 1)
-go-to: zln_menu
-
-@peasants_pm
-title: President [+ president +] will appoint a Peasant Party to form a government.
-view-if: zln_attempt >= 1 or ((psl_w_sj + psl_p_sj) >= zln_sj)
-
-- @psl_w_pm
-- @psl_p_pm
-
-@psl_w_pm
-title: President [+ president +] appoints the PSL-W to form a government.
-view-if: psl_w_attempt < 1 and (psl_w_sj > psl_p_sj or psl_p_attempt >= 1)
-go-to: psl_w_menu
-
-@psl_p_pm
-title: President [+ president +] appoints the PSL-P to form a government.
-view-if: psl_p_attempt < 1 and (psl_p_sj >= psl_w_sj or psl_w_attempt >= 1)
-go-to: psl_p_menu
-
-@nogov
-title: The Sejm is paralyzed.
-view-if: zln_attempt >= 1 and pps_attempt >= 1 and psl_w_attempt >= 1 and psl_p_attempt >= 1
-on-arrival: failed_forming = 1
-
-// Temporarily removed deadlock.caretaker to test it
+[? if lanckorona_pact == 1 : Chjena-Piast (ZLN + PSChD + PSL-P): [+ chjena_piast +] ?]
 
 The Sejm finds that it cannot establish a mandate, for this reason, the members will reconvene next month for another attempt.
-
-@zln_menu
-
-- @wip: wip
-
-@wip
-
-wip
-
-@psl_w_menu
-
-- @wip2: wip
-
-@wip2
-
-wip
-
-@psl_p_menu
-
-- @wip3: wip
-
-@wip3
-
-wip
 
 @coalition_menu
 
