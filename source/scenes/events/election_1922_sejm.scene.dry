@@ -366,7 +366,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10
 view-if: interior_minister_party != "PPS"
-on-arrival: leverage -= 10: interior_minister_party = "PPS"; interior_minister = "No info"
+on-arrival: leverage -= 10; interior_minister_party = "PPS"; interior_minister = "No info"
 go-to: ministries
 
 Carl Severing of the SPD has been appointed Interior Minister.
