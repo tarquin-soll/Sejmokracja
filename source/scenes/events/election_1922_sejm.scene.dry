@@ -325,7 +325,7 @@ Carl Severing of the SPD has been appointed Interior Minister.
 
 @publicworks
 title: Public Works Ministry
-subtitle
+subtitle: The Public Works Ministry focuses on constructing projects and recovering post-partition.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
