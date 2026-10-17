@@ -79,7 +79,7 @@ Q.labor_minister = 'Vacant';
 Q.publicworks_minister_party = 'Vacant';
 Q.publicworks_minister = 'Vacant';
 Q.industry_minister_party = 'Vacant'
-Q industry_minister = 'Vacant';
+Q.industry_minister = 'Vacant';
 Q.treasury_minister_party = 'Vacant';
 Q.treasury_minister = 'Vacant';
 Q.agriculture_minister_party = 'Vacant';
@@ -111,7 +111,7 @@ Q.grand_coalition = parseFloat((Q.pps_sj + Q.npr_sj + Q.psl_w_sj + Q.psl_p_sj).t
 Q.left_agrarian_coalition = parseFloat((Q.pps_sj + Q.npr_sj + Q.psl_l_sj + Q.psl_w_sj).toFixed(1));
 Q.broad_right_coalition = parseFloat((Q.psl_w_sj + Q.psl_p_sj + Q.zln_sj + Q.other_sj + Q.otherright_sj + Q.pschd_sj).toFixed(1));
 Q.bourgeois_coalition = parseFloat((Q.psl_p_sj + Q.pschd_sj + Q.zln_sj + Q.otherright_sj).toFixed(1));
-Q.chjena_piast = parseFloat((Q.zln_sj + pschd_sj + Q.psl_p_sj).toFixed(1));
+Q.chjena_piast = parseFloat((Q.zln_sj + Q.pschd_sj + Q.psl_p_sj).toFixed(1));
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -288,7 +288,8 @@ go-to: ministries
 @daszynski
 title: Ignacy Daszyński for prime minister.
 subtitle: This is our preferred choice, however, our coalition partners may have qualms over a socialist in the prime ministry.
-on-arrival: prime_minister_party = "PPS"; prime_minister = "Daszyński"; leverage -= 5
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: prime_minister_party = "PPS"; prime_minister = "Daszyński"; leverage -= 10
 go-to: ministries
 
 @ministries
@@ -304,11 +305,11 @@ subtitle: Taking the Labor Ministry is expected of us.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-view-if: labor_minister_party != "SPD"
-on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Wissell"
+view-if: labor_minister_party != "PPS"
+on-arrival: leverage -= 5; labor_minister_party = "PPS"; labor_minister = "Ziemięcki"
 go-to: ministries
 
-Rudolf Wissell of the SPD has been appointed labor minister.
+Bronisław Ziemięcki of the PPS has been appointed labor minister.
 
 @interior
 title: Interior Ministry
@@ -321,6 +322,18 @@ on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = 
 go-to: ministries
 
 Carl Severing of the SPD has been appointed Interior Minister.
+
+@publicworks
+title: Public Works Ministry
+subtitle
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: publicworks_minister_party != "PPS"
+on-arrival: leverage -= 5; publicworks_minister_party = "PPS"; publicworks_minister = "Barlicki"
+go-to: ministries
+
+Norbert Barlicki of the PPS has been appointed Public Works Minister.
 
 @finance
 title: Finance Ministry
@@ -373,15 +386,15 @@ Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
 
 @agriculture
 title: Agricultural Ministry
-subtitle: This is not our usual domain.
+subtitle: This is usually the domain of the Peasant Parties.
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 10 
-view-if: agriculture_minister_party != "SPD"
-on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
+view-if: agriculture_minister_party != "PPS"
+on-arrival: leverage -= 10; agriculture_minister_party = "PPS"; agriculture_minister = "Barlicki"
 go-to: ministries
 tags: mins_1928
 
-Fritz Baade of the SPD has been appointed Agriculture Minister.
+Norbert Barlicki of the PPS has been appointed Agriculture Minister.
 
 @reichswehr
 title: Reichswehr Ministry
@@ -401,6 +414,16 @@ Julius Leber of the SPD has been appointed Reichswehr Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
+on-arrival: {!
+if (Q.military_minister_party == "Vacant") {
+    Q.military_minister = "Sosnowski";
+}
+if (Q.publicworks_minister_party == "Vacant") {
+    Q.publicworks_minister = "Narutowicz";
+} elseif (Q.narutowicz_dead == 1) {
+    Q.publicworks_minister = "Rybczyński";
+}
+!}
 
 This coalition arrangement is tolerable to all.
 
@@ -453,9 +476,9 @@ on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietr
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_reichswehr
-title: Drop the Reichswehr Ministry.
-view-if: reichswehr_minister_party = "SPD"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
+@drop_military
+title: Drop the Military Ministry.
+view-if: military_minister_party = "PPS"
+on-arrival: military_minister_party = "I"; military_minister = "Sosnkowski"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
