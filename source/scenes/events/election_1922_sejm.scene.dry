@@ -263,7 +263,7 @@ The Sejm finds that it cannot establish a mandate, for this reason, the members 
 @grand_coalition
 title: We can form a Grand Coalition.
 subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)
-unavailable-subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)[? : - We do not have good enough relations with the PSL-P. ?]
+unavailable-subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)[? psl_p_relation <= 50 : - We do not have good enough relations with the PSL-P. ?]
 choose-if: grand_coalition >= 50 and psl_p_relation <= 50
 on-arrival: pps_in_government = 1; npr_in_government = 1; psl_w_in_government = 1; psl_p_in_government = 1
 
