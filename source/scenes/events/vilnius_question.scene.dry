@@ -31,18 +31,13 @@ The **<span style="color: #D00;">Central Lithuania</span>** delegates have rejec
 
 Due to the delegates refusal to amend the resolution, it culminated into a political crises which led to the loss of trust in the government followed by the resignation of [+ prime_minister +] as Prime Minister.
 
-- @psl_p_zln_appoint
-
-@psl_p_zln_appoint
-title: President [+ president +] appoints the PSL-P and ZLN to form a government.
-
-The ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet without support from the NPR, since the NPR hesitated to join a government with the National Democrats due to political disagreement...
+President [+ president +] appoints the PSL-P and ZLN to form a government, however, ZLN refuses to form a cabinet and the PSL-P refuses to form a cabinet without support from the NPR, since the NPR hesitated to join a government with the National Democrats due to political disagreement...
 
 - @deadlock
 
 @deadlock
 title: The Sejm is deadlocked.
-subtitle: Piłsudski appoints [+ prime_minister +] again as a non-parliamentary candidate
+subtitle: [+ president +]appoints [+ prime_minister +] again as a non-parliamentary candidate
 
 [+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority, should we extend our support?
 
@@ -60,7 +55,7 @@ We have decided to tolerate the government.
 title: Don't tolerate the government.
 on-arrival: pps_toleration = 0; internationalist_strength += 10
 
-We have decided to not tolerate the government, however, they still have a majority, albeit not a stable one.
+The government still functions, our party
 
 - @cabinet
 
