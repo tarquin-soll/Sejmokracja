@@ -265,7 +265,7 @@ The Sejm finds that it cannot establish a mandate, for this reason, the members 
 @soc_agr_coalition
 title: We can form a Social-Agrarian Coalition.
 subtitle: PPS [? if soc_agr_wholsom == 1 : + PSL-L ?]+ PSL-W + PSL-P: [+ social_agrarian_coalition +]([+ soc_agr_coalition +]%)
-unavailable-subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)[? psl_p_relation <= 50 : - We do not have good enough relations with the PSL-P. ?]
+unavailable-subtitle: PPS + NPR + PSL-W + PSL-P ([+ grand_coalition +]%)[? if psl_p_relation <= 50 : - We do not have good enough relations with the PSL-P. ?]
 choose-if: soc_agr_coalition >= 50 and psl_p_relation <= 50
 on-arrival: pps_in_government = 1; psl_w_in_government = 1; psl_p_in_government = 1; psl_l_in_government = 1 if soc_agr_wholsom == 1
 
