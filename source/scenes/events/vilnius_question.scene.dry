@@ -2,7 +2,7 @@ title: Vilnius Question
 subtitle: The Republic of **<span style="color: #D00;">Central Lithuania</span>** has adopted a motion to incorporate itself to the <b><span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic</span>**
 tags: event
 is-card: true
-on-arrival: vilnius_seen = 1
+on-arrival: vilnius_seen = 1; president_confidence -= 20
 face-image: img/vilnius.png
 view-if: vilnius_seen = 0 and year = 1922 and month >= 3
 new-page: true
@@ -37,53 +37,22 @@ President [+ president +] appoints the PSL-P and ZLN to form a government, howev
 
 @deadlock
 title: The Sejm is deadlocked.
-subtitle: [+ president +]appoints [+ prime_minister +] again as a non-parliamentary candidate
+subtitle: [+ president +] appoints [+ prime_minister +] again as a non-parliamentary candidate
 
-[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority, should we extend our support?
+[+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority.
 
-- @yes
-- @no
-
-@yes
-title: Extend our support.
-
-We have decided to tolerate the government.
-
-- @cabinet
-
-@no
-title: Don't tolerate the government.
-on-arrival: pps_toleration = 0; internationalist_strength += 10
-
-The government still functions, our party
+As usual our party has extended their support to the government and tolerated it.
 
 - @cabinet
 
 @cabinet
 title: [+ prime_minister +] appoints the ministers.
-on-arrival: other_in_government = 0; other_toleration = 1
+on-arrival: other_in_government = 0; other_toleration = 1; economic_minister = 'Ossowski'; interior_minister = 'Kamieński'
+
 
 The <span class="wide_tooltip-wrap">NZL<span class="wide_tooltip-tip">Extra-parliamentary party consisting of centre-right members.</span></span> (Extra-parliamentary) who have previously been in government have been omitted out of the government.
 
-Which ministry would be shuffled.
-
-- @economic
-
-@economic
-title: The Economic Ministry.
-on-arrival: economic_minister = 'Ossowski'
-
-[+ prime_minister +] replaces Strasburger with Ossowski (Independent) in the Economic Ministry.
-
-- @interior
-
-@interior
-title: The Interior Ministry.
-on-arrival: interior_minister = 'Kamieński'
-
-[+ prime_minister +] replaces Downarowicz with Kamieński (Independent) in the Interior Ministry Ministry.
-
-- @finalized
+The following ministry has been shuffled: The Economic Minister and the Interior Minister.
 
 @finalized
 title: The new government is finalized
