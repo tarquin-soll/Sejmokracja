@@ -5,14 +5,17 @@ tags: event
 view-if: year = 1922 and month = 4
 max-visits: 1
 face-image: img/RapalloTreaty.jpg
+on-arrival: president_confidence -= 10
 
 = Treaty of Rapallo
 
-Treaty, what happened
+The two powers, have renounced all territorial claim, and financial claim against each other and opened friendly diplomatic relation, mutual diplomatic recognition and lastly they both have pledged to increase economic ties to each other.
 
 - @consequence
 
 @consequence
-title: consequence
+title: What does it mean for Poland?
 
-Piłsudski is mad or some shit wtf is wirth doing, what does this entail to poland
+The populace is threatened for the two territorial powers to its west and east has reconcile.
+
+Piłsudski confidence in the republic has wane in fear of a new partition.
