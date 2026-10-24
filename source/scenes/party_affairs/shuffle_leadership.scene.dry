@@ -35,7 +35,7 @@ tags: remove_advisor
 @remove_daszynski
 title: Remove Daszyński
 view-if: daszynski_advisor = 1
-tags: remove_dvisor
+tags: remove_advisor
 on-arrival: daszynski_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
@@ -54,9 +54,9 @@ Niedziałkowski has been removed as an advisor. The Centrist faction disapproves
 
 @remove_barlicki
 title: Remove Barlicki
-view-if: severing_advisor = 1
+view-if: barlicki_advisor = 1
 tags: remove_advisor
-on-arrival: severing_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: barlicki_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Moraczewski has been removed as an advisor. The Labor faction disapproves.
