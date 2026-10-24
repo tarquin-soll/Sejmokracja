@@ -526,11 +526,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
-            'understanding_enemy', 'schleichers_schemes',
-            // legislative affairs
-            'government', 'addressing_the_deficit',
-            // sub legislative affairs
-            'streamline', 'printmoney', 'welfarecut', 'taxrich'];
+            'understanding_enemy', 'schleichers_schemes'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
@@ -570,7 +566,6 @@ Q.police_timer = 0;
 Q.prussian_affairs_timer = 0;
 Q.shuffle_cabinet_timer = 0;
 Q.social_welfare_timer = 0;
-Q.war_guilt_timer = 0;
 Q.womens_rights_timer = 0;
 Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
@@ -579,24 +574,13 @@ Q.coalition_affairs_timer = 0;
 Q.deadlocked_timer = 0;
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
-Q.sa_ban_timer = 0;
-Q.sh_ban_timer = 0;
-Q.kpd_ultimatum_timer = 0;
-Q.march_on_berlin_timer = 0;
-// legislation timer
-Q.government_timer = 0;
-Q.addressing_the_deficit_timer = 0;
-// sub legislation timer
-Q.streamline_timer = 0;
-Q.printmoney_timer = 0;
-Q.welfarecut_timer = 0;
-Q.taxrich_timer = 0;
 
 
 // all the initial advisors are centrists.
 Q.daszynski_advisor = 1; // Ignacy Daszyński
 Q.niedziawkowski_advisor = 1; // Mieczysław Niedziałkowski
-// labor sub faction (IN CASE I MAKE LABOR, since there's not enough advisors in labor)
+
+// Labor Advisors
 Q.barlicki_advisor = 1; // Norbert Barlicki
 
 // Internationalist advisors
@@ -619,11 +603,16 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
+- @1922_test: Testing Mode
 - @1922_sejm: Begin (sejmokracja mode)
 - @1922_easy: Begin (easy difficulty)
 - @1922_main: Begin (normal difficulty)
 - @1922_hard: Begin (hard difficulty)
 - @1922_historical: Begin (historical mode)
+
+@1922_easy
+on-arrival: difficulty = -1; resources = 10; peasants_pps += 50
+go-to: 1922_main
 
 @1922_sejm
 subtitle: The struggle of historical with the tools of easy. (Intended way to play the game.)
