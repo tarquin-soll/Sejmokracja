@@ -59,7 +59,7 @@ tags: remove_advisor
 on-arrival: barlicki_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Moraczewski has been removed as an advisor. The Labor faction disapproves.
+Barlicki has been removed as an advisor. The Labor faction disapproves.
 
 # nationalist
 
@@ -152,12 +152,12 @@ Mieczysław Niedziałkowski is now an advisor.
 
 # nationalist
 
-@add_severing
+@add_moraczewski
 title: Jędrzej Moraczewski
 subtitle: Jędrzej Moraczewski is one of the PPS leaders. He is staunch supporter of Piłsudski. The Left and Right are welcoming to him {!<br><br>!}[? if difficulty < 0 : Actions - Party Discipline, Negotiating with the Peasants and Right, Negotiating with the President ?]
 is-card: true
 card-image: img/portraits/MoraczewskiJędrzej.jpg
-tags: reformist_advisor
+tags: nationalist_advisor
 view-if: moraczewski_advisor = 0 and n_advisors < 3
 on-arrival: moraczewski_advisor = 1; n_advisors += 1; nationalist_strength += 5
 go-to: advisor_menu
@@ -171,7 +171,6 @@ Jędrzej Moraczewski is now an advisor.
 @add_barlicki
 title: Norbert Barlicki
 subtitle: Norbert Barlicki is one of the few who has a background in rural and agricultural affairs in the PPS due to his history in participating in agricultural unions. {!<br><br>!}[? if difficulty < 0 : Actions - Rural Campaign, Agricultural Policy ?]
-
 is-card: true
 card-image: img/portraits/BarlickiNorbert.jpg
 tags: labor_advisor
