@@ -19,7 +19,7 @@ title: Media
 subtitle: Manage our party's newspapers and media.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
+on-arrival: advisor_action_timer = 4; media_timer -= 6; last_advisor_action = 1
 go-to: media
 
 
@@ -28,7 +28,7 @@ title: Editorial Line
 subtitle: We can change the editorial line of Robotnik to support a particular faction.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6
+on-arrival: advisor_action_timer = 4
 
 Which faction should we support?
 

@@ -7,37 +7,20 @@ new-page: true
 
 = Ignacy Daszyński
 
-Daszyński ia the co-founder of the PPS and was the brief and first prime minister of independent poland. He is an excellent orator known for his attracting speeches.
+Ignacy Daszyński is the co-founder of the PPS and was the brief and first prime minister of independent poland. He is an excellent orator known for his attracting speeches.
 
-- @clear_agenda
 - @party_discipline
 - @emergency_fundraising
 - @mediate_coalition
 - @cabinet
 - @root: Return to main
 
-@clear_agenda
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
-choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: {!
-Q.advisor_action_timer = 6;
-if (Q.difficulty >= 0) {
-    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
-} else {
-    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
-}
-!}
-
-All items from our agenda have been cleared.
-
 @party_discipline
 title: Party Discipline
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; left_dissent -= 10; conservative_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10
+on-arrival: advisor_action_timer = 4; internationalist_dissent -= 10; nationalist_dissent -= 10; center_dissent -= 10; labor_dissent -= 10
     
 We have enforced party discipline to reduce dissent across all factions.
 
@@ -47,7 +30,7 @@ view-if: difficulty < 1
 subtitle: An emergency infusion of resources.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; resources += dues
+on-arrival: advisor_action_timer = 4; resources += dues
 
 We have gained +[+ dues +] resources.
 
@@ -56,7 +39,7 @@ title: Mediate Coalition Dissent
 subtitle: Daszyński can mediate coalition dissent.
 choose-if: advisor_action_timer = 0 and pps_in_government and coalition_dissent >= 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?][? if coalition_dissent < 1 and pps_in_government = 0 : Our coalition partners are currently satisfied with our actions. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1; coalition_dissent -= 1 if coalition_dissent >= 2
+on-arrival: advisor_action_timer = 4; coalition_dissent -= 1; coalition_dissent -= 1 if coalition_dissent >= 2
 
 Daszyński has successfully reduced dissent in the government.
 
@@ -65,7 +48,7 @@ title: Cabinet
 subtitle: Direct one of our ministries.
 choose-if: advisor_action_timer = 0 and pps_in_government
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if pps_in_government = 0 : The PPS isn't in the government. ?]
-on-arrival: advisor_action_timer = 6
+on-arrival: advisor_action_timer = 4
 
 Daszyński can direct our ministries.
 

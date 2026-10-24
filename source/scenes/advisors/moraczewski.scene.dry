@@ -7,18 +7,28 @@ view-if: moraczewski_advisor = 1
 
 = Jędrzej Moraczewski
 
-Moraczewski is one of the PPS leaders. He is a great supporter of Piłsudski. The Left and Right are welcoming to him
+Jędrzej Moraczewski is one of the PPS leaders. He is a great supporter of Piłsudski. The Left and Right are welcoming to him
 
+- @party_discipline
 - @peasants_right
 - @president
 - @root: Return to main
+
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_dissent -= 10; conservative_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10
+    
+We have enforced party discipline to reduce dissent across all factions.
 
 @peasants_right
 title: Negotiating with the Peasants and Right
 subtitle: Moraczewski can improve our relationships with the Peasants and Right-wing parties.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; psl_l_relation += 5; psl_w_relation += 5; psl_p_relation += 5; psl_p_relation -= 2 if lanckorona_pact; zln_relation += 3; pschd_relation += 3
+on-arrival: advisor_action_timer = 4; psl_l_relation += 5; psl_w_relation += 5; psl_p_relation += 5; psl_p_relation -= 2 if lanckorona_pact; zln_relation += 3; pschd_relation += 3
 
 We have improved our relations with the PSL-"Lewica", PSL-"Wyzwolenie", PSL-"Piast", and ChZJN. [? if lanckorona_pact : Moraczewski have found it difficult to negotiate with the PSL-"Piast" and the ChZJN ?]
 
@@ -27,7 +37,7 @@ title: Negotiating with the President
 subtitle: Moraczewski can improve our relationship with the President.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; president_relation += 5; president_relation += 5 if president == "Piłsudski"
+on-arrival: advisor_action_timer = 4; president_relation += 5; president_relation += 5 if president == "Piłsudski"
 
 We have improved our relations with [+ President +]
 
