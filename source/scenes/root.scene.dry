@@ -610,7 +610,7 @@ For more information on the politics and government of the German Republic, see 
 - @1922_hard: Begin (hard difficulty)
 - @1922_historical: Begin (historical mode)
 
-@1922_easy
+@1922_test
 on-arrival: difficulty = -1; resources = 10; peasants_pps += 50
 go-to: 1922_main
 
