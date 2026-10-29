@@ -1,6 +1,6 @@
 title: 1922 Presidential Election 
 subtitle: The first presidential election of our young Republic.
-view-if: year = 1922 and month >= 2
+view-if: year = 1922 and month >= -1
 max-visits: 1
 priority: -2
 new-page: true
