@@ -12,27 +12,34 @@ An international economic conference is held to address major economic and polit
 
 The conference was also held to negotiate and build a relationship between **<span style="color: #000091;">West</span><span style="color: #CCC;">ern Eu</span><span style="color: #E1000F;">rope</span>** and **<span style="color: #FFB81C;">East</span><span style="color: #046A38;">ern Eu</span><span style="color: #BE3A34;">rope</span>**.
 
-**<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>** is represented through it's formal delegates led by the Foreign Minister, [+ foreign_minister +].
+**<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>** is represented through it's formal delegates led by its Foreign Minister, [+ foreign_minister +].
 
-- @pebq
+- @border
 
-@pebq
-title: Polish Eastern Border Question
+@border
+title: Polish eastern border question
   
-The **<span style="color: #000091;">West</span><span style="color: #CCC;">ern Po</span><span style="color: #E1000F;">wers</span>** have initiated a discussion regarding the legitimacy of the <span class="wide_tooltip-wrap">Treaty of Riga<span class="wide_tooltip-tip" title="Treaty that draw the Polish-Soviet border and ended the Polish-Soviet war, not recognized by the Western Powers">Treaty of Riga</span></span>.
+The **<span style="color: #000091;">West</span><span style="color: #CCC;">ern Po</span><span style="color: #E1000F;">wers</span>** have initiated a discussion regarding the legitimacy of the <span class="wide_tooltip-wrap">Treaty of Riga<span class="wide_tooltip-tip">The treaty that ended the Polish-Soviet war and drew the Polish-Soviet border, not recognized by the Western Powers.</span></span>.
 
-The **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegates argued for the legitimacy of the Eastern Borders. additionally to further solidify their position, the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegates discussed with the **<span  style="color: #CD0000;">Soviet</span>** delegates offering to recognize the Bolshevik government in exchange
+The **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegates argued for the legitimacy of the Eastern Borders. additionally to further solidify their position, the **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span>** delegates discussed with the **<span  style="color: #CD0000;">Soviet</span>** delegates offering to recognize the Bolshevik government in exchange for them to recognize the treaty and the border.
 
-- @asratgr
+- @russia_and_germany: It's a shame no conclusion was reached.
 
-@asratgr
-title: About Soviet Russia and the German Republic
+@russia_and_germany
+subtitle: How about Soviet Russia and the German Republic?
 
-wtf
+Soviet Russia and Germany bad
 
-- @gold
+- @gold: Unfortunately no conclusion was reached.
 
 @gold
-title: Return to **<span style="color: #FC0;">Gold</span> Standard
+subtitle: Return to <span style="color: #FC0;">Gold</span> Standard?
 
-wtf
+Return to gold pls
+
+- @end: The conference ends
+
+@end
+subtitle: The delegates fail to reach an agreement.
+
+Without achieving its primary diplomatic and economic goals, the conference ends in failure.
