@@ -32,27 +32,27 @@ on-arrival: advisor_action_timer = 4
 
 Which faction should we support?
 
-- @support_left: Left
+- @support_international: Internationalist
 - @support_center: Center
-- @support_conservative: Conservative
-- @support_reformist: Reformists
+- @support_labor: Labor
+- @support_national: Nationalist
 
-@support_left
-on-arrival: left_dissent -= 8; left_strength += 8
+@support_international
+on-arrival: internationalist_dissent -= 8; internationalist_strength += 8
 
-Robotnik prints editorials in support of Left positions.
+Robotnik prints editorials in support of internationalist positions.
 
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8
 
 Robotnik prints editorials in support of centrist positions.
 
-@support_conservative
-on-arrival: conservative_dissent -= 8; conservative_strength += 8
+@support_labor
+on-arrival: labor_dissent -= 8; labor_strength += 8
 
-Robotnik prints editorials in support of conservative positions.
+Robotnik prints editorials in support of laborite positions.
 
-@support_reformist
-on-arrival: reformist_dissent -= 8; reformist_strength += 8
+@support_nationalist
+on-arrival: nationalist_dissent -= 8; nationalist_strength += 8
 
-Robotnik prints editorials in support reformist positions.
+Robotnik prints editorials in support nationalisy positions.

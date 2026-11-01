@@ -10,7 +10,7 @@ new-page: true
 Ignacy Daszyński is the co-founder of the PPS and was the brief and first prime minister of independent poland. He is an excellent orator known for his attracting speeches.
 
 - @party_discipline
-- @emergency_fundraising
+- @grassroot_fundraising
 - @mediate_coalition
 - @cabinet
 - @root: Return to main
@@ -24,15 +24,14 @@ on-arrival: advisor_action_timer = 4; internationalist_dissent -= 10; nationalis
     
 We have enforced party discipline to reduce dissent across all factions.
 
-@emergency_fundraising
-title: Emergency Fundraising
-view-if: difficulty < 1
-subtitle: An emergency infusion of resources.
+@grassroot_fundraising
+title: Grassroots Fundraising.
+subtitle: Raise resources through our voters base.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 4; resources += dues
+on-arrival: advisor_action_timer = 4; resources += 2
 
-We have gained +[+ dues +] resources.
+We have gained 2 resources from our supporters.
 
 @mediate_coalition
 title: Mediate Coalition Dissent
