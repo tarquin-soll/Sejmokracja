@@ -35,7 +35,7 @@ const colourList = [{
         style: "color: #316EAA; font-weight: bold;"
    },
     {
-        word: "Other Parties",
+        word: "Other parties",
         style: "color: #A0A0E0; font-weight: bold;"
    },
     {
