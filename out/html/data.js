@@ -87,7 +87,7 @@ const tooltipList = [{
     explanationText: "<img src=img/ChZJN.webp> Polskie Stronnictwo Chrześcijańskiej Demokracji </br></br> Polish Christian Democratic Party"
     },
     {
-    searchString: "Other Parties",
+    searchString: "Other p.arties",
     explanationText: "<img src=img/ChZJN.webp> Christian National Agricultural Party </br></br> National Christian People's Party"
     },
     {
