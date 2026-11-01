@@ -40,7 +40,7 @@ Q.pschd_sn_votes = Q.pschd_votes*senat_adjustment_factor.pschd;
 Q.other_sn_votes = Q.other_votes*senat_adjustment_factor.other;
 Q.otherright_sn_votes = Q.otherright_votes*senat_adjustment_factor.otherright;
 
-Q.total_votes_sn = Q.npr_sn_votes + Q.pps_sn_votes + Q.npr_sn_votes + Q.psl_l_sn_votes + Q.psl_w_sn_votes + Q.psl_p_sn_votes + Q.bmn_sn_votes + Q.zln_sn_votes + Q.pschd_sn_votes + Q.other_sn_votes + Q.otherright_sn_votes
+Q.total_votes_sn = Q.kpp_sn_votes + Q.pps_sn_votes + Q.npr_sn_votes + Q.psl_l_sn_votes + Q.psl_w_sn_votes + Q.psl_p_sn_votes + Q.bmn_sn_votes + Q.zln_sn_votes + Q.pschd_sn_votes + Q.other_sn_votes + Q.otherright_sn_votes
 
 if (Q.total_votes_sn > 0) {
     Q.kpp_sn_votes = parseFloat(((Q.kpp_sn_votes/Q.total_votes_sn)*100).toFixed(1));
@@ -75,21 +75,21 @@ for (var party of Q.parties) {
     Q['str_change_' + party + '_sn'] = sign + Q['change_' + party + '_sn'].toFixed(1);
 };
 
-Q.left_sn = Q.kpp_sn + Q.pps_sn + (Q.npr_sn*0.5) + Q.psl_l_sn + (Q.psl_w_sn*0.3);
+Q.left_sn = Q.kpp_sn + Q.pps_sn + (Q.npr_sn*0.4) + Q.psl_l_sn + (Q.psl_w_sn*0.3);
 Q.center_sn = (Q.psl_w_sn*0.7) + (Q.psl_p_sn*0.6) + Q.bmn_sn + Q.other_sn;
-Q.right_sn = (Q.npr_sn*0.5) + Q.otherright_sn + Q.zln_sn + Q.pschd_sn + (Q.psl_p_sn*0.4);
+Q.right_sn = (Q.npr_sn*0.6) + Q.otherright_sn + Q.zln_sn + Q.pschd_sn + (Q.psl_p_sn*0.4);
 
 Q.left_dominant_sn = 0;
 Q.center_dominant_sn = 0;
 Q.right_dominant_sn = 0;
 
-if ((Q.left_sn > Q.center_sn) && (left_sn > Q.right_sn)){
+if ((Q.left_sn > Q.center_sn) && (Q.left_sn > Q.right_sn)){
     Q.left_dominant_sn = 1;
 }
 if ((Q.center_sn > Q.left_sn) && (Q.center_sn > Q.right_sn)){
     Q.center_dominant_sn = 1;
 }
-if ((Q.right_sn > left_sn) && (Q.right_sn > Q.center_sn)){
+if ((Q.right_sn > Q.left_sn) && (Q.right_sn > Q.center_sn)){
     Q.right_dominant_sn = 1;
 }
 !}
@@ -203,7 +203,7 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !}BMN: {!</td><td>!} [+ bmn_sn +]% {!</td><td>!} [+ str_change_bmn_sn +] {!</td></tr>!}
 
-{!<tr><td>- <div class="box" style='background-color:#302060'> </div> !}ChZJN: {!</td><td>!} volkgemeinschaff% {!</td><td>!} meinkampferbund {!</td></tr>!}
+- Christian Union of National Unity (ChZJN)
 
 {!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div> !}ZLN: {!</td><td>!} [+ zln_sn +]% {!</td><td>!} [+ str_change_zln_sn +] {!</td></tr>!}
 
@@ -215,4 +215,4 @@ if (window && d3) {
 
 {!</table>!}
 
-[? if right_dominant_sn : The Senat is dominated by the right. ?][? if left_dominant_sn : The Senat is dominated by the left. ?][? if center_dominant_sn : The Senat is dominated by the centrists. ?]
+[? if right_dominant_sn == 1 : The Senat is dominated by the right, this will limit the scope of left wing governments and benefit right wing governments. ?][? if left_dominant_sn : The Senat is dominated by the left, this eill limit the scope of right wing governments and benefit left wing governments. ?][? if center_dominant_sn : The Senat is dominated by the centrists. ?]
