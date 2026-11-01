@@ -211,6 +211,8 @@ go-to: menu
 
 **PPS** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
 
+**KPP** - *Komunistyczna Partia Polski* (Communist Party of Poland) - a far-left offshoot of the PPS that merged with the <span class<span class="wide_tooltip-wrap"><span style="color: #C60000;">SKPDiL</span><span class="wide_tooltip-tip">Social Democracy of the Kingdom of Poland and Lithuania, a revolutionary marxist party</span></span>
+
 **Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
 
 Current relations: [+ z_relation : relationships +]
@@ -237,7 +239,9 @@ Current relations: [+ kpd_relation : relationships +]
 
 Current relations: [+ nsdap_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
+**Others** - there is a multitude of small, mostly regional parties regarding Jewish interest and Ukranian interest, their political position usually lies near the BMN in between the PSL-P and ChZJN. 
+
+**Other parties in the ChZJN** - the Christian National Agricultural Party and National Christian People's Party, their political position lies in between the PSChD and the ZLN.
 
 @paramilitaries
 on-arrival: {!
@@ -286,23 +290,22 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 
 
 @factions
-go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 
-**Internal factions of the SPD**
+**Internal factions of the PPS**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+**Internationalists**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+Many internationalists are remaining members of the PPS that didn't defect to the <span class="wide_tooltip-wrap"><span style="color: #C62828;">PPS-L</span><span class="wide_tooltip-tip">PPS-L or PPS-Lewica, was one of the faction that split from the PPS in 1906 focused on internationalism, revolution and dropping the idea of Polish independence. Merged to be the KPP in 1918.</span></span>, or are young radicals. Many are interested in reconciling with the KPP, and exploring Internationalism.
 
-Strength: [+ left_strength : strength +]
+Strength: [+ internationalist_strength : strength +]
 
-Dissent: [+ left_dissent : dissent +]
+Dissent: [+ internationalist_dissent : dissent +]
 
 **Centrists**
 
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+Centrists in the PPS are pragmatic participants in the government, internally they seek to protect the unity of the socialist movement by remaining receptive to both sides.
 
 Strength: [+ center_strength : strength +]
 
@@ -310,31 +313,19 @@ Dissent: [+ center_dissent : dissent +]
 
 **Labor**
 
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+Many PPS members are also part of the ZSZ, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
 
 Strength: [+ labor_strength : strength +]
 
 Dissent: [+ labor_dissent : dissent +]
 
-**Reformists**
+**Nationalists**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+Nationalists are closely aligned with Józef Piłsudski, they are supportive in participating and protecting the government, viewing it as the foundation of the Polish state.
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ nationalist_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
-
-@neorevisionists
-go-to: menu
-
-**Neorevisionists**
-
-Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
-
-Strength: [+ neorevisionist_strength : strength +]
-
-Dissent: [+ neorevisionist_dissent : dissent +]
-
+Dissent: [+ nationalist_dissent : dissent +]
 
 @figures
 title: Figures and Charts
