@@ -256,8 +256,6 @@ Broad-Right Coalition (PSL-W + PSL-P + Others + ZLN + PSChD + Other parties): [+
 
 [? if lanckorona_pact == 1 : Chjena-Piast (ZLN + PSChD + PSL-P): [+ chjena_piast +] ?]
 
-The Sejm finds that it cannot establish a mandate, for this reason, the members will reconvene next month for another attempt.
-
 @coalition_menu
 
 - @soc_agr_coalition
