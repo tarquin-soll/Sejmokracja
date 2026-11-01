@@ -35,7 +35,7 @@ Which faction should we support?
 - @support_international: Internationalist
 - @support_center: Center
 - @support_labor: Labor
-- @support_national: Nationalist
+- @support_nationalist: Nationalist
 
 @support_international
 on-arrival: internationalist_dissent -= 8; internationalist_strength += 8
