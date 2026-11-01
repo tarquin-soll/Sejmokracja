@@ -189,29 +189,29 @@ if (window && d3) {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sn +]%** {!</td><td>!} [? if year >= 1923 : **[+ str_change_pps_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#C62828; outline: 2px; outline-style: solid;'> </div> !} **PPS:** {!</td><td>!} **[+ pps_sn +]%** {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_pps_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kpp_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_kpp_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#890000'> </div> !}KPP: {!</td><td>!} [+ kpp_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_kpp_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_npr_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#841839'> </div> !}NPR: {!</td><td>!} [+ npr_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_npr_sn +] ?]</b><i>[? if year < 1923 :NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#80FF00'> </div> !}PSL-L: {!</td><td>!} [+ psl_l_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_psl_l_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#80FF00'> </div> !}PSL-L: {!</td><td>!} [+ psl_l_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_psl_l_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ psl_w_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_psl_w_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#179900'> </div> !}PSL-W: {!</td><td>!} [+ psl_w_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_psl_w_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ psl_p_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_psl_p_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3A6538'> </div> !}PSL-P: {!</td><td>!} [+ psl_p_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_psl_p_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !}BMN: {!</td><td>!} [+ bmn_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_bmn_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3AF34'> </div> !}BMN: {!</td><td>!} [+ bmn_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_bmn_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
 {!<tr><td>!}- Christian Union of National Unity (ChZJN){!<td><tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div> !}ZLN: {!</td><td>!} [+ zln_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_zln_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#312E99'></div> !}ZLN: {!</td><td>!} [+ zln_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_zln_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div> !}PSChD: {!</td><td>!} [+ pschd_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_pschd_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#316EAA'></div> !}PSChD: {!</td><td>!} [+ pschd_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_pschd_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0E0'></div> !}Other parties: {!</td><td>!} [+ otherright_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_otherright_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td style="padding-left:26px;"><div class="box" style='background-color:#A0A0E0'></div> !}Other parties: {!</td><td>!} [+ otherright_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_otherright_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sn +]% {!</td><td>!} [? if year >= 1923 : **[+ str_change_other_sn +]** ?][? if year < 1923 : *NEW* ?] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#909090'> </div> !}Others: {!</td><td>!} [+ other_sn +]% {!</td><td>!} <b>[? if year >= 1923 : [+ str_change_other_sn +] ?]</b><i>[? if year < 1923 : NEW ?]</i> {!</td></tr>!}
 
 {!</table>!}
 
