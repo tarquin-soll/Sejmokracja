@@ -213,9 +213,23 @@ go-to: menu
 
 **KPP** - *Komunistyczna Partia Polski* (Communist Party of Poland) - a far-left offshoot of the PPS that merged with the <span class<span class="wide_tooltip-wrap"><span style="color: #C60000;">SKPDiL</span><span class="wide_tooltip-tip">Social Democracy of the Kingdom of Poland and Lithuania, a revolutionary marxist party</span></span>
 
+Current relations: [+ kpp_relation : relationships +]
+
 **Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
 
 Current relations: [+ z_relation : relationships +]
+
+**PSL-L** - *Polskie Stronnictwo Ludowe - Lewica* (Polish People's Party - Left) - an anti-clerical left leaning radical agrarian party split from the Polish People's Party in 1913 with the PSL-W. They are open to cooperation with socialists and advocate for changes such as expropriation of lands and nationalizations.
+
+Current relations: [+ psl_l_relation : relationships +]
+
+**PSL-W** - *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") - a center-left agrarian party, and has historically supported our governmental policies.
+
+Current relations: [+ psl_w_relation : relationships +]
+
+**PSL-P** - *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") -
+
+Current relations: [+ psl_p_relation : relationships +]
 
 **DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
 
