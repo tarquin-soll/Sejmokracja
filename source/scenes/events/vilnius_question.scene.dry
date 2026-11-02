@@ -37,6 +37,7 @@ President [+ president +] appoints the PSL-P and ZLN to form a government, howev
 
 @deadlock
 title: The Sejm is deadlocked.
+on-arrival: instability += 1
 subtitle: [+ president +] appoints [+ prime_minister +] again as a non-parliamentary candidate
 
 [+ prime_minister +] recieved broad support in the Sejm from the NPR, PSL-P, PSL-W, and Other parties, however the Government lacks a stable majority.
