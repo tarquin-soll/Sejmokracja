@@ -16,9 +16,12 @@ max-cards: 3
 
 [? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic<span>**. ?]
 
+[? if year == 1922 and month == 2 : Pope Pius XI succeeds Pope Benedict XV, to become the 259th pope. ?]
+
+[? if year == 1922 and month == 6 : Weimar Republic is put into national mourning when foreign minister, Walter Rathenau, is assasinated by the Organisation Consul due to his Jewish herigate and the Treaty of Rapallo. ?]
+
 - @party
 - @govt
-- @leg
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -40,9 +43,12 @@ max-cards: 4
 
 [? if year = 1922 and month = 2 : The Republic of **<span style="color: #DD0000;">Central Lithuania</span>** having finished it's election on January boycotted by Jews, Lithuanians and Belarussians have put forward a motion to annex its land, the Vilnius Region to the **<span style="color: #CCCCCC;">Polish </span><span style="color: #DC143C;">Republic</span>**. ?]
 
+[? if year == 1922 and month == 2 : Pope Pius XI succeeds Pope Benedict XV, to become the 259th pope. ?]
+
+[? if year == 1922 and month == 6 : Weimar Republic is put into national mourning when foreign minister, Walter Rathenau, is assasinated by the Organisation Consul due to his Jewish herigate and the Treaty of Rapallo. ?]
+
 - @party
 - @govt
-- @leg
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -61,11 +67,3 @@ card-image: img/Sejm.jpg
 is-deck: true
 
 - #govt_affairs
-
-@leg
-title: Legislature Politics
-view-if: time >= 3
-card-image: img/portraits/DaszyńskiIgnacy2.jpg
-is-deck: true
-
-- #leg_politics
