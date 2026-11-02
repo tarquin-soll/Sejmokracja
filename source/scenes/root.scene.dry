@@ -114,6 +114,7 @@ Q.bmn_leader = 'Grünbaum';
 Q.zln_leader = 'Grabski';
 Q.pschd_leader = 'Korfanty';
 
+Q.psl_p_right = 10;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
