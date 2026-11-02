@@ -205,11 +205,10 @@ Q.capital_strike_progress = 0;
 Q.budget = -1;
 
 // Proportion of different social groups
-// source: chatgpt lol
-Q.peasants = 68;
-Q.workers = 14;
+Q.peasants = 65;
+Q.workers = 16;
 Q.petit = 15;
-Q.bourgeoisie = 3;
+Q.bourgeoisie = 4;
 Q.unemployed = 8;
 Q.minorities = 31;
 
