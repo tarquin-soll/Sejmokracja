@@ -209,49 +209,39 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 @parties
 go-to: menu
 
-**PPS** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+**PPS** - *Sozialdemokratische Partei Deutschlands* (Polish Socialist Party) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
 
-**KPP** - *Komunistyczna Partia Polski* (Communist Party of Poland) - a far-left offshoot of the PPS that merged with the <span class<span class="wide_tooltip-wrap"><span style="color: #C60000;">SKPDiL</span><span class="wide_tooltip-tip">Social Democracy of the Kingdom of Poland and Lithuania, a revolutionary marxist party</span></span>
+**KPP** - *Komunistyczna Partia Polski* (Communist Party of Poland) - a far-left offshoot of the PPS that merged with the <span class<span class="wide_tooltip-wrap"><span style="color: #C00;">**SKPDiL**</span><span class="wide_tooltip-tip">Social Democracy of the Kingdom of Poland and Lithuania, a revolutionary marxist party</span></span>
 
 Current relations: [+ kpp_relation : relationships +]
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**NPR** - *Narodowa Partia Robotnicza* (National Workers' Party)- a conservative left-wing nationalist Christian party, described to be a flexible party due to it being able to govern with both the political left and the political right.
 
-Current relations: [+ z_relation : relationships +]
+Current relations: [+ npr_relation : relationships +]
 
-**PSL-L** - *Polskie Stronnictwo Ludowe - Lewica* (Polish People's Party - Left) - an anti-clerical left leaning radical agrarian party split from the Polish People's Party in 1913 with the PSL-W. They are open to cooperation with socialists and advocate for changes such as expropriation of lands and nationalizations.
+**PSL-L** - *Polskie Stronnictwo Ludowe - Lewica* (Polish People's Party - Left) - founded in 1914, the PSL-L is an anti-clerical left leaning radical agrarian party split from the Polish People's Party in 1913 with the PSL-W. They are open to cooperation with socialists and advocate for changes such as expropriation of lands and nationalizations.
 
 Current relations: [+ psl_l_relation : relationships +]
 
-**PSL-W** - *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") - a center-left agrarian party, and has historically supported our governmental policies.
+**PSL-W** - *Polskie Stronnictwo Ludowe "Wyzwolenie"* (Polish People's Party "Liberation") - a center-left agrarian party that supports the Republic, supported by the peasants. and has historically supported our governmental policies.
 
 Current relations: [+ psl_w_relation : relationships +]
 
-**PSL-P** - *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") -
+**PSL-P** - *Polskie Stronnictwo Ludowe "Piast"* (Polish People's Party "Piast") - founded in 1914, the PSL-P is a center-right agrarian party, supported by the pesants, split from the Polish People's Party in 1913. The party advocated for agrarian and land reform and creation of large peasant farms from the lens of christian democracy.
 
 Current relations: [+ psl_p_relation : relationships +]
 
-**DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+**BMN** - *Blok Mniejszości Narodowych* (National Minority Bloc) - an agglomerate of political parties of national minorities ranging from Ukranian, German, Jewish and Belarussian minorities for the purpose of joint electoral campaign due to the election system favoring large parties.
 
-Current relations: [+ ddp_relation : relationships +]
+Current relations: [+ bmn_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**ZLN** - *Związek Ludowo-Narodowy* (People's National Union) - WIP
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ zln_relation : relationships +]
 
-**DNVP** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
+**PSChD** - *Polskie Stronnictwo Chrześcijańskiej Demokracji* (Polish Christian Democratic Party) - the second-most prominent party inside of the ChZJN, composed of christian democrats, additionally, the party's economic views is akin to Pope Leo XIII, recognizing the dangers of social and economic inequality opposing both unchecked capitalism and socialist solutions.
 
-Current relations: [+ dnvp_relation : relationships +]
-
-**KPD** - *Kommunistische Partei Deutschlands* (German Communist Party) - a radical left-wing offshoot of the SPD that emerged in the aftermath of the German Revolution of 1918, they follow the path of Moscow, opposing parliamentary democracy in favor of a Soviet-style revolution.
-
-Current relations: [+ kpd_relation : relationships +]
-
-[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
-
-**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
-
-Current relations: [+ nsdap_relation : relationships +]
+Current relations: [+ pschd_relation : relationships +]
 
 **Others** - there is a multitude of small, mostly regional parties regarding Jewish interest and Ukranian interest, their political position usually lies near the BMN in between the PSL-P and ChZJN. 
 
@@ -311,7 +301,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Internationalists**
 
-Many internationalists are remaining members of the PPS that didn't defect to the <span class="wide_tooltip-wrap"><span style="color: #C62828;">PPS-L</span><span class="wide_tooltip-tip">PPS-L or PPS-Lewica, was one of the faction that split from the PPS in 1906 focused on internationalism, revolution and dropping the idea of Polish independence. Merged to be the KPP in 1918.</span></span>, or are young radicals. Many are interested in reconciling with the KPP, and exploring Internationalism.
+Many internationalists are remaining members of the PPS that didn't defect to the <span class="wide_tooltip-wrap"><span style="color: #C62828;">**PPS-L**</span><span class="wide_tooltip-tip">PPS-L or PPS-Lewica, was one of the faction that split from the PPS in 1906 focused on internationalism, revolution and dropping the idea of Polish independence. Merged to be the KPP in 1918.</span></span>, or are young radicals. Many are interested in reconciling with the KPP, and exploring Internationalism.
 
 Strength: [+ internationalist_strength : strength +]
 
