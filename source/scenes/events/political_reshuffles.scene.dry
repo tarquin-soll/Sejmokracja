@@ -2,13 +2,15 @@ title: Political Reshuffles
 subtitle: Piłsudski brings down the government!
 tags: event
 view-if: year == 1922 and month > 4 and president_confidence >= 0
+max-visits: 1
+face-image: img/portraits/ŚliwińskiArtur.jpg
 new-page: true
 
 = Political Reshuffles
 
-Piłsudski has lost confidence in the Second Ponikowski's Cabinet due to the delegations soft approach on Soviet Russia in the Genoa Conference and the events in Rapallo.
+Piłsudski has lost confidence in the Second Ponikowski's Cabinet due to the delegations soft approach on Soviet Russia in the Genoa Conference and the events taking place in Rapallo.
 
-Further fueled by the poor handling of the Vilnius Question, Piłsudski brings down the government.
+Ponikowski's approach of the Vilnius Question also contributed in this lost of confidence, hence, Piłsudski brings down the government.
 
 Using this opportunity, Piłsudski tests the scope of his authority and appoints Artur Śliwiński who virtually has no stable backing in the parliament to lead an extra-parliamentary government.
 
@@ -19,7 +21,7 @@ on-arrival: instability += 1
 
 Artur Śliwiński has been ousted, even if we attempt to convince the other parties, the ZLN's overwhelming majority in the Sejm makes it impossible to defend Artur.
 
-This goes to show how the President's power was severly weakened by the March 1921 constitution, Piłsudski grows disillusioned of the new Polish republic...
+This goes to show how the President's power was severly weakened by the March 1921 Constitution. Piłsudski grows disillusioned of the new Polish republic...
 
 - @korfanty: The ZLN seeks to appoint Korfanty as Prime Minister.
 
@@ -27,11 +29,11 @@ This goes to show how the President's power was severly weakened by the March 19
 
 As expected, Piłsudski refuses to appoint Korfanty as the Prime Minister.
 
-The cracks in democracy are showing...
-
-- @compromise: The government cannot stand idly, Piłsudski and the ZLN compromises.
+- @compromise: The government cannot stand idly by! Piłsudski and the ZLN compromises.
 
 @compromise
 on-arrival: psl_w_right += 1; psl_p_right += 1; prime_minister = "Nowak"; prime_minister_party = "Independent"; foreign_minister = "Narutowicz"; treasury_minister = "Jastrzębski"; publicworks_minister = "Rybczyński"; justice_minister = "Makowski"
 
 A pragmatic Kraków conservative candidate — Julian Nowak — is proposed, while not the preferred choice of the ZLN they accept the compromise due to Nowak's conservative character. He also recieved support from the PSL-P viewing him as a respectable prime minister and to stop political deadlocks.
+
+The cracks in democracy are showing...
