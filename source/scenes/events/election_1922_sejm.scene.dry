@@ -68,7 +68,7 @@ Q.pschd_toleration = 0;
 Q.other_toleration = 0;
 Q.otherright_toleration = 0;
 
-Q.president_caretaker_government = 0;
+Q.president_government = 0;
 
 Q.minority_government = 0;
 
@@ -113,6 +113,7 @@ Q.left_agrarian_coalition = parseFloat((Q.pps_sj + Q.npr_sj + Q.psl_l_sj + Q.psl
 Q.broad_right_coalition = parseFloat((Q.psl_w_sj + Q.psl_p_sj + Q.zln_sj + Q.other_sj + Q.otherright_sj + Q.pschd_sj).toFixed(1));
 Q.conservative_coalition = parseFloat((Q.psl_p_sj + Q.pschd_sj + Q.zln_sj + Q.otherright_sj).toFixed(1));
 Q.chjena_piast = parseFloat((Q.zln_sj + Q.pschd_sj + Q.psl_p_sj).toFixed(1));
+Q.president_government_mandate = parseFloat((Q.npr_sj + Q.psl_w_sj + Q.psl_p_sj + Q.bmn_sj).toFixed(1));
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -261,6 +262,7 @@ Broad-Right Coalition (PSL-W + PSL-P + Others + ZLN + PSChD + Other parties): [+
 - @soc_agr_coalition
 - @grand_coalition
 - @broad_coalition
+- @president_government
 
 @soc_agr_coalition
 title: We can form a Social-Agrarian Coalition.
@@ -342,8 +344,15 @@ title: We are unable to convince them.
 @broad_coalition
 title: The right forms a Broad-Right coalition.
 subtitle: PSL-W + PSL-P + Others + ZLN + PSChD + Other parties: ([+ broad_right_coalition +]%)
-unavailable-subtitle: PSL-W + PSL-P + Others + ZLN + PSChD + Other parties: ([+ broad_right_coalition +]%)
+unavailable-subtitle: PSL-W + PSL-P + Others + ZLN + PSChD + Other parties: ([+ broad_right_coalition +]%) [? if president = "Piłsudski" : - President Piłsudski is not willing to form this government. ?]
 choose-if: broad_right_coalition >= 50
+
+@president_government
+title: [+ president +] forms an extra-parliamentary government.
+subtitle: The government recieves support from the NPR, PSL-W, PSL-P and the BMN: ([+ president_government_mandate +]), we can extend our support to them.
+go-to: ministries
+
+ggs
 
 @ministries
 
@@ -388,14 +397,14 @@ go-to: ministries
 
 Jędrzej Moraczewski of the PPS has been appointed Public Works Minister.
 
-@finance
+@treasury
 title: Treasury Ministry
 subtitle: The Treasury Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: We do not have enough leverage. (Ministry is Work in Progress)
 tags: mins_1922
-choose-if: leverage >= 10 
-view-if: finance_minister_party != "PPS"
-on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"
+choose-if: leverage >= 50
+view-if: treasury_minister_party != "PPS"
+on-arrival: leverage -= 10; treasury_minister_party = "SPD"; finance_minister = "Hilferding"
 go-to: ministries
 
 Rudolf Hilferding of the SPD has been appointed Finance Minister.
@@ -451,8 +460,8 @@ Norbert Barlicki of the PPS has been appointed Agriculture Minister.
 @education
 title: Religious Affairs and Public Education Ministry
 subtitle: The Education Ministry controls the national curriculum.
-unavailable-subtitle: We do not have enough leverage.
-choose-if: leverage >= 10
+unavailable-subtitle: We do not have enough leverage. (Ministry is Work in Progress)
+choose-if: leverage >= 50
 view-if: education_minister_party != "PPS"
 on-arrival: leverage -= 10; education_minister_party = "PPS"; education_minister = "Some Guy"
 go-to: ministries
@@ -463,9 +472,9 @@ Some Guy of the PPS has been appointed Education Minister.
 @military
 title: Military Affairs Ministry
 subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: We do not have enough leverage. (Ministry is Work in Progress)
 tags: mins_1922
-choose-if: leverage >= 15 
+choose-if: leverage >= 55 
 view-if: reichswehr_minister_party != "SPD"
 on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"
 go-to: ministries
