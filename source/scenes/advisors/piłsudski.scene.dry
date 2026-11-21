@@ -1,0 +1,58 @@
+title: Jozef Piłsudski
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/PilsudskiJozef.jpg
+view-if: piłsudski_advisor = 1
+new-page: true
+
+= Jozef Piłsudski
+
+- @election
+- @money
+- @peasant
+- @worker
+- @minority
+- @instability
+- @root: Return to main
+
+@election
+title: Campaign Trail
+subtitle: Election rn
+on-arrival: next_election_year = year; next_election_month = month; next_election_time = 0
+
+Election today
+  
+@money
+title: Money
+subtitle: Money rn
+on-arrival: resources += 3
+
++3 resource
+
+@peasant
+title: peasant
+subtitle: ok
+on-arrival: peasants_pps += 10
+
++10
+
+@worker
+title: worker
+subtitle: ok
+on-arrival: workers_pps += 10
+
++10
+
+@minority
+title: minority
+subtitle: ok
+on-arrival: minorities_pps += 10
+
++10
+
+@instability
+title: do what you do best
+subtitle: nice
+on-arrival: instability += 1
+
++1 bad stuff
