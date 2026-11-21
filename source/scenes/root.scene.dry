@@ -613,7 +613,7 @@ For more information on the politics and government of the German Republic, see 
 - @1922_historical: Begin (historical mode)
 
 @1922_test
-on-arrival: difficulty = -1; piłsudski_advisor = 1;
+on-arrival: difficulty = -1
 go-to: 1922_main
 
 @1922_sejm
