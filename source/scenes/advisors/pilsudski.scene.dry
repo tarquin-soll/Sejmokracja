@@ -2,7 +2,7 @@ title: Jozef Piłsudski
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/PilsudskiJozef.jpg
-view-if: piłsudski_advisor = 1
+view-if: pilsudski_advisor = 1
 new-page: true
 
 = Jozef Piłsudski
