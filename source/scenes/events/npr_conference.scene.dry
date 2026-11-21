@@ -19,22 +19,20 @@ During the conference, Jankowski, steps down as party chairman to assume the vic
 
 @yes_lanckorona
 on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15
+face-image: img/portraits/WachowiakStanisław.jpg
 
 Stanisław Wachowiak, a conservative and Christian democratic figure in the party has been selected as the chairman of the NPR. He seems to represent a rightward turn from Jankowski, and will be more aligned with the ZLN.
 
 @indecisive
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Joos is likely to be friendlier to us than Kaas.
-choose-if: z_relation >= 70
 on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+face-image: img/portraits/NPR_1923_Leader.png
 
 With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
 
 @no_lanckorona
-choose-if: z_relation >= 62 and resources >= 1 
-view-if: z_relation < 70
-unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
-subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
 on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+face-image: img/portraits/NPR_1923_Leader.png
 
 With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
