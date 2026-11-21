@@ -591,6 +591,8 @@ Q.moraczewski_advisor = 0; // Jędrzej Moraczewski
 
 // Nonfactional advisors
 
+Q.piłsudski_advisor = 0; // initialization I guess
+
 !}
 set-bg: img/map_2.jpg
 new-page: true
