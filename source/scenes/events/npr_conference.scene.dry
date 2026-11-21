@@ -1,24 +1,28 @@
-title: NPR Congress
+title: NPR Conference
 subtitle: The NPR chooses their stance about Lanckorona...
 view-if: lanckorona_pact == 1
+on-arrival: npr_leader = 'Vacant'
 max-visits: 1
 tags: event
 new-page: true
+face-image: img/npr.webp
 
-= NLR Conference
+= NPR Conference
 
-indecisive
-  
-- @no_lanckorona: The Center Party elects Ludwig Kaas as the party chair.
-- @indecisive: The party remains indecisive in their stance
-- @yes_lanckorona: We must hold a campaign in support of Joseph Joos as party chair.
+The PSL-P and ZLN has made a pact strengthening their political alliance dubbed as the "Lanckorona Pact", since the PSL-P was a close partner to the NPR, Now, the party holds a conference to decide their stance on the pact.
 
-@kaas
-on-arrival: z_party_leader = "Kaas"; z_relation -= 5
+During the conference, Jankowski, steps down as party chairman to assume the vice-chair position, the conference will now also elect a new leader.
 
-Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
+- @no_lanckorona: The party elects rejects the Chjeno-Piast.
+- @indecisive: The party remains indecisive in their stance.
+- @yes_lanckorona: The party supports the Chjeno-Piast.
 
-@joos
+@yes_lanckorona
+on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15
+
+Stanisław Wachowiak, a conservative and Christian democratic figure in the party has been selected as the chairman of the NPR. He seems to represent a rightward turn from Jankowski, and will be more aligned with the ZLN.
+
+@indecisive
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Joos is likely to be friendlier to us than Kaas.
 choose-if: z_relation >= 70
@@ -26,7 +30,7 @@ on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
 With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
 
-@joos_campaign
+@no_lanckorona
 choose-if: z_relation >= 62 and resources >= 1 
 view-if: z_relation < 70
 unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
