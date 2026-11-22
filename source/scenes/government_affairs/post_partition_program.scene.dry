@@ -2,7 +2,7 @@ title: Post Partition Program
 is-card: true
 new-page: true
 on-arrival: post_partition_program_timer += 6; month_actions += 1
-view-if: pps_in_government and publicworks_minister_party == "PPS" or and post_partition_program_timer < 0
+view-if: pps_in_government and publicworks_minister_party == "PPS" and post_partition_program_timer < 0
 card-image: img/portraits/MoraczewskiJędrzej.jpg
 tags: govt_affairs, cabinet
 #subtitle: Programs to recover post-partition.
