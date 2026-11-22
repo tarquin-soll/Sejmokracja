@@ -15,6 +15,7 @@ The PPS cannot govern by itself yet. Because we do not have an electoral majorit
 - @peasant: Strengthen our bonds with the **<span style="color: #80FF00;">PSL-"Liberation"</span>** and left-agrarian **<span style="color: #179900;">PSL-"Left"</span>**.
 - @piast: Strengthen our bonds with the conservative **<span style="color: #3A6538;">PSL-"Piast"</span>**.
 - @bmn: Strengthen our bonds with centrist **<span style="color: #E3AF34;">Minority Parties</span>**.
+- @npr: Strengthen our bonds with the left-wing nationalist **<span style="color: #841839;">National Workers' Party</span>
 - @kpp: Work towards repairing relationships with the KPP
 - @pps_alone: The PPS can stand alone for now.
 - @easy_discard
@@ -23,7 +24,7 @@ The PPS cannot govern by itself yet. Because we do not have an electoral majorit
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; psl_l_relation += 8; psl_w_relation += 8
+on-arrival: resources -= 1; psl_l_relation += 8; psl_w_relation += 8; psl_w_left += 1
 
 We are ideologically close with them so it is easy to build relations with the PSL-L.
 
@@ -31,6 +32,7 @@ We are ideologically close with them so it is easy to build relations with the P
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
+view-if: ideology != "internationalist"
 on-arrival: resources -= 1
 go-to: lanckorona if lanckorona_pact = 1; piast_op_2 if psl_p_in_government = 0 and pps_in_government = 0; piast_op if psl_p_in_government = 1 and pps_in_government = 0; piast_coalition if pps_in_government = 1 and psl_p_in_government = 1
 
@@ -42,7 +44,7 @@ on-arrival: psl_p_relation += 5*(1 - dissent); psl_p_relation += 2*(1 - dissent)
 @piast_op_2
 on-arrival: piast_relation += 6*(1 - dissent); psl_p_left += 0.5
 
-Together with the <span style="color: #000000;">Center</span>, we share a common opposition to the incumbent cabinet, making improving relations easier.
+Together with the PSL-P, we share a common opposition to the incumbent cabinet, making improving relations easier.
 
 @piast_coalition
 on-arrival: psl_p_relation += 8*(1 - dissent); psl_p_left += 1
@@ -68,13 +70,22 @@ on-arrival: bmn_relation += 3*(1 - dissent)
 
 We are currently coalition partners with them, and historically, they haven't been able to enter the government without our help so improving relations comes naturally.
 
+@npr
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; npr_relation += 8*(1 - dissent)
+
+We are ideologically similar with them so it is easy to build relations with the NPR.
+
 @kpp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpp_relation += 10
+view-if: ideology == "internationalist"
+on-arrival: resources -= 1; kpp_relation += 5; nationalist_dissent += 6; center_dissent += 6; internationalist_strength += 6
 
-Here you go 10 KPP relations for FREE
+We are working to repair our relationship with the KPP and settle our previous disputes.
 
 @pps_alone
 
