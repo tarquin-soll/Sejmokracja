@@ -2,7 +2,7 @@ title: A rightward turn?
 new-page: true
 subtitle: The PSL-P meets with the ChZJN.
 tags: event
-view-if: year >= 1923 month >= 3 and instability >= 5
+view-if: year >= 1923 and month >= 3 and instability >= 5
 max-visits: 1
 face-image: img/Piast_Concept.jpg
 
