@@ -4,7 +4,7 @@ new-page: true
 on-arrival: economic_democracy_timer += 8; month_actions += 1
 view-if: pps_in_government and industry_minister_party == "PPS" or and labor_minister_party == "PPS" and economic_democracy_timer <= 0
 card-image: img/portraits/KwapińskiJan.jpg
-max-visits: 8
+max-visits: 11
 tags: govt_affairs, cabinet
 #subtitle: How can we give workers more control over the means of production?
 
@@ -19,6 +19,7 @@ As we control the Labor [? if economic_minister_party == "SPD" : and Economic ?]
 - @expand_councils
 - @expand_councils_2
 - @expand_councils_3
+- @foreign_asset_1
 - @suspend_germans_1
 - @nationalize_1
 - @cooperatives_1
@@ -54,20 +55,26 @@ max-visits: 1
 
 Sectorial works councils can now negotiate wage and price policies for entire economic sectors, helping to both give workers more of a voice, and to rationalize the economy, smoothing over the anarchy of the market.
 
+@foreign_asset_1
+title: Nationalize foreign assets.
+subtitle: +1 budget, This will increase our domestic capital.
+on-arrival: minorities_pps -= 4*(1-dissent); minorities_bmn += 10; budget += 1; nationalist_dissent -= 6; nationalist_strength += 8; bmn_relation -= 10; coalition_dissent += 2 if bmn_in_government
+max-visits: 2
+
 @suspend_germans_1
 title: Expropriate or suspend <span style="color: #000000;">Ge</span><span style="color: #DD0000;">rm</span><span style="color: #FFCE00;">an</span-owned factories
 subtitle: -1 budget, This is a step to removing the control of foreign interest in the economy.
 on-arrival: economic_democracy += 1; workers_pps += 7*(1-dissent); minorities_pps -= 4*(1+dissent); capital_strike_progress += 1; nationalist_dissent -= 6; labor_dissent -= 6; labor_strength += 8; bmn_relation -= 10; coalition_dissent += 2 if bmn_in_government; economic_growth -= 0.5
-max-visits: 2
+max-visits: 1
 
 The Polish people
 
 @nationalize_1
 title: Begin to socialize key industries.
 subtitle: -1 budget, we should buy out industries and govern them together with workers and consumers.
-on-arrival: economic_democracy += 1; capital_strike_progress += 1; budget -= 1; socializations += 1; workers_spd += 6*(1-dissent); unemployed_spd += 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; capital_strike_progress += 1 if black_thursday_seen; unemployed -= 1 if unemployed > 9; economic_growth += 0.2 if economic_growth < 5
+on-arrival: economic_democracy += 1; capital_strike_progress += 1; budget -= 1; socializations += 1; workers_pps += 6*(1-dissent); unemployed_pps += 3*(1-dissent); coalition_dissent += 1 if psl_p_in_government or psl_w_in_government; capital_strike_progress += 1 if black_thursday_seen; unemployed -= 1 if unemployed > 9; economic_growth += 0.2 if economic_growth < 5
 choose-if: budget >= 1
-max-visits: 3
+max-visits: 2
 
 We have begun to socialize key industries by buying out the capitalist owners, and creating coordinated governing boards consisting of worker, consumer, and state representatives. The capitalists are not pleased at our intrusion into the economy.
 
@@ -76,6 +83,6 @@ title: Support worker and consumer cooperatives.
 subtitle: -1 budget
 on-arrival: economic_democracy += 1; cooperatives += 1; workers_pps += 4*(1-dissent); unemployed_pps += 4*(1-dissent); budget -= 1; unemployed -= 1 if unemployed > 9; economic_growth += 0.2
 choose-if: budget >= 1
-max-visits: 3
+max-visits: 2
 
 We have enacted legislation that makes it easier to create cooperative enterprises of all sorts, and provide financial support to struggling cooperatives.
