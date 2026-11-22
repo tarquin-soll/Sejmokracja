@@ -404,7 +404,7 @@ unavailable-subtitle: We do not have enough leverage. (Ministry is Work in Progr
 tags: mins_1922
 choose-if: leverage >= 50
 view-if: treasury_minister_party != "PPS"
-on-arrival: leverage -= 10; treasury_minister_party = "SPD"; finance_minister = "Hilferding"
+on-arrival: leverage -= 10; treasury_minister_party = "PPS"; finance_minister = "Hilferding"
 go-to: ministries
 
 Rudolf Hilferding of the SPD has been appointed Finance Minister.
@@ -416,7 +416,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1922
 choose-if: leverage >= 10 
 view-if: industry_minister_party != "PPS"
-on-arrival: leverage -= 10; industry_minister_party = "SPD"; industry_minister = "Kwapiński"
+on-arrival: leverage -= 10; industry_minister_party = "PPS"; industry_minister = "Kwapiński"
 go-to: ministries
 
 Jan Kwapiński of the PPS has been appointed Industry and Trade Minister.
