@@ -3,8 +3,8 @@ new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
-view-if: spd_in_government = 1 and finance_minister_party = "SPD" and fiscal_policy_timer = 0
-card-image: img/portraits/HilferdingRudolf.jpg
+view-if: pps_in_government = 1 and treasury_minister_party = "PPS" and fiscal_policy_timer = 0
+card-image: img/portraits/GrosfeldLudwig.jpg
 go-to: fiscal_menu
 #subtitle: Issues of taxation, budget, and tariffs.
 
@@ -28,6 +28,7 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @raise_progressive: Make the tax system more progressive by raising taxes on the rich and cutting them for the poor.
 - @regressive
 - @tariffs
+- @print
 - @root: Do not change the tax system.
 - @easy_discard
 - @cancel_advisor_action
@@ -115,6 +116,7 @@ Current tariff level: [+ tariffs : taxation +]
 - @raise_tariffs
 - @lower_tariffs
 - @fiscal_menu: Change domestic taxes instead of tariffs.
+- @print
 - @root: Do not change tariffs or taxes.
 - @easy_discard
 
@@ -137,3 +139,39 @@ on-arrival: tariffs -= 1; budget -= 2; inflation -= 0.5; workers_spd += 4*(1-dis
 Lowering tariffs helps workers and the urban poor by reducing prices for basic necessities. In addition, other countries are pleased by lower tariffs, and are more willing to negotiate on many issues.
 
 Farmers are hurt by this policy, as cheap imported grain leads to ruin for some small producers. In general, cheap imports are detrimental for small-scale industries aimed at the domestic market.
+
+@print
+title: Print money instead.
+
+Polish National Loan Bank
+
+- @print_small: Issue small amount of bills to recover from short-term deficit.
+- @print_okay: Issue enough bills to last as for a few months and do small-scale project.
+- @print_big: Issue large amount of bills to start a project or recover from long-term deficit.
+- @fiscal_menu: Change domestic taxes instead of printing money.
+- @tariffs
+- @root: Do not print money, change tariffs, or taxes.
+- @easy_discard
+
+@print_small
+on-arrival: budget += 1; inflation += 1; workers_pps -= 5; unemployed_pps -= 5
+
+We issue small amount of banknotes to recover from short-term deficit.
+
+The working class are hurt by this policy.
+
+@print_okay
+on-arrival: budget += 2; inflation += 2; workers_pps -= 6; unemployed_pps -= 6
+
+We issue small amount of banknotes to recover from short-term deficit.
+
+The working class are hurt by this policy.
+
+@print_big
+on-arrival: budget += 3; inflation += 2; workers_pps -= 7; unemployed_pps -= 7
+
+We issue small amount of banknotes to recover from short-term deficit.
+
+The working class are hurt by this policy.
+
+
