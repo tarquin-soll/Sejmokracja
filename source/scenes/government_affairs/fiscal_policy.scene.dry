@@ -143,7 +143,7 @@ Farmers are hurt by this policy, as cheap imported grain leads to ruin for some 
 @print
 title: Print money instead.
 
-Polish National Loan Bank
+We can contact the Polish National Loan Bank to print and issue banknotes to the government to increase our domestic capital.
 
 - @print_small: Issue small amount of bills to recover from short-term deficit.
 - @print_okay: Issue enough bills to last as for a few months and do small-scale project.
@@ -158,20 +158,22 @@ on-arrival: budget += 1; inflation += 1; workers_pps -= 5; unemployed_pps -= 5
 
 We issue small amount of banknotes to recover from short-term deficit.
 
-The working class are hurt by this policy.
+The working class are hurt by this policy. This hurts our support among the workers.
 
 @print_okay
 on-arrival: budget += 2; inflation += 2; workers_pps -= 6; unemployed_pps -= 6
 
-We issue small amount of banknotes to recover from short-term deficit.
+We issue enough banknotes to last us a few months in government and implement our projects, however this policy affects the poor due to the increasing inflation.
 
-The working class are hurt by this policy.
+Our grassroot supports have considerably lessened
 
 @print_big
-on-arrival: budget += 3; inflation += 2; workers_pps -= 7; unemployed_pps -= 7
+on-arrival: budget += 3; inflation += 3.5; workers_pps -= 7; unemployed_pps -= 7
 
-We issue small amount of banknotes to recover from short-term deficit.
+We issue large amount of banknotes to fund our large-scale projects or get out of long-term deficit.
 
-The working class are hurt by this policy.
+This policy has contributed to a large acceleration of inflation in our economy.
+
+The working class are hurt by this. We have lost considerable support among the workers.
 
 
