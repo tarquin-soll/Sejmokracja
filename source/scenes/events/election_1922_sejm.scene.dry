@@ -3,7 +3,7 @@ new-page: true
 tags: event
 priority: -1
 view-if: (year = next_election_year and month >= next_election_month) or (year > next_election_year)
-on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_chancellor_timer = 4;
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 5; n_elections += 1; next_election_time = time + 60;
 set-jump: post_election_1922_sejm
 face-image: img/fl_pl.webp
 
@@ -313,6 +313,7 @@ go-to: ministries
 @stapinski
 title: Can we convince them to let the PSL-L have the prime ministry?
 subtitle: This is an unexpected choice and will cause us internal dissent, he could be a good social agrarian prime minister but we have to convince the rest of our partners.
+view-if: soc_agr_wholsom
 
 - @accept_stapinski
 - @reject_stapinski
@@ -336,6 +337,7 @@ go-to: ministries
 
 @reject_stapinski
 title: We are unable to convince them.
+view-if: leverage < 3
 
 - @daszynski
 - @witos
@@ -355,6 +357,21 @@ go-to: ministries
 ggs
 
 @ministries
+on-arrival: {!
+if (Q.narutowicz_dead == 1 && Q.publicworks_minister_party != "PPS") {
+    Q.publicworks_minister = "Rybczyński";
+}
+if (Q.education_minister_party != "PPS") {
+    Q.education_minister_party = "PSL-P";
+    Q.education_minister = "Rataj";
+}
+if (Q.labor_minister_party != "PPS" && Q.npr_in_government) {
+    Q.labor_minister_party = "NPR";
+    Q.labor_minister = "Jankowski";
+} else {
+    Q.labor_minister = "Darowski"
+}
+!}
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
 
@@ -400,14 +417,14 @@ Jędrzej Moraczewski of the PPS has been appointed Public Works Minister.
 @treasury
 title: Treasury Ministry
 subtitle: The Treasury Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage. (Ministry is Work in Progress)
+unavailable-subtitle: We do not have enough leverage.
 tags: mins_1922
-choose-if: leverage >= 50
+choose-if: leverage >= 10
 view-if: treasury_minister_party != "PPS"
-on-arrival: leverage -= 10; treasury_minister_party = "PPS"; finance_minister = "Hilferding"
+on-arrival: leverage -= 10; treasury_minister_party = "PPS"; treasury_minister = "Grosfeld"
 go-to: ministries
 
-Rudolf Hilferding of the SPD has been appointed Finance Minister.
+Ludwik Grosfeld of the PPS has been appointed Treasury Minister.
 
 @economic
 title: Industry and Trade Ministry
@@ -487,27 +504,20 @@ Julius Leber of the SPD has been appointed Reichswehr Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1922
-on-arrival: {!
-if (Q.narutowicz_dead == 1) {
-    Q.publicworks_minister = "Rybczyński";
-}
-Q.education_minister_party = "PSL-P"
-Q.education_minister = "Rataj"
-!}
 
 This coalition arrangement is tolerable to all.
 
 @drop_labor
 title: Drop the Labor Ministry.
 view-if: labor_minister_party = "PPS"
-on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
+on-arrival: labor_minister_party = "I"; leverage += 5;
 tags: drop_mins_1922
 go-to: ministries
 
 @drop_interior
 title: Drop the Interior Ministry.
-view-if: interior_minister_party = "SPD"
-on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+view-if: interior_minister_party = "PPS"
+on-arrival: interior_minister_party = "I"; leverage += 5;
 tags: drop_mins_1922
 go-to: ministries
 
