@@ -19,15 +19,14 @@ During the conference, Jankowski, steps down as party chairman to assume the vic
 
 @yes_chj_pslp
 view-if: npr_relation <= 40
-on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15; bourgeoisie_npr += 5
+on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15; bourgeoisie_npr += 5; npr_lanckorona = 1
 face-image: img/portraits/WachowiakStanisław.jpg
 
 Stanisław Wachowiak, a conservative and Christian democratic figure in the party has been selected as the chairman of the NPR. He seems to represent a rightward turn from Jankowski, and will be more aligned with the ZLN.
 
 @indecisive
 view-if: npr_relation > 40 and npr_relation < 70
-subtitle: Joos is likely to be friendlier to us than Kaas.
-on-arrival: npr_leader = "Popiel and Chądzyński"
+on-arrival: npr_leader = "Popiel and Chądzyński"; npr_relation -= 5
 face-image: img/portraits/NPR_1923_Leader.png
 
 Karol Popiel, a Christian democrat and Adam Chądzyński, a left-wing nationalist had been both selected as the chairman of the NPR, they represent the party's balanced approach to the left and right.
@@ -36,7 +35,7 @@ They remain indecisive about the Chjeno-Piast due to their conflicting ideas and
 
 @no_chj_pslp
 view-if: npr_relation >= 70
-on-arrival: npr_leader = "Popiel and Chądzyński"; workers_npr += 5; npr_no_lanckorona = 1
+on-arrival: npr_leader = "Popiel and Chądzyński"; workers_npr += 5; npr_lanckorona = -1
 face-image: img/portraits/NPR_1923_Leader.png
 
 Karol Popiel, a Christian democrat and Adam Chądzyński, a left-wing nationalist had been both selected as the chairman of the NPR, they represent the party's balanced approach to the left and right.
