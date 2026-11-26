@@ -9,30 +9,38 @@ face-image: img/npr.webp
 
 = NPR Conference
 
-The PSL-P and ZLN has made a pact strengthening their political alliance dubbed as the "Lanckorona Pact", since the PSL-P was a close partner to the NPR, Now, the party holds a conference to decide their stance on the pact.
+The PSL-P and ZLN has made a pact strengthening their political alliance dubbed as the "Lanckorona Pact" and their parliamentary cooperation dubbed as the "Chjena-Piast". Since the PSL-P was a close partner to the NPR, Now, the party holds a conference to decide their stance on the pact.
 
 During the conference, Jankowski, steps down as party chairman to assume the vice-chair position, the conference will now also elect a new leader.
 
-- @no_lanckorona: The party elects rejects the Chjeno-Piast.
+- @no_chj_pslp: The party elects rejects the Chjeno-Piast.
 - @indecisive: The party remains indecisive in their stance.
-- @yes_lanckorona: The party supports the Chjeno-Piast.
+- @yes_chj_pslp: The party supports the Chjeno-Piast.
 
-@yes_lanckorona
-on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15
+@yes_chj_pslp
+view-if: npr_relation <= 40
+on-arrival: npr_leader = "Wachowiak"; npr_relation -= 15; bourgeoisie_npr += 5
 face-image: img/portraits/WachowiakStanisław.jpg
 
 Stanisław Wachowiak, a conservative and Christian democratic figure in the party has been selected as the chairman of the NPR. He seems to represent a rightward turn from Jankowski, and will be more aligned with the ZLN.
 
 @indecisive
-unavailable-subtitle: Our relations are not good enough.
+view-if: npr_relation > 40 and npr_relation < 70
 subtitle: Joos is likely to be friendlier to us than Kaas.
-on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+on-arrival: npr_leader = "Popiel and Chądzyński"
 face-image: img/portraits/NPR_1923_Leader.png
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+Karol Popiel, a Christian democrat and Adam Chądzyński, a left-wing nationalist had been both selected as the chairman of the NPR, they represent the party's balanced approach to the left and right.
 
-@no_lanckorona
-on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+They remain indecisive about the Chjeno-Piast due to their conflicting ideas and the NPR's eagerness of parliamentary balance between the left and right.
+
+@no_chj_pslp
+view-if: npr_relation >= 70
+on-arrival: npr_leader = "Popiel and Chądzyński"; workers_npr += 5; npr_no_lanckorona = 1
 face-image: img/portraits/NPR_1923_Leader.png
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+Karol Popiel, a Christian democrat and Adam Chądzyński, a left-wing nationalist had been both selected as the chairman of the NPR, they represent the party's balanced approach to the left and right.
+
+The NPR isn't reluctant in being part of the left-wing opposition if a Chjeno-Piast coalition were to happen, they closely align their beliefs with us while remaining true to their balanced approach.
+
+They reject the Chjeno-Piast.
