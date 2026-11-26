@@ -22,6 +22,7 @@ max-cards: 3
 
 - @party
 - @govt
+- @test
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -49,6 +50,7 @@ max-cards: 4
 
 - @party
 - @govt
+- @test
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -67,3 +69,7 @@ card-image: img/Sejm.jpg
 is-deck: true
 
 - #govt_affairs
+
+@test
+title: Test
+go-to: test
