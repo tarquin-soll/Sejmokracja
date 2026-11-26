@@ -13,6 +13,7 @@ new-page: true
 - @worker
 - @minority
 - @instability
+- @psl
 - @root: Return to main
 
 @election
@@ -21,7 +22,13 @@ subtitle: Election rn
 on-arrival: next_election_year = year; next_election_month = month; next_election_time = 0
 
 Election today
-  
+
+@psl
+title: Psl-piast
+on-arrival: psl_p_left += 1; psl_p_relation += 10
+
+psl
+
 @money
 title: Money
 subtitle: Money rn
@@ -32,23 +39,23 @@ on-arrival: resources += 3
 @peasant
 title: peasant
 subtitle: ok
-on-arrival: peasants_pps += 10
+on-arrival: peasants_pps += 30
 
-+10
++10*3
 
 @worker
 title: worker
 subtitle: ok
-on-arrival: workers_pps += 10
+on-arrival: workers_pps += 30
 
-+10
++10*3
 
 @minority
 title: minority
 subtitle: ok
-on-arrival: minorities_pps += 10
+on-arrival: minorities_pps += 30
 
-+10
++10*3
 
 @instability
 title: do what you do best
