@@ -306,12 +306,7 @@ Q.minorities_pschd = 0;
 Q.minorities_otherright = 0;
 Q.minorities_other = 33;
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
+// Current Sejm composition
 Q.kpp_sj = 0;
 Q.pps_sj = 8.9;
 Q.npr_sj = 8.1;
@@ -430,8 +425,9 @@ Q.education_minister = 'Ponikowski';
 
 // Events: what has occurred?
 Q.senat_seen = 1;
-Q.lanckorona_pact_seen = 0;
+Q.lanckorona_seen = 0;
 Q.lanckorona_pact = 0;
+Q.lanckorona_pact_compromise = 0;
 Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
@@ -656,7 +652,7 @@ this.state.disableSaves = true;
 go-to: 1922_main
 
 @1922_main
-audio: shuffle music/KozietulskiMarsz.mp3 music/MarszVictoria.mp3 
+audio: shuffle music/KozietulskiMarsz.mp3 music/mazurka_in_Bb_OP_7_NO_1.mp3 music/MarszVictoria.mp3 music/MazurekDabrowskiego.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
