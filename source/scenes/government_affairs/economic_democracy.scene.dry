@@ -67,6 +67,7 @@ To increase our domestic capital to fund projects to boost our economy and to fu
 title: Expropriate or suspend <span style="color: #000000;">Ge</span><span style="color: #DD0000;">rm</span><span style="color: #FFCE00;">an</span> factory owners.
 subtitle: -2 budget, This is a step to removing the control of foreign interest in the economy.
 on-arrival: budget -= 2; economic_democracy += 1; workers_pps += 7*(1-dissent); bourgeoisie_pps -= 6*(1+dissent); minorities_pps -= 4*(1+dissent); capital_strike_progress += 1; nationalist_dissent -= 6; labor_dissent -= 6; labor_strength += 8; bmn_relation -= 10; coalition_dissent += 2 if bmn_in_government; economic_growth -= 0.5
+choose-if: budget >= 2
 max-visits: 1
 
 We have now removed considerable amount of foreign influence in our economy by buying out the factories, and suspending other factories that poses a national security risk due to their foreign connections.
