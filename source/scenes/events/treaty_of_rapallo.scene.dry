@@ -4,6 +4,7 @@ subtitle: German-Soviet relations rekindled
 tags: event
 view-if: year = 1922 and month = 4
 max-visits: 1
+priority: -1
 face-image: img/RapalloTreaty.jpg
 
 = Treaty of Rapallo
