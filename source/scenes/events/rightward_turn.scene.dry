@@ -4,6 +4,7 @@ subtitle: The PSL-P meets with the ChZJN.
 tags: event
 view-if: year >= 1923 and month >= 3 and instability >= 5
 max-visits: 1
+on-arrival: lanckorona_seen = 1
 face-image: img/Piast_Concept.jpg
 
 = A rightward turn?
@@ -17,40 +18,38 @@ The parties will meet in Warsaw to discuss how to approach the current problems 
 @discuss
 go-to: lanckorona_pact if psl_p_right >= (psl_p_left + (psl_p_relation*(4/100)))
 
-The PSL-P discusses
+The PSL-P discusses with the ChZJN...
 
 - @compromise: The ChZJN attempts to compromise with the PSL-P
 
 @compromise
+subtitle: The PSL-P is unconvinced on a political alliance.
 
-higher tariffs err more agricultural policy etc.
+The ChZJN promises to increase tariffs and support more pro-agricultural policies in the government.
 
-To do: Parcellation/Expropriation
+- @deal: The PSL-P decides.
+- @nuh_uh: The PSL-P decides.
 
-- @result: The result?
+@nuh_uh
+view-if: (psl_p_right + 2) < (psl_p_left + (psl_p_relation*(4/100)))
+on-arrival: psl_p_left += 3; psl_p_relation += 10; psl_w_right += 3
 
-@result
+After more diplomatic exchange, the PSL-P remains in cooperation with like-minded parties with the PSL-W, NPR and us — the PPS.
 
-After careful diplomatic exchange
-
-- @deal: The PSL-P agrees.
-- @nodeal: Ths PSL-P refuses.
+This is both good news to our parties cooperation and also strengthens the peasant unity in the Sejm.
 
 @deal
-view-if: psl_p_right >= (psl_p_left + (psl_p_relation*(3/100)))
-go-to: lanckorona_pact
+view-if: (psl_p_right + 2) >= (psl_p_left + (psl_p_relation*(4/100)))
+go-to lanckorona_pact
+on-departure: lanckorona_pact_compromise = 1
 
-@nodeal
-view-if: psl_p_right < (psl_p_left + (psl_p_relation*(3/100)))
-on-arrival: psl_p_left += 2
-
-Ah Shucks
+After more diplomatic exchange, the PSL-P will be given more ministries and pursue increased tariffs in government, and Thus,
 
 @lanckorona_pact
 on-arrival: lanckorona_pact = 1; psl_p_ideology = 'Right'; psl_p_left -= 2; psl_p_relation -= 25; peasants_psl_p += 5
 
 The two parties have reached an agreement, they will both pursue a formation of a parliamentary majority.
 
-The agreement stipulated that numerus clausus should be applied in education, agricultural expropriation will be accelerated at least 200,000 hectares per year, there will be increased **<span style="color: #CCC;">Poloni</span><span style="color: #DC143C;">zation</span>** of the Eastern Borderlands and other right wing reforms.
+The agreement [? if lanckorona_pact_compromise == 1 : also ?] stipulated that numerus clausus should be applied in education, agricultural expropriation will be accelerated by at least 200,000 hectares per year, there will be increased **<span style="color: #CCC;">Poloni</span><span style="color: #DC143C;">zation</span>** of the Eastern Borderlands and other right wing reforms.
 
-This represents the signifact and irreversible shift of the PSL-P to the right.
+This represents a significant [? if lanckorona_pact_compromise != 1 : and irreversible ?] shift of the PSL-P to the right.
