@@ -40,7 +40,7 @@ This is both good news to our parties cooperation and also strengthens the peasa
 
 @deal
 view-if: (psl_p_right + 2) >= (psl_p_left + (psl_p_relation*(4/100)))
-go-to lanckorona_pact
+go-to: lanckorona_pact
 on-departure: lanckorona_pact_compromise = 1
 
 After more diplomatic exchange, the PSL-P will be given more ministries and pursue increased tariffs in government, and Thus,
@@ -50,6 +50,6 @@ on-arrival: lanckorona_pact = 1; psl_p_ideology = 'Right'; psl_p_left -= 2; psl_
 
 The two parties have reached an agreement, they will both pursue a formation of a parliamentary majority.
 
-The agreement [? if lanckorona_pact_compromise == 1 : also ?] stipulated that numerus clausus should be applied in education, agricultural expropriation will be accelerated by at least 200,000 hectares per year, there will be increased **<span style="color: #CCC;">Poloni</span><span style="color: #DC143C;">zation</span>** of the Eastern Borderlands and other right wing reforms.
+The agreement [? if lanckorona_pact_compromise == 1 : also ?] stipulated that numerus clausus should be applied in education, agricultural expropriation will be accelerated by at least 200,000 hectares per year, there will be increased **<span style="color: #CCC;">Poloni</span><span style="color: #DC143C;">zation</span>** of the Eastern Borderlands and other right-wing reforms.
 
 This represents a significant [? if lanckorona_pact_compromise != 1 : and irreversible ?] shift of the PSL-P to the right.
