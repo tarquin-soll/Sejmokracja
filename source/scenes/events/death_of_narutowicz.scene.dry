@@ -1,0 +1,15 @@
+title: The Assassination of Narutowicz
+tags: event
+on-arrival: narutowicz_dead = 1; instability += 1; president = "Vacant"; president_party = "Vacant"
+face-image: img/narutowicz_assassination_illustration.jpg
+max-visits: 1
+new-page: true
+priority: 1
+
+= The Assassination of Narutowicz
+
+Narutowicz, first elected President of **<span style="color: #CCC;">Pol</span><span style="color: #DC143C;">and</span>**, only five days upon taking office qas fatally shot three times during his visits at the Zachęta gallery by <span class="wide_tooltip-wrap">Niewiadomski<span class="wide_tooltip-tip"><img src="portraits/NiewiadomskiEligiusz.jpg">Eligiusz Niewiadomski, a modernist painter and right-wing sympathizer</span></span>. 
+
+Niewiadomski has now been arrested and is currently on trial.
+
+Let's hope the judicial system doesn't fail us...
