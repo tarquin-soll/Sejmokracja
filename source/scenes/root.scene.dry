@@ -13,6 +13,7 @@ go-to: start_menu_2
 - @start: Start game
 - @election_simulation: Election simulation
 - @credits: Credits
+- @discord: Discord
 - @game_over.achievements
 
 
@@ -577,14 +578,14 @@ new-page: true
 
 > *"The omnipotence of the Legislative Sejm led to the fall of the Sejm after a few years and contributed to the omnipotence of the government (...) The May Days became the starting point for the growing strength and power of the government, with a simultaneous weakening of the legislative factor: parliament (...) The state is tottering between two abnormal and harmful states. It is high time to bring it to balance and harmonious cooperation between the legislative and executive powers."*
 
-- Ignacy Daszyński
+ - Ignacy Daszyński
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of alternate history. Historical accuracy is a major concern due to the limited historical documents regarding the political parties and events that happened in this period so keep in mind that any divergence from actual events will have to include some lement of make-believe and assumptions. Please let me know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the <span style="color: #CCC;">Pol</span><span style="color: #DC143C;">ish</span> Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
 - @1922_test: Testing Mode
-- @1922_sejm: Begin (sejmokracja mode)
+- @1922_sejm: Begin (<span style="color: #CCC;">sejmo</span><span style="color: #DC143C;">kracja</span> mode)
 - @1922_easy: Begin (easy difficulty)
 - @1922_main: Begin (normal difficulty)
 - @1922_hard: Begin (hard difficulty)
@@ -606,14 +607,17 @@ Q.budget = -4;
 go-to: 1922_main
 
 @1922_easy
+view-if: dues >= 5
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1922_main
 
 @1922_hard
+view-if: dues >= 5
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1922_main
 
 @1922_historical
+view-if: dues >= 5
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
